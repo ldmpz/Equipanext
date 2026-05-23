@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Base Elements */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Accounts for the fixed navbar height */
+}
+
+/* Material Icons Setup */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Interactive Depth - Physical Switch Feel for Buttons */
+.btn-primary {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-secondary:active {
+  transform: translateY(1px);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Technical Shadow System */
+.technical-shadow {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.technical-shadow-hover:hover {
+  box-shadow: 0px 8px 16px rgba(0, 102, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-shadow {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Input glow on focus */
+.input-glow:focus {
+  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.15);
+  border-color: #0066ff;
+}
+
+/* Technical Grid overlay for hero sections */
+.grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+/* Scroll Animation Classes (Intersection Observer) */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Delay Utilities */
+.stagger-1 { transition-delay: 0.05s; animation-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.12s; animation-delay: 0.12s; }
+.stagger-3 { transition-delay: 0.20s; animation-delay: 0.20s; }
+.stagger-4 { transition-delay: 0.28s; animation-delay: 0.28s; }
+.stagger-5 { transition-delay: 0.36s; animation-delay: 0.36s; }
+
+/* Direct CSS Keyframe Entrance Animations (Pure CSS fallback) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+/* Pulse Ring Animation */
+@keyframes pulse-ring {
+  0% { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.6); }
+  70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(0, 102, 255, 0); }
+  100% { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(0, 102, 255, 0); }
+}
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite;
+}
+
+/* ==========================================
+   NAVIGATION BAR & GLASSMORPHISM TRANSITIONS
+   ========================================== */
+
+/* 1. Initial Transparent State (A little smaller and fully transparent) */
+#navbar {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid transparent !important;
+  box-shadow: none !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Dark Mode Initial Transparent State */
+.dark #navbar {
+  background-color: transparent !important;
+  border-bottom: 1px solid transparent !important;
+}
+
+/* Dynamic heights for inner-container and logo */
+#navbar .navbar-inner-container {
+  height: 72px; /* 10% smaller height on mobile (was h-24 / 96px) */
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#navbar .navbar-logo-img {
+  height: 52px; /* 10% smaller logo on mobile */
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 768px) {
+  #navbar .navbar-inner-container {
+    height: 88px; /* 10% smaller height on desktop (was h-28 / 112px) */
+  }
+
+  #navbar .navbar-logo-img {
+    height: 64px; /* 10% smaller logo on desktop (was h-24 / 96px) */
+  }
+}
+
+/* 2. Scrolled State (Opaque White Background, dynamic compact sizing) */
+#navbar.navbar-scrolled {
+  background-color: #ffffff !important;
+  backdrop-filter: blur(0px) !important;
+  -webkit-backdrop-filter: blur(0px) !important;
+  border-bottom: 1px solid #e2e8f0 !important; /* light gray bottom border */
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 8px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Scrolled compact sizing */
+#navbar.navbar-scrolled .navbar-inner-container {
+  height: 64px;
+}
+
+#navbar.navbar-scrolled .navbar-logo-img {
+  height: 44px;
+}
+
+@media (min-width: 768px) {
+  #navbar.navbar-scrolled .navbar-inner-container {
+    height: 72px;
+  }
+
+  #navbar.navbar-scrolled .navbar-logo-img {
+    height: 52px;
+  }
+}
+
+/* Dark Mode Scrolled State */
+.dark #navbar.navbar-scrolled {
+  background-color: #1a1c1e !important; /* deep dark background matching design tokens */
+  border-bottom: 1px solid #2d3135 !important;
+}
+
+/* Premium Nav Link Base Styling */
+.nav-link {
+  position: relative !important;
+  display: inline-block;
+  background-color: transparent !important;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Sliding hover line */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active underline and hover expansion */
+.nav-link:hover::after,
+.nav-link.nav-link-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Active and Hover colors based on navbar scrolled state & dark background adaptation */
+/* 3. Text Contrast & State Adapters for Home Page (Dark Hero Header) */
+.home-page #navbar:not(.navbar-scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.home-page #navbar:not(.navbar-scrolled) .nav-link:hover,
+.home-page #navbar:not(.navbar-scrolled) .nav-link.nav-link-active {
+  color: #ffffff !important;
+}
+
+/* Hamburger button color adaptation */
+.home-page #navbar:not(.navbar-scrolled) #mobile-menu-btn {
+  color: #ffffff !important;
+}
+
+/* Inverted hover container on transparent state */
+.home-page #navbar:not(.navbar-scrolled) #mobile-menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* 4. Text Contrast & State Adapters for Internal Pages (Light/White Header) */
+body:not(.home-page) #navbar:not(.navbar-scrolled) .nav-link {
+  color: #424656 !important; /* text-on-surface-variant */
+}
+
+body:not(.home-page) #navbar:not(.navbar-scrolled) .nav-link:hover,
+body:not(.home-page) #navbar:not(.navbar-scrolled) .nav-link.nav-link-active {
+  color: #0050cb !important; /* primary color */
+}
+
+/* 5. Scrolled state links colors (Opaque white backdrop) */
+#navbar.navbar-scrolled .nav-link {
+  color: #424656 !important;
+}
+
+#navbar.navbar-scrolled .nav-link:hover,
+#navbar.navbar-scrolled .nav-link.nav-link-active {
+  color: #0050cb !important;
+}

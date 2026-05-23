@@ -1,0 +1,94 @@
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-500" id="navbar">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto navbar-inner-container">
+    <!-- Brand Logo -->
+    <a class="flex items-center gap-2 hover:opacity-80 transition-opacity" href="/index.html">
+      <img alt="EQUIPANEXT" class="w-auto object-contain navbar-logo-img" src="./assets/images/marca/Logo.png"/>
+    </a>
+    <!-- Desktop Navigation Links -->
+    <ul class="hidden md:flex gap-gutter items-center">
+      <li>
+        <a class="nav-link font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary uppercase px-3 py-2 transition-all duration-300" href="/index.html">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a class="nav-link font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary uppercase px-3 py-2 transition-all duration-300" href="/nosotros.html">
+          Nosotros
+        </a>
+      </li>
+      <li>
+        <a class="nav-link font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary uppercase px-3 py-2 transition-all duration-300" href="/productos.html">
+          Productos
+        </a>
+      </li>
+      <li>
+        <a class="nav-link font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary uppercase px-3 py-2 transition-all duration-300" href="/diseñador.html">
+          Diseñador B2B
+        </a>
+      </li>
+      <li>
+        <a class="nav-link font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary uppercase px-3 py-2 transition-all duration-300" href="/servicios.html">
+          Servicios
+        </a>
+      </li>
+      <li>
+        <a class="nav-link font-label-caps text-label-caps text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary uppercase px-3 py-2 transition-all duration-300" href="/contacto.html">
+          Contacto
+        </a>
+      </li>
+    </ul>
+    <!-- Trailing Primary Action -->
+    <div class="hidden md:block">
+      <a class="btn-primary inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase px-6 py-3 rounded hover:bg-primary transition-colors" href="/contacto.html">
+        <span class="material-symbols-outlined text-[18px]">forum</span>
+        Cotizar WhatsApp
+      </a>
+    </div>
+    <!-- Mobile Menu Toggle -->
+    <button class="md:hidden text-on-surface-variant p-2 hover:bg-surface-container-low rounded-lg transition-colors" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <!-- Mobile Navigation Menu (Hidden by default) -->
+  <div class="md:hidden hidden bg-surface-container-lowest border-t border-outline-variant absolute w-full left-0 shadow-lg" id="mobile-menu">
+    <ul class="flex flex-col py-2">
+      <li>
+        <a class="block font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low px-margin-mobile py-4 uppercase" href="/index.html">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a class="block font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low px-margin-mobile py-4 uppercase" href="/nosotros.html">
+          Nosotros
+        </a>
+      </li>
+      <li>
+        <a class="block font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low px-margin-mobile py-4 uppercase" href="/productos.html">
+          Productos
+        </a>
+      </li>
+      <li>
+        <a class="block font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low px-margin-mobile py-4 uppercase" href="/diseñador.html">
+          Diseñador B2B
+        </a>
+      </li>
+      <li>
+        <a class="block font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low px-margin-mobile py-4 uppercase" href="/servicios.html">
+          Servicios
+        </a>
+      </li>
+      <li>
+        <a class="block font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low px-margin-mobile py-4 uppercase" href="/contacto.html">
+          Contacto
+        </a>
+      </li>
+      <li class="px-margin-mobile pt-4 pb-2 border-t border-outline-variant/50">
+        <a class="btn-primary flex justify-center items-center gap-2 bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase px-6 py-3 rounded hover:bg-primary transition-colors w-full" href="/contacto.html">
+          <span class="material-symbols-outlined text-[18px]">forum</span>
+          Cotizar WhatsApp
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
