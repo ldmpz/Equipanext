@@ -1,156 +1,142 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Servicios() {
   return (
-    <main className="bg-background text-on-background min-h-screen relative overflow-hidden">
-      {/* Technical Grid Overlay */}
-      <div className="absolute inset-0 grid-pattern opacity-[0.06] z-0"></div>
-      <div className="absolute inset-0 hero-blueprint opacity-[0.08] z-0"></div>
-      
-      {/* Ambient Radial Glows */}
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
-      <div className="absolute bottom-0 left-10 w-[300px] h-[300px] bg-primary-container/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
-
-      {/* Tech terminal details */}
-      <div className="absolute top-12 left-12 font-mono-label text-[10px] text-primary/30 uppercase tracking-widest hidden lg:block">
-        [SYS-INIT // DEPT-SERVICIOS // VER-4.0]
-      </div>
-
+    <main className="bg-[#FFFFFF] text-[#1B1F24] min-h-screen selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
       {/* Hero Section */}
-      <section className="relative pt-[140px] pb-[80px] md:pt-[180px] md:pb-[120px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-        <div className="relative z-10 max-w-3xl fade-in-up">
-          <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary font-mono-label text-[11px] px-3.5 py-1.5 rounded-full mb-6 w-fit uppercase tracking-widest">
-            <span className="dot-live"></span>
-            DIVISIÓN INDUSTRIAL
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight tracking-tight">
-            Ingeniería Textil a <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-white">
-              Escala Industrial.
-            </span>
+      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#F5F7FA] overflow-hidden">
+        {/* Subtle Gradient Background */}
+        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] z-0"></div>
+
+        {/* Ambient Subtle Depth */}
+        <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-b from-[#0057FF]/[0.02] to-transparent rounded-full blur-3xl pointer-events-none z-0"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center fade-in-up">
+          <div className="inline-flex items-center gap-2.5 bg-white border border-[#EAECEF] text-[#4b5563] font-medium text-[11px] px-4 py-1.5 rounded-full mb-8 uppercase tracking-[0.15em] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+            <span className="w-1.5 h-1.5 bg-[#0057FF] rounded-full"></span>
+            División Industrial
+          </div>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-semibold text-[#1B1F24] mb-8 leading-[1.05] tracking-[-0.03em]">
+            Ingeniería a <br className="hidden md:block"/>
+            <span className="text-[#0057FF]">escala industrial.</span>
           </h1>
-          <p className="text-body-lg font-body-lg text-on-surface-variant mb-10 max-w-2xl text-lg leading-relaxed">
-            Ofrecemos soluciones integrales en la fabricación y personalización de uniformes industriales, bordado corporativo y serigrafía técnica. Procesos estandarizados, tecnología de punta y capacidad volumétrica para satisfacer las demandas más exigentes del sector B2B.
+          <p className="text-[#4b5563] max-w-3xl mx-auto text-lg md:text-2xl font-light leading-relaxed tracking-tight">
+            Ofrecemos soluciones integrales en la fabricación y personalización de uniformes industriales, bordado corporativo y serigrafía técnica. Procesos estandarizados y tecnología de punta.
           </p>
         </div>
       </section>
 
       {/* Services Bento Grid */}
-      <section className="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <section className="py-[120px] md:py-[180px] px-6 md:px-12 max-w-7xl mx-auto bg-white">
+        <div className="mb-16 md:mb-24 text-center max-w-3xl mx-auto">
+          <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
+            Nuestros Servicios
+          </span>
+          <h2 className="font-display font-semibold text-[#1B1F24] text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
+            Capacidad Operativa B2B
+          </h2>
+          <p className="text-[#4b5563] text-lg font-light leading-relaxed">
+            Estructura diseñada para soportar los volúmenes más exigentes sin comprometer la calidad y precisión de cada pieza.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
           
           {/* 1. Fabricación Industrial */}
-          <div className="md:col-span-12 lg:col-span-8 bg-surface border border-outline-variant/30 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col lg:flex-row group hover:border-primary/40 transition-all duration-300 fade-in-up relative min-h-[380px]">
-            <div className="absolute top-4 right-4 font-mono-label text-[9px] text-primary/30 z-20">[SYS_SRV // SEC_01]</div>
-            
-            <div className="flex-grow p-8 md:p-10 flex flex-col justify-center relative z-10 w-full lg:w-1/2">
-              <div className="mb-6 inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg border border-primary/20">
-                <span className="material-symbols-outlined text-primary">precision_manufacturing</span>
+          <div className="md:col-span-12 lg:col-span-8 bg-white border border-[#EAECEF] rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500 overflow-hidden flex flex-col lg:flex-row group">
+            <div className="flex-grow p-10 md:p-14 flex flex-col justify-center relative z-10 w-full lg:w-1/2">
+              <div className="w-16 h-16 bg-[#F5F7FA] rounded-2xl flex items-center justify-center mb-8">
+                <span className="material-symbols-outlined text-[#1B1F24] text-[32px] font-light">precision_manufacturing</span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">Fabricación Industrial</h2>
-              <p className="text-body-md font-body-md text-on-surface-variant mb-6 text-sm md:text-base leading-relaxed">
-                Líneas de producción optimizadas para altos volúmenes. Utilizamos patronaje digital y corte automatizado para garantizar consistencia milimétrica en cada pieza de su pedido corporativo. Fabricamos chalecos reflejantes, overoles, uniformes y ropa de trabajo a gran escala.
+              <h3 className="text-3xl font-display font-semibold text-[#1B1F24] mb-4 tracking-tight">Fabricación Industrial</h3>
+              <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed">
+                Líneas de producción optimizadas para altos volúmenes. Utilizamos patronaje digital y corte automatizado para garantizar consistencia milimétrica en cada pieza de su pedido corporativo.
               </p>
-              <div className="mt-auto flex gap-4">
-                <span className="text-[10px] font-mono-label bg-surface-container-high px-3 py-1.5 rounded-md text-primary border border-outline-variant/50 uppercase tracking-wider font-semibold">CAP: 50K/MES</span>
-                <span className="text-[10px] font-mono-label bg-surface-container-high px-3 py-1.5 rounded-md text-primary border border-outline-variant/50 uppercase tracking-wider font-semibold">CORTE LÁSER</span>
+              <div className="mt-auto flex flex-wrap gap-3">
+                <span className="bg-[#F5F7FA] border border-[#EAECEF] text-[#1B1F24] text-[11px] font-medium px-4 py-2 rounded-full tracking-wide">CAP: 50K/MES</span>
+                <span className="bg-[#F5F7FA] border border-[#EAECEF] text-[#1B1F24] text-[11px] font-medium px-4 py-2 rounded-full tracking-wide">CORTE AUTOMATIZADO</span>
               </div>
             </div>
             {/* Background Image Area for Fabricacion */}
-            <div 
-              className="hidden lg:block absolute top-0 right-0 w-1/2 h-full bg-surface-container-low border-l border-outline-variant/30" 
-              style={{
-                backgroundImage: "url('/assets/images/instalaciones/manufacturing_floor.png')", 
-                backgroundSize: 'cover', 
-                backgroundPosition: 'center'
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+            <div className="relative w-full lg:w-1/2 min-h-[300px] lg:min-h-full overflow-hidden bg-[#F5F7FA]">
+              <img 
+                src="/assets/images/instalaciones/manufacturing_floor.png" 
+                alt="Planta de manufactura"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent hidden lg:block"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent lg:hidden"></div>
             </div>
           </div>
 
           {/* 2. Diseño y Personalización */}
-          <div className="md:col-span-6 lg:col-span-4 bg-surface border border-outline-variant/30 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-8 flex flex-col group hover:border-primary/40 transition-all duration-300 fade-in-up stagger-1 relative overflow-hidden">
-            <div className="absolute top-4 right-4 font-mono-label text-[9px] text-primary/30">[SYS_SRV // SEC_02]</div>
-            
-            <div className="mb-6 inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg border border-primary/20">
-              <span className="material-symbols-outlined text-primary">tune</span>
+          <div className="md:col-span-6 lg:col-span-4 bg-white border border-[#EAECEF] rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500 p-10 md:p-14 flex flex-col group">
+            <div className="w-16 h-16 bg-[#F5F7FA] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#0057FF]/5 transition-colors">
+              <span className="material-symbols-outlined text-[#1B1F24] text-[32px] font-light group-hover:text-[#0057FF] transition-colors">tune</span>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">Diseño y Personalización</h3>
-            <p className="text-body-md font-body-md text-on-surface-variant flex-grow text-sm leading-relaxed">
-              Adaptamos prendas estándar o desarrollamos diseños desde cero según sus requerimientos técnicos, normativas de seguridad y manual de identidad corporativa.
+            <h3 className="text-2xl font-display font-semibold text-[#1B1F24] mb-4 tracking-tight">Diseño Personalizado</h3>
+            <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed flex-grow">
+              Adaptamos prendas estándar o desarrollamos diseños desde cero según sus requerimientos técnicos y manual de identidad corporativa.
             </p>
-            <div className="mt-6 border-t border-outline-variant/20 pt-4">
-              <a className="text-[11px] font-mono-label text-primary flex items-center group-hover:translate-x-1 transition-transform tracking-wider uppercase font-semibold gap-1" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20personalizaci%C3%B3n%20de%20uniformes" target="_blank" rel="noopener noreferrer">
-                COTIZAR <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-            </div>
+            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20personalizaci%C3%B3n" target="_blank" rel="noopener noreferrer">
+              Solicitar asesoría <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
           </div>
 
           {/* 3. Bordado Industrial */}
-          <div className="md:col-span-6 lg:col-span-4 bg-surface border border-outline-variant/30 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-8 flex flex-col group hover:border-primary/40 transition-all duration-300 fade-in-up relative overflow-hidden">
-            <div className="absolute top-4 right-4 font-mono-label text-[9px] text-primary/30">[SYS_SRV // SEC_03]</div>
-            
-            <div className="mb-6 inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg border border-primary/20">
-              <span className="material-symbols-outlined text-primary">styler</span>
+          <div className="md:col-span-6 lg:col-span-4 bg-white border border-[#EAECEF] rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500 p-10 md:p-14 flex flex-col group">
+            <div className="w-16 h-16 bg-[#F5F7FA] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#0057FF]/5 transition-colors">
+              <span className="material-symbols-outlined text-[#1B1F24] text-[32px] font-light group-hover:text-[#0057FF] transition-colors">styler</span>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">Bordado Industrial</h3>
-            <p className="text-body-md font-body-md text-on-surface-variant flex-grow text-sm leading-relaxed">
-              Aplicación de logotipos e insignias mediante maquinaria de cabezal múltiple de alta velocidad. Hilos de poliéster de máxima resistencia al desgaste y decoloración por lavado industrial.
+            <h3 className="text-2xl font-display font-semibold text-[#1B1F24] mb-4 tracking-tight">Bordado Industrial</h3>
+            <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed flex-grow">
+              Aplicación de insignias mediante maquinaria de cabezal múltiple de alta velocidad. Hilos resistentes al desgaste y lavado agresivo.
             </p>
-            <div className="mt-6 border-t border-outline-variant/20 pt-4">
-              <a className="text-[11px] font-mono-label text-primary flex items-center group-hover:translate-x-1 transition-transform tracking-wider uppercase font-semibold gap-1" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20bordado%20industrial" target="_blank" rel="noopener noreferrer">
-                COTIZAR <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-            </div>
+            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20bordado" target="_blank" rel="noopener noreferrer">
+              Cotizar servicio <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
           </div>
 
-          {/* 4. Serigrafía y Transfer */}
-          <div className="md:col-span-6 lg:col-span-4 bg-surface border border-outline-variant/30 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-8 flex flex-col group hover:border-primary/40 transition-all duration-300 fade-in-up stagger-1 relative overflow-hidden">
-            <div className="absolute top-4 right-4 font-mono-label text-[9px] text-primary/30">[SYS_SRV // SEC_04]</div>
-            
-            <div className="mb-6 inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg border border-primary/20">
-              <span className="material-symbols-outlined text-primary">layers</span>
+          {/* 4. Serigrafía */}
+          <div className="md:col-span-6 lg:col-span-4 bg-white border border-[#EAECEF] rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500 p-10 md:p-14 flex flex-col group">
+            <div className="w-16 h-16 bg-[#F5F7FA] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#0057FF]/5 transition-colors">
+              <span className="material-symbols-outlined text-[#1B1F24] text-[32px] font-light group-hover:text-[#0057FF] transition-colors">layers</span>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 font-display">Serigrafía y Transfer</h3>
-            <p className="text-body-md font-body-md text-on-surface-variant flex-grow text-sm leading-relaxed">
-              Estampado técnico para señalética de seguridad o branding amplio. Utilizamos tintas plastisol y base de agua curadas térmicamente para garantizar durabilidad extrema en condiciones rudas.
+            <h3 className="text-2xl font-display font-semibold text-[#1B1F24] mb-4 tracking-tight">Serigrafía y Transfer</h3>
+            <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed flex-grow">
+              Estampado técnico para señalética de seguridad. Tintas de alta resistencia curadas térmicamente para durabilidad extrema.
             </p>
-            <div className="mt-6 border-t border-outline-variant/20 pt-4">
-              <a className="text-[11px] font-mono-label text-primary flex items-center group-hover:translate-x-1 transition-transform tracking-wider uppercase font-semibold gap-1" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20serigrafia%20o%20transfer" target="_blank" rel="noopener noreferrer">
-                COTIZAR <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-            </div>
+            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20serigrafia" target="_blank" rel="noopener noreferrer">
+              Cotizar servicio <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
           </div>
 
           {/* 5. Atención a Empresas */}
-          <div className="md:col-span-12 lg:col-span-4 bg-surface border border-outline-variant/30 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-8 flex flex-col group hover:border-primary/45 transition-all duration-300 fade-in-up stagger-2 relative overflow-hidden border-t-4 border-t-primary">
-            <div className="absolute -right-6 -top-6 text-surface-container-high opacity-[0.15] transform rotate-12 pointer-events-none group-hover:scale-105 transition-all duration-500">
-              <span className="material-symbols-outlined" style={{ fontSize: '140px' }}>business</span>
-            </div>
-            <div className="absolute top-4 right-4 font-mono-label text-[9px] text-primary/30">[SYS_SRV // SEC_05]</div>
+          <div className="md:col-span-12 lg:col-span-4 bg-[#1B1F24] rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-500 p-10 md:p-14 flex flex-col group relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-[60px] pointer-events-none z-0"></div>
             
             <div className="relative z-10 flex flex-col h-full">
-              <div className="mb-6 inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg border border-primary/20">
-                <span className="material-symbols-outlined text-primary">headset_mic</span>
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 border border-white/10">
+                <span className="material-symbols-outlined text-white text-[32px] font-light">headset_mic</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 font-display">Atención a Empresas</h3>
-              <p className="text-body-md font-body-md text-on-surface-variant mb-6 text-sm leading-relaxed">
-                Gestión de cuentas corporativas con ejecutivo asignado. Portal de compras B2B privado, control de inventarios, reportes de consumo por sucursal y logística de distribución nacional.
+              <h3 className="text-2xl font-display font-semibold text-white mb-4 tracking-tight">Cuentas B2B</h3>
+              <p className="text-[#9ca3af] mb-8 text-base font-light leading-relaxed">
+                Gestión de cuentas corporativas con ejecutivo asignado, control de inventarios y logística de distribución nacional.
               </p>
               
-              <ul className="space-y-3 mt-auto border-t border-outline-variant/20 pt-4">
-                <li className="flex items-start">
-                  <span className="material-symbols-outlined text-primary mr-2.5 text-lg">check_circle</span>
-                  <span className="text-sm text-on-surface-variant font-medium text-on-surface-variant">Ejecutivo de cuenta dedicado</span>
+              <ul className="space-y-4 mt-auto border-t border-white/10 pt-6">
+                <li className="flex items-center text-[#d1d5db] font-light text-sm">
+                  <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
+                  Ejecutivo dedicado
                 </li>
-                <li className="flex items-start">
-                  <span className="material-symbols-outlined text-primary mr-2.5 text-lg">check_circle</span>
-                  <span className="text-sm text-on-surface-variant font-medium text-on-surface-variant">Portal B2B personalizado</span>
+                <li className="flex items-center text-[#d1d5db] font-light text-sm">
+                  <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
+                  Portal de compras B2B
                 </li>
-                <li className="flex items-start">
-                  <span className="material-symbols-outlined text-primary mr-2.5 text-lg">check_circle</span>
-                  <span className="text-sm text-on-surface-variant font-medium text-on-surface-variant">Logística y distribución</span>
+                <li className="flex items-center text-[#d1d5db] font-light text-sm">
+                  <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
+                  Distribución logística
                 </li>
               </ul>
             </div>
@@ -160,17 +146,15 @@ export default function Servicios() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 border-t border-outline-variant/30 bg-[#08090b] relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[140px] pointer-events-none z-0"></div>
-        <div className="absolute inset-0 grid-pattern opacity-[0.03] z-0"></div>
-        
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center fade-in-up relative z-10">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">¿Requiere una cotización por volumen?</h2>
-          <p className="text-body-md font-body-md text-on-surface-variant mb-8 max-w-xl mx-auto text-base">
-            Nuestro equipo está listo para analizar sus requerimientos y estructurar una propuesta técnica y comercial a la medida de su empresa.
+      <section className="py-[120px] md:py-[160px] bg-[#F5F7FA] border-t border-[#EAECEF] relative overflow-hidden text-center">
+        <div className="max-w-3xl mx-auto px-6 md:px-12 relative z-10 fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-display font-semibold text-[#1B1F24] mb-6 tracking-tight">¿Requiere producción por volumen?</h2>
+          <p className="text-[#4b5563] text-lg font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+            Nuestro equipo de ingeniería está listo para analizar sus requerimientos y estructurar una propuesta técnica y comercial a la medida de su empresa.
           </p>
-          <a className="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-on-primary rounded font-label-caps text-label-caps hover:bg-primary/95 transition-all shadow-sm active:translate-y-px" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20un%20pedido%20por%20volumen" target="_blank" rel="noopener noreferrer">
-            SOLICITAR COTIZACIÓN
+          <a className="inline-flex justify-center items-center gap-2 bg-[#1B1F24] text-white font-medium text-sm px-8 py-4 rounded-full hover:bg-[#2B3138] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(27,31,36,0.15)] hover:-translate-y-0.5" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20un%20pedido%20por%20volumen" target="_blank" rel="noopener noreferrer">
+            Contactar Asesor B2B
+            <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
         </div>
       </section>

@@ -38,30 +38,41 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'navbar-scrolled' : ''
+      className={`fixed top-0 w-full z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        scrolled 
+          ? 'bg-surface/80 backdrop-blur-2xl border-b border-outline-variant/60 shadow-[0_4px_30px_rgba(0,0,0,0.03)] py-4' 
+          : 'bg-transparent border-b border-transparent py-6'
       }`}
       id="navbar"
     >
-      <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto navbar-inner-container">
+      <div className="flex justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <img alt="EQUIPANEXT" className="w-auto object-contain navbar-logo-img" src="/assets/images/marca/Logo.png"/>
+        <Link href="/" className="flex items-center gap-2 group">
+          <img 
+            alt="EQUIPANEXT" 
+            className={`w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-8' : 'h-10'} opacity-90 group-hover:opacity-100`} 
+            src="/assets/images/marca/Logo.png"
+          />
         </Link>
 
         {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex gap-gutter items-center">
+        <ul className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <li key={link.href}>
                 <Link 
                   href={link.href}
-                  className={`nav-link font-label-caps text-label-caps uppercase px-3 py-2 transition-all duration-300 ${
-                    isActive ? 'nav-link-active' : ''
+                  className={`relative font-medium text-sm tracking-wide transition-all duration-300 ${
+                    isActive 
+                      ? 'text-on-background' 
+                      : 'text-on-surface-variant hover:text-on-background'
                   }`}
                 >
                   {link.label}
+                  {isActive && (
+                    <span className="absolute -bottom-1.5 left-0 w-full h-[2px] bg-on-background rounded-full"></span>
+                  )}
                 </Link>
               </li>
             );
@@ -70,16 +81,15 @@ export default function Navbar() {
 
         {/* Trailing Primary Action */}
         <div className="hidden md:block">
-          <Link href="/contacto" className="btn-primary inline-flex items-center gap-2 bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded">
-            <span className="material-symbols-outlined text-[18px]">forum</span>
-            Cotizar WhatsApp
+          <Link href="/contacto" className="inline-flex items-center gap-2 bg-on-background text-surface text-sm font-semibold tracking-wide px-5 py-2.5 rounded-full hover:scale-105 hover:shadow-lg transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
+            Cotizar
           </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-on-surface-variant p-2 hover:bg-surface-container-low rounded-lg transition-colors" 
+          className="md:hidden text-on-background p-2 -mr-2 rounded-full hover:bg-surface-container-low transition-colors" 
           aria-label="Toggle Navigation Menu"
         >
           <span className="material-symbols-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
@@ -87,19 +97,22 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div className={`md:hidden bg-surface-container-lowest border-t border-outline-variant absolute w-full left-0 shadow-lg ${mobileMenuOpen ? 'block' : 'hidden'}`}>
-        <ul className="flex flex-col py-2">
+      <div 
+        className={`md:hidden absolute top-full left-0 w-full bg-surface/95 backdrop-blur-2xl border-b border-outline-variant shadow-2xl transition-all duration-500 origin-top overflow-hidden ${
+          mobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <ul className="flex flex-col py-4 px-6">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className="block font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container-low px-margin-mobile py-4 uppercase">
+              <Link href={link.href} className="block font-medium text-on-surface-variant hover:text-on-background py-4 border-b border-outline-variant/30 text-lg">
                 {link.label}
               </Link>
             </li>
           ))}
-          <li className="px-margin-mobile pt-4 pb-2 border-t border-outline-variant/50">
-            <Link href="/contacto" className="btn-primary flex justify-center items-center gap-2 bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded w-full">
-              <span className="material-symbols-outlined text-[18px]">forum</span>
-              Cotizar WhatsApp
+          <li className="pt-6 pb-2">
+            <Link href="/contacto" className="flex justify-center items-center gap-2 bg-on-background text-surface font-semibold tracking-wide px-6 py-4 rounded-xl w-full">
+              Cotizar Ahora
             </Link>
           </li>
         </ul>
@@ -107,3 +120,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

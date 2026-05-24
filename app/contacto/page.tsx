@@ -24,50 +24,45 @@ export default function Contacto() {
   };
 
   return (
-    <main className="bg-background text-on-background min-h-screen relative overflow-hidden">
-      {/* Technical Grid Overlay */}
-      <div className="absolute inset-0 grid-pattern opacity-[0.06] z-0"></div>
-      <div className="absolute inset-0 hero-blueprint opacity-[0.08] z-0"></div>
-      
-      {/* Ambient Radial Glow */}
-      <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
-      <div className="absolute bottom-0 left-10 w-[300px] h-[300px] bg-primary-container/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+    <main className="bg-[#FFFFFF] text-[#1B1F24] min-h-screen selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
+      {/* Hero Section */}
+      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#F5F7FA] overflow-hidden">
+        {/* Subtle Gradient Background */}
+        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] z-0"></div>
 
-      {/* Tech terminal details */}
-      <div className="absolute top-12 left-12 font-mono-label text-[10px] text-primary/30 uppercase tracking-widest hidden lg:block">
-        [SYS-INIT // DEPT-CONTACTO // VER-4.0]
-      </div>
+        {/* Ambient Subtle Depth */}
+        <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-b from-[#0057FF]/[0.02] to-transparent rounded-full blur-3xl pointer-events-none z-0"></div>
 
-      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-[140px] pb-12 md:pt-[180px] md:pb-24 relative z-10">
-        {/* Header Section */}
-        <header className="mb-16 md:mb-24 text-center fade-in-up">
-          <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary font-mono-label text-[11px] px-3.5 py-1.5 rounded-full mb-4 uppercase tracking-widest">
-            <span className="dot-live"></span>
-            SOPORTE TÉCNICO &amp; VENTAS
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline-lg-mobile md:font-headline-lg text-white mb-6 font-bold tracking-tight font-display">
-            Estamos Aquí para <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-white">Ayudarle.</span>
+        <div className="relative z-10 max-w-4xl mx-auto text-center fade-in-up">
+          <div className="inline-flex items-center gap-2.5 bg-white border border-[#EAECEF] text-[#4b5563] font-medium text-[11px] px-4 py-1.5 rounded-full mb-8 uppercase tracking-[0.15em] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
+            <span className="w-1.5 h-1.5 bg-[#0057FF] rounded-full"></span>
+            Soporte & Ventas B2B
+          </div>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-semibold text-[#1B1F24] mb-8 leading-[1.05] tracking-[-0.03em]">
+            Estamos Aquí para <br className="hidden md:block"/>
+            <span className="text-[#0057FF]">Ayudarle.</span>
           </h1>
-          <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            Conecte con nuestro equipo de especialistas. Proveemos soluciones en uniformes industriales, chalecos reflejantes y bordado personalizado diseñadas para la máxima exigencia y durabilidad.
+          <p className="text-[#4b5563] max-w-3xl mx-auto text-lg md:text-2xl font-light leading-relaxed tracking-tight">
+            Conecte con nuestro equipo de especialistas. Proveemos soluciones en uniformes industriales y personalización diseñadas para la máxima exigencia.
           </p>
-        </header>
+        </div>
+      </section>
 
-        {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      {/* Bento Grid Layout */}
+      <section className="py-[120px] md:py-[160px] px-6 md:px-12 max-w-7xl mx-auto bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
+          
           {/* Contact Form */}
-          <section className="md:col-span-7 bg-surface border border-outline-variant/30 rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.5)] p-6 md:p-8 relative overflow-hidden fade-in-up stagger-1 group hover:border-primary/30 transition-all duration-300">
-            <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-            <div className="absolute top-4 right-4 font-mono-label text-[9px] text-primary/30">[SYS_FORM // SEC_01]</div>
+          <div className="md:col-span-12 lg:col-span-8 bg-white border border-[#EAECEF] rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-8 md:p-14 relative overflow-hidden group">
             
-            <h2 className="text-headline-md font-headline-md text-white mb-6 font-display">Envíenos un Mensaje</h2>
+            <h2 className="text-3xl font-display font-semibold text-[#1B1F24] mb-8 tracking-tight">Envíenos un Mensaje</h2>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs" htmlFor="name">Nombre</label>
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex flex-col gap-3">
+                  <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="name">Nombre Completo</label>
                   <input 
-                    className="form-input w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-body-md font-body-md text-on-surface transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-on-surface-variant/30" 
+                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
                     id="name" 
                     name="name" 
                     placeholder="Ej. Juan Pérez" 
@@ -77,10 +72,10 @@ export default function Contacto() {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs" htmlFor="company">Empresa</label>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="company">Empresa</label>
                   <input 
-                    className="form-input w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-body-md font-body-md text-on-surface transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-on-surface-variant/30" 
+                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
                     id="company" 
                     name="company" 
                     placeholder="Ej. Industrias ABC" 
@@ -90,11 +85,12 @@ export default function Contacto() {
                   />
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs" htmlFor="phone">Teléfono</label>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex flex-col gap-3">
+                  <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="phone">Teléfono</label>
                   <input 
-                    className="form-input w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-body-md font-body-md text-on-surface transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-on-surface-variant/30" 
+                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
                     id="phone" 
                     name="phone" 
                     placeholder="Ej. 55 1234 5678" 
@@ -103,10 +99,10 @@ export default function Contacto() {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs" htmlFor="email">Correo</label>
+                <div className="flex flex-col gap-3">
+                  <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="email">Correo Electrónico</label>
                   <input 
-                    className="form-input w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-body-md font-body-md text-on-surface transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-on-surface-variant/30" 
+                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
                     id="email" 
                     name="email" 
                     placeholder="correo@empresa.com" 
@@ -117,11 +113,12 @@ export default function Contacto() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs" htmlFor="product">Producto de interés</label>
+
+              <div className="flex flex-col gap-3">
+                <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="product">Producto o Servicio de Interés</label>
                 <div className="relative">
                   <select 
-                    className="form-input w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-body-md font-body-md text-on-surface appearance-none transition-all focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" 
+                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] appearance-none transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 font-light" 
                     id="product" 
                     name="product"
                     value={formData.product}
@@ -138,120 +135,114 @@ export default function Contacto() {
                     <option value="serigrafia">Serigrafía y Transfer</option>
                     <option value="otro">Otro</option>
                   </select>
-                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-on-surface-variant">
-                    <span className="material-symbols-outlined">expand_more</span>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-[#4b5563]">
+                    <span className="material-symbols-outlined text-[20px]">unfold_more</span>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-label-caps font-label-caps text-on-surface-variant uppercase text-xs" htmlFor="message">Mensaje</label>
+
+              <div className="flex flex-col gap-3">
+                <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="message">Detalle de Solicitud</label>
                 <textarea 
-                  className="form-input w-full bg-surface-container-lowest border border-outline-variant/40 rounded px-4 py-3 text-body-md font-body-md text-on-surface transition-all resize-none focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-on-surface-variant/30" 
+                  className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all resize-none focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
                   id="message" 
                   name="message" 
-                  placeholder="Detalle su requerimiento o consulta..." 
+                  placeholder="Describa el volumen estimado y requisitos técnicos..." 
                   required 
-                  rows={4}
+                  rows={5}
                   value={formData.message}
                   onChange={handleChange}
                 ></textarea>
               </div>
-              <button className="w-full md:w-auto bg-primary text-on-primary px-8 py-3 rounded font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary/95 transition-all shadow-sm active:translate-y-px flex justify-center items-center gap-2" type="submit">
-                COTIZAR
-                <span className="material-symbols-outlined">send</span>
+
+              <button className="w-full md:w-auto bg-[#1B1F24] text-white px-10 py-4 rounded-full font-medium text-sm tracking-wide hover:bg-[#2B3138] transition-all shadow-[0_4px_14px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 flex justify-center items-center gap-2" type="submit">
+                Enviar Solicitud
+                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </button>
             </form>
-          </section>
+          </div>
 
           {/* Info Sidebar */}
-          <aside className="md:col-span-5 flex flex-col gap-gutter fade-in-up stagger-2">
+          <div className="md:col-span-12 lg:col-span-4 flex flex-col gap-6 lg:gap-8">
+            
             {/* Primary Action Card */}
-            <div className="bg-primary text-on-primary p-6 md:p-8 rounded-lg shadow-sm flex flex-col items-start gap-4 relative overflow-hidden group">
-              <div className="absolute -right-10 -bottom-10 w-[150px] h-[150px] bg-white/5 rounded-full blur-[40px] pointer-events-none"></div>
-              <div className="bg-white text-primary p-3 rounded-lg inline-flex shadow-sm">
-                <span className="material-symbols-outlined text-3xl">chat</span>
+            <div className="bg-[#1B1F24] rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] p-10 flex flex-col items-start gap-6 relative overflow-hidden group hover:-translate-y-1 transition-all duration-500">
+              <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-[60px] pointer-events-none z-0"></div>
+              
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-2 border border-white/10 relative z-10">
+                <span className="material-symbols-outlined text-white text-[32px] font-light">support_agent</span>
               </div>
-              <h3 className="text-headline-md font-headline-md font-bold font-display">Atención Inmediata</h3>
-              <p className="text-body-md font-body-md opacity-90 mb-2">Para cotizaciones urgentes o soporte técnico directo, contáctenos vía WhatsApp.</p>
-              <a className="bg-white text-primary px-6 py-3 rounded-lg font-label-caps text-label-caps uppercase tracking-wider hover:bg-neutral-100 hover:scale-[1.01] transition-all shadow-sm active:translate-y-px inline-flex items-center gap-2 w-full justify-center" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar" target="_blank" rel="noopener noreferrer">
-                COTIZAR
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </a>
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl font-display font-semibold text-white mb-3 tracking-tight">Atención Directa</h3>
+                <p className="text-[#9ca3af] text-base font-light leading-relaxed mb-8">
+                  Para cotizaciones urgentes, licitaciones o requerimientos especializados, nuestro equipo de ingeniería está disponible.
+                </p>
+                <a className="inline-flex justify-center items-center gap-2 bg-white text-[#1B1F24] font-medium text-sm px-8 py-4 rounded-full hover:bg-neutral-100 transition-all duration-300 w-full" href="https://wa.me/521234567890?text=Hola,%20requiero%20asistencia%20inmediata" target="_blank" rel="noopener noreferrer">
+                  Contactar vía WhatsApp
+                </a>
+              </div>
             </div>
 
             {/* Contact Details Card */}
-            <div className="bg-surface border border-outline-variant/30 p-6 rounded-lg shadow-sm flex flex-col gap-6 relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
-              <div className="absolute top-4 right-4 font-mono-label text-[9px] text-primary/30">[SYS_INFO // SEC_02]</div>
+            <div className="bg-[#F5F7FA] border border-[#EAECEF] p-10 rounded-3xl flex flex-col gap-8 relative overflow-hidden group hover:shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-500">
               
               {/* Location */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-primary">
-                  <span className="material-symbols-outlined">location_on</span>
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-white border border-[#EAECEF] shadow-sm flex items-center justify-center text-[#1B1F24] flex-shrink-0">
+                  <span className="material-symbols-outlined font-light">location_on</span>
                 </div>
                 <div>
-                  <h4 className="text-label-caps font-label-caps text-on-surface-variant uppercase mb-1 text-xs">Ubicación Central</h4>
-                  <p className="text-body-md font-body-md text-white font-medium">Chimalhuacán, Estado de México</p>
-                  <p className="text-body-md font-body-md text-on-surface-variant text-sm mt-1">Visitas con cita previa para muestras de materiales.</p>
+                  <h4 className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.1em] mb-2">Centro de Operaciones</h4>
+                  <p className="text-[#1B1F24] font-medium text-base">Chimalhuacán, Estado de México</p>
+                  <p className="text-[#4b5563] text-sm font-light mt-1">Atención corporativa con cita previa.</p>
                 </div>
               </div>
-              <hr className="border-outline-variant/20"/>
+              
+              <hr className="border-[#EAECEF]"/>
               
               {/* Hours */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-primary">
-                  <span className="material-symbols-outlined">schedule</span>
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-white border border-[#EAECEF] shadow-sm flex items-center justify-center text-[#1B1F24] flex-shrink-0">
+                  <span className="material-symbols-outlined font-light">schedule</span>
                 </div>
                 <div>
-                  <h4 className="text-label-caps font-label-caps text-on-surface-variant uppercase mb-1 text-xs">Horario Operativo</h4>
-                  <p className="text-body-md font-body-md text-white font-medium">Lunes a Viernes</p>
-                  <p className="text-body-md font-body-md text-on-surface-variant text-sm">9:00 AM - 5:00 PM</p>
+                  <h4 className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.1em] mb-2">Horario de Atención</h4>
+                  <p className="text-[#1B1F24] font-medium text-base">Lunes a Viernes</p>
+                  <p className="text-[#4b5563] text-sm font-light mt-1">9:00 AM - 6:00 PM (Hora Central)</p>
                 </div>
               </div>
-              <hr className="border-outline-variant/20"/>
+              
+              <hr className="border-[#EAECEF]"/>
               
               {/* Email */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-primary">
-                  <span className="material-symbols-outlined">mail</span>
+              <div className="flex items-start gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-white border border-[#EAECEF] shadow-sm flex items-center justify-center text-[#1B1F24] flex-shrink-0">
+                  <span className="material-symbols-outlined font-light">mail</span>
                 </div>
                 <div>
-                  <h4 className="text-label-caps font-label-caps text-on-surface-variant uppercase mb-1 text-xs">Correo Electrónico</h4>
-                  <a className="text-body-md font-body-md text-primary hover:underline block break-all font-medium" href="mailto:ventasequipanext@gmail.com">ventasequipanext@gmail.com</a>
+                  <h4 className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.1em] mb-2">Contacto Digital</h4>
+                  <a className="text-[#1B1F24] font-medium text-base hover:text-[#0057FF] transition-colors" href="mailto:ventasequipanext@gmail.com">ventasequipanext@gmail.com</a>
+                  <p className="text-[#4b5563] text-sm font-light mt-1">Respuesta en max. 24hrs.</p>
                 </div>
               </div>
+              
             </div>
 
-            {/* Social Links */}
-            <div className="bg-surface border border-outline-variant/30 p-6 rounded-lg shadow-sm relative overflow-hidden group hover:border-primary/30 transition-all duration-300">
-              <div className="absolute top-4 right-4 font-mono-label text-[9px] text-primary/30">[SYS_SOCIAL]</div>
-              <h4 className="text-label-caps font-label-caps text-on-surface-variant uppercase mb-4 text-xs">Redes Sociales</h4>
-              <div className="flex gap-4">
-                <a aria-label="Facebook" className="w-10 h-10 rounded-lg border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all duration-300 hover:bg-surface-container-high" href="#">
-                  <span className="material-symbols-outlined">thumb_up</span>
-                </a>
-                <a aria-label="Instagram" className="w-10 h-10 rounded-lg border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all duration-300 hover:bg-surface-container-high" href="#">
-                  <span className="material-symbols-outlined">photo_camera</span>
-                </a>
-                <a aria-label="TikTok" className="w-10 h-10 rounded-lg border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-all duration-300 hover:bg-surface-container-high" href="#">
-                  <span className="material-symbols-outlined">play_arrow</span>
-                </a>
+            {/* Map Placeholder or Visual Element */}
+            <div className="h-[200px] rounded-3xl border border-[#EAECEF] overflow-hidden relative group">
+              <img alt="Ubicación" className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" src="/assets/images/interactivo/map.png"/>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B1F24]/80 to-transparent flex items-end p-6">
+                 <span className="text-white text-sm font-medium flex items-center gap-2">
+                    <span className="w-2 h-2 bg-[#0057FF] rounded-full"></span>
+                    Estado de México
+                 </span>
               </div>
             </div>
-          </aside>
-        </div>
 
-        {/* Map Section */}
-        <section className="mt-gutter h-64 md:h-96 w-full rounded-lg border border-outline-variant/30 overflow-hidden fade-in-up stagger-3 relative shadow-sm group hover:border-primary/40 transition-all duration-300">
-          <img alt="Mapa de Ubicación EQUIPANEXT" className="w-full h-full object-cover grayscale opacity-40 group-hover:opacity-60 transition-all duration-700 ease-out" src="/assets/images/interactivo/map.png"/>
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none"></div>
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="bg-surface/90 backdrop-blur-md p-4 rounded-lg border border-outline-variant/50 shadow-lg flex items-center gap-3">
-              <span className="material-symbols-outlined text-primary">location_on</span>
-              <span className="text-label-caps font-label-caps uppercase text-white text-xs font-semibold tracking-wider">Ubicados en Chimalhuacán, Estado de México</span>
-            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }

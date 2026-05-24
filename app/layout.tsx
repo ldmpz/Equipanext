@@ -30,19 +30,19 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link 
-          href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" 
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
           rel="stylesheet" 
         />
         <link 
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" 
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@200..700,0..1&display=swap" 
           rel="stylesheet" 
         />
       </head>
-      <body className="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+      <body className="bg-[#FFFFFF] text-[#1B1F24] font-sans antialiased selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
         <ScrollObserver />
         <div className="flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-grow pt-20">
+          <main className="flex-grow">
             {children}
           </main>
           <Footer />
