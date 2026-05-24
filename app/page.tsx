@@ -69,7 +69,7 @@ export default function Home() {
         <div className="px-6 md:px-12 max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-4 divide-x-0 md:divide-x divide-[#EAECEF] text-center">
             <div className="flex flex-col items-center justify-center group">
-              <span className="text-4xl md:text-6xl font-display font-light text-[#1B1F24] mb-3 tracking-tight group-hover:scale-105 transition-transform duration-500">+15<span className="text-[#0057FF]">k</span></span>
+              <span className="text-4xl md:text-6xl font-display font-light text-[#1B1F24] mb-3 tracking-tight group-hover:scale-105 transition-transform duration-500">+50<span className="text-[#0057FF]">k</span></span>
               <span className="text-[10px] font-semibold text-[#9ca3af] uppercase tracking-[0.2em]">Prendas Anuales</span>
             </div>
             <div className="flex flex-col items-center justify-center group">
@@ -128,9 +128,9 @@ export default function Home() {
                   <p className="text-[#9ca3af] text-[13px] font-light leading-relaxed">Telas ignífugas y de alta visibilidad bajo normativas globales.</p>
                 </li>
                 <li className="flex flex-col gap-3 group">
-                  <span className="material-symbols-outlined text-[24px] text-[#1B1F24] group-hover:text-[#0057FF] transition-colors">precision_manufacturing</span>
-                  <h4 className="text-[#1B1F24] font-medium text-[15px]">Corte CNC</h4>
-                  <p className="text-[#9ca3af] text-[13px] font-light leading-relaxed">Precisión milimétrica en el ensamblaje de cada prenda operativa.</p>
+                  <span className="material-symbols-outlined text-[24px] text-[#1B1F24] group-hover:text-[#0057FF] transition-colors">print</span>
+                  <h4 className="text-[#1B1F24] font-medium text-[15px]">DTF y Serigrafía</h4>
+                  <p className="text-[#9ca3af] text-[13px] font-light leading-relaxed">Estampados técnicos de alta definición y resistencia al lavado industrial.</p>
                 </li>
               </ul>
             </div>

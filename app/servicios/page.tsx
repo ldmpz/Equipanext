@@ -54,7 +54,7 @@ export default function Servicios() {
                 Líneas de producción optimizadas para altos volúmenes. Utilizamos patronaje digital y corte automatizado para garantizar consistencia milimétrica en cada pieza de su pedido corporativo.
               </p>
               <div className="mt-auto flex flex-wrap gap-3">
-                <span className="bg-[#F5F7FA] border border-[#EAECEF] text-[#1B1F24] text-[11px] font-medium px-4 py-2 rounded-full tracking-wide">CAP: 50K/MES</span>
+                <span className="bg-[#F5F7FA] border border-[#EAECEF] text-[#1B1F24] text-[11px] font-medium px-4 py-2 rounded-full tracking-wide">CAP: 5K/MES</span>
                 <span className="bg-[#F5F7FA] border border-[#EAECEF] text-[#1B1F24] text-[11px] font-medium px-4 py-2 rounded-full tracking-wide">CORTE AUTOMATIZADO</span>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function Servicios() {
             <div className="w-16 h-16 bg-[#F5F7FA] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#0057FF]/5 transition-colors">
               <span className="material-symbols-outlined text-[#1B1F24] text-[32px] font-light group-hover:text-[#0057FF] transition-colors">layers</span>
             </div>
-            <h3 className="text-2xl font-display font-semibold text-[#1B1F24] mb-4 tracking-tight">Serigrafía y Transfer</h3>
+            <h3 className="text-2xl font-display font-semibold text-[#1B1F24] mb-4 tracking-tight">Serigrafía y DTF</h3>
             <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed flex-grow">
               Estampado técnico para señalética de seguridad. Tintas de alta resistencia curadas térmicamente para durabilidad extrema.
             </p>
@@ -113,33 +113,29 @@ export default function Servicios() {
           </div>
 
           {/* 5. Atención a Empresas */}
-          <div className="md:col-span-12 lg:col-span-4 bg-[#1B1F24] rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:-translate-y-1 transition-all duration-500 p-10 md:p-14 flex flex-col group relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-[60px] pointer-events-none z-0"></div>
-            
-            <div className="relative z-10 flex flex-col h-full">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-8 border border-white/10">
-                <span className="material-symbols-outlined text-white text-[32px] font-light">headset_mic</span>
-              </div>
-              <h3 className="text-2xl font-display font-semibold text-white mb-4 tracking-tight">Cuentas B2B</h3>
-              <p className="text-[#9ca3af] mb-8 text-base font-light leading-relaxed">
-                Gestión de cuentas corporativas con ejecutivo asignado, control de inventarios y logística de distribución nacional.
-              </p>
-              
-              <ul className="space-y-4 mt-auto border-t border-white/10 pt-6">
-                <li className="flex items-center text-[#d1d5db] font-light text-sm">
-                  <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
-                  Ejecutivo dedicado
-                </li>
-                <li className="flex items-center text-[#d1d5db] font-light text-sm">
-                  <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
-                  Portal de compras B2B
-                </li>
-                <li className="flex items-center text-[#d1d5db] font-light text-sm">
-                  <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
-                  Distribución logística
-                </li>
-              </ul>
+          <div className="md:col-span-12 lg:col-span-4 bg-white border border-[#EAECEF] rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500 p-10 md:p-14 flex flex-col group">
+            <div className="w-16 h-16 bg-[#F5F7FA] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#0057FF]/5 transition-colors">
+              <span className="material-symbols-outlined text-[#1B1F24] text-[32px] font-light group-hover:text-[#0057FF] transition-colors">headset_mic</span>
             </div>
+            <h3 className="text-2xl font-display font-semibold text-[#1B1F24] mb-4 tracking-tight">Cuentas B2B</h3>
+            <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed flex-grow">
+              Gestión de cuentas corporativas con ejecutivo asignado, control de inventarios y logística de distribución nacional.
+            </p>
+            
+            <ul className="space-y-4 border-t border-[#EAECEF] pt-6">
+              <li className="flex items-center text-[#4b5563] font-light text-sm">
+                <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
+                Ejecutivo dedicado
+              </li>
+              <li className="flex items-center text-[#4b5563] font-light text-sm">
+                <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
+                Portal de compras B2B
+              </li>
+              <li className="flex items-center text-[#4b5563] font-light text-sm">
+                <span className="material-symbols-outlined text-[#0057FF] mr-3 text-[18px]">check_circle</span>
+                Distribución logística
+              </li>
+            </ul>
           </div>
 
         </div>

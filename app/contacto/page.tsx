@@ -132,7 +132,7 @@ export default function Contacto() {
                     <option value="camisas">Camisas Industriales</option>
                     <option value="pantalones">Pantalones Industriales</option>
                     <option value="bordado">Bordado Personalizado</option>
-                    <option value="serigrafia">Serigrafía y Transfer</option>
+                    <option value="serigrafia">Serigrafía y DTF</option>
                     <option value="otro">Otro</option>
                   </select>
                   <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-5 text-[#4b5563]">
@@ -195,7 +195,6 @@ export default function Contacto() {
                 <div>
                   <h4 className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.1em] mb-2">Centro de Operaciones</h4>
                   <p className="text-[#1B1F24] font-medium text-base">Chimalhuacán, Estado de México</p>
-                  <p className="text-[#4b5563] text-sm font-light mt-1">Atención corporativa con cita previa.</p>
                 </div>
               </div>
               
