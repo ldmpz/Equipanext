@@ -32,6 +32,7 @@ export default function Navbar() {
     { href: '/productos', label: 'Productos' },
     { href: '/servicios', label: 'Servicios' },
     { href: '/disenador', label: 'Diseñador B2B' },
+    { href: '/nosotros', label: 'Nosotros' },
     { href: '/contacto', label: 'Contacto' },
   ];
 
