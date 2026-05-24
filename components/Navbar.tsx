@@ -29,10 +29,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Inicio' },
-    { href: '/nosotros', label: 'Nosotros' },
     { href: '/productos', label: 'Productos' },
-    { href: '/disenador', label: 'Diseñador B2B' },
     { href: '/servicios', label: 'Servicios' },
+    { href: '/disenador', label: 'Diseñador B2B' },
     { href: '/contacto', label: 'Contacto' },
   ];
 
@@ -41,18 +40,17 @@ export default function Navbar() {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        scrolled 
-          ? 'bg-surface/80 backdrop-blur-2xl border-b border-outline-variant/60 shadow-[0_4px_30px_rgba(0,0,0,0.03)] py-4' 
-          : 'bg-transparent border-b border-transparent py-6'
+        isTransparentTop 
+          ? 'bg-transparent border-b border-transparent py-6'
+          : 'bg-white border-b border-[#EAECEF] shadow-sm py-4' 
       }`}
-      id="navbar"
     >
       <div className="flex justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 group">
           <img 
             alt="EQUIPANEXT" 
-            className={`w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-8' : 'h-10'} opacity-90 group-hover:opacity-100 ${isTransparentTop ? 'brightness-0 invert' : ''}`} 
+            className={`w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-12' : 'h-16'} opacity-90 group-hover:opacity-100 drop-shadow-md`} 
             src="/assets/images/marca/Logo.png"
           />
         </Link>
@@ -67,8 +65,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative font-medium text-sm tracking-wide transition-colors duration-300 ${
                     isTransparentTop
-                      ? (isActive ? 'text-white' : 'text-white/70 hover:text-white')
-                      : (isActive ? 'text-on-background' : 'text-on-surface-variant hover:text-on-background')
+                      ? (isActive ? 'text-white' : 'text-white/70 hover:text-[#0057FF]')
+                      : (isActive ? 'text-on-background' : 'text-on-surface-variant hover:text-[#0057FF]')
                   }`}
                 >
                   {link.label}
