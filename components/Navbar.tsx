@@ -36,6 +36,8 @@ export default function Navbar() {
     { href: '/contacto', label: 'Contacto' },
   ];
 
+  const isTransparentTop = !scrolled && pathname === '/';
+
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
@@ -50,7 +52,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <img 
             alt="EQUIPANEXT" 
-            className={`w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-8' : 'h-10'} opacity-90 group-hover:opacity-100`} 
+            className={`w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-8' : 'h-10'} opacity-90 group-hover:opacity-100 ${isTransparentTop ? 'brightness-0 invert' : ''}`} 
             src="/assets/images/marca/Logo.png"
           />
         </Link>
@@ -63,15 +65,15 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link 
                   href={link.href}
-                  className={`relative font-medium text-sm tracking-wide transition-all duration-300 ${
-                    isActive 
-                      ? 'text-on-background' 
-                      : 'text-on-surface-variant hover:text-on-background'
+                  className={`relative font-medium text-sm tracking-wide transition-colors duration-300 ${
+                    isTransparentTop
+                      ? (isActive ? 'text-white' : 'text-white/70 hover:text-white')
+                      : (isActive ? 'text-on-background' : 'text-on-surface-variant hover:text-on-background')
                   }`}
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute -bottom-1.5 left-0 w-full h-[2px] bg-on-background rounded-full"></span>
+                    <span className={`absolute -bottom-1.5 left-0 w-full h-[2px] rounded-full transition-colors duration-300 ${isTransparentTop ? 'bg-white' : 'bg-on-background'}`}></span>
                   )}
                 </Link>
               </li>
@@ -81,7 +83,11 @@ export default function Navbar() {
 
         {/* Trailing Primary Action */}
         <div className="hidden md:block">
-          <Link href="/contacto" className="inline-flex items-center gap-2 bg-on-background text-surface text-sm font-semibold tracking-wide px-5 py-2.5 rounded-full hover:scale-105 hover:shadow-lg transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
+          <Link href="/contacto" className={`inline-flex items-center gap-2 text-sm font-semibold tracking-wide px-5 py-2.5 rounded-full hover:scale-105 hover:shadow-lg transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            isTransparentTop 
+              ? 'bg-white text-[#1B1F24] hover:bg-white/90' 
+              : 'bg-on-background text-surface hover:bg-[#000000]'
+          }`}>
             Cotizar
           </Link>
         </div>
@@ -89,7 +95,11 @@ export default function Navbar() {
         {/* Mobile Menu Toggle */}
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-on-background p-2 -mr-2 rounded-full hover:bg-surface-container-low transition-colors" 
+          className={`md:hidden p-2 -mr-2 rounded-full transition-colors ${
+            isTransparentTop && !mobileMenuOpen
+              ? 'text-white hover:bg-white/10' 
+              : 'text-on-background hover:bg-surface-container-low'
+          }`} 
           aria-label="Toggle Navigation Menu"
         >
           <span className="material-symbols-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
@@ -111,7 +121,7 @@ export default function Navbar() {
             </li>
           ))}
           <li className="pt-6 pb-2">
-            <Link href="/contacto" className="flex justify-center items-center gap-2 bg-on-background text-surface font-semibold tracking-wide px-6 py-4 rounded-xl w-full">
+            <Link href="/contacto" className="flex justify-center items-center gap-2 bg-on-background text-surface font-semibold tracking-wide px-6 py-4 rounded-xl w-full hover:bg-[#000000] transition-colors">
               Cotizar Ahora
             </Link>
           </li>
