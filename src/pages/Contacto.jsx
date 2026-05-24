@@ -184,7 +184,7 @@ export default function Contacto() {
                 <p className="text-body-md font-body-md text-on-surface-variant">9:00 AM - 5:00 PM</p>
               </div>
             </div>
-            <hr class="border-outline-variant"/>
+            <hr className="border-outline-variant"/>
             {/* Email */}
             <div className="flex items-start gap-4">
               <span className="material-symbols-outlined text-outline mt-1">mail</span>
@@ -205,7 +205,7 @@ export default function Contacto() {
               <a aria-label="Instagram" className="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-colors" href="#">
                 <span className="material-symbols-outlined">photo_camera</span>
               </a>
-              <a aria-label="TikTok" class="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-colors" href="#">
+              <a aria-label="TikTok" className="w-10 h-10 rounded border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-colors" href="#">
                 <span className="material-symbols-outlined">play_arrow</span>
               </a>
             </div>
