@@ -92,7 +92,7 @@ export default function Disenador() {
       `• *Precio Estimado Unitario:* $${unitPrice.toLocaleString('es-MX')} MXN\n` +
       `• *Total Estimado Neto:* $${totalCost.toLocaleString('es-MX')} MXN\n\n` +
       `Me gustaría recibir una cotización formal detallada, muestras físicas de las telas y conocer sus tiempos de entrega aproximados.`;
-    return `https://wa.me/521234567890?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/525524398773?text=${encodeURIComponent(message)}`;
   };
 
   return (

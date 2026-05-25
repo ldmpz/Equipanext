@@ -51,7 +51,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <img 
             alt="EQUIPANEXT" 
-            className={`w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-12' : 'h-16'} opacity-90 group-hover:opacity-100 drop-shadow-md`} 
+            className={`w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-14' : 'h-24'} opacity-90 group-hover:opacity-100 drop-shadow-md origin-left`} 
             src="/assets/images/marca/Logo.png"
           />
         </Link>

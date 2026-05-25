@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'EQUIPANEXT - Uniformes Industriales Profesionales',
   description: 'Ingeniería en indumentaria industrial. Proveemos soluciones textiles de alto rendimiento para entornos operativos exigentes.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/assets/images/marca/Favicon.ico',
   },
 };
 

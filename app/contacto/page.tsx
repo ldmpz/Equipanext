@@ -19,9 +19,26 @@ export default function Contacto() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Contacto enviado:', formData);
-    alert('¡Gracias por su mensaje! Nos pondremos en contacto a la brevedad.');
+    
+    // Construir el mensaje para WhatsApp
+    const mensaje = `*Nuevo Prospecto desde la Web* 🌐
+    
+*Nombre:* ${formData.name}
+*Empresa:* ${formData.company || 'N/A'}
+*Teléfono:* ${formData.phone || 'N/A'}
+*Correo:* ${formData.email}
+*Producto de Interés:* ${formData.product}
+
+*Detalles:*
+${formData.message}`;
+
+    const url = `https://wa.me/525524398773?text=${encodeURIComponent(mensaje)}`;
+    
+    // Abrir WhatsApp en una nueva pestaña
+    window.open(url, '_blank');
   };
+
+  // Usamos el envío mediante WhatsApp
 
   return (
     <main className="bg-[#FFFFFF] text-[#1B1F24] min-h-screen selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
@@ -178,7 +195,7 @@ export default function Contacto() {
                 <p className="text-[#9ca3af] text-base font-light leading-relaxed mb-8">
                   Para cotizaciones urgentes, licitaciones o requerimientos especializados, nuestro equipo de ingeniería está disponible.
                 </p>
-                <a className="inline-flex justify-center items-center gap-2 bg-white text-[#1B1F24] font-medium text-sm px-8 py-4 rounded-full hover:bg-neutral-100 transition-all duration-300 w-full" href="https://wa.me/521234567890?text=Hola,%20requiero%20asistencia%20inmediata" target="_blank" rel="noopener noreferrer">
+                <a className="inline-flex justify-center items-center gap-2 bg-white text-[#1B1F24] font-medium text-sm px-8 py-4 rounded-full hover:bg-neutral-100 transition-all duration-300 w-full" href="https://wa.me/525524398773?text=Hola,%20requiero%20asistencia%20inmediata" target="_blank" rel="noopener noreferrer">
                   Contactar vía WhatsApp
                 </a>
               </div>

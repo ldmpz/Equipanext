@@ -37,7 +37,7 @@ export default function Servicios() {
             Capacidad Operativa B2B
           </h2>
           <p className="text-[#4b5563] text-lg font-light leading-relaxed">
-            Estructura diseñada para soportar los volúmenes más exigentes sin comprometer la calidad y precisión de cada pieza.
+            Tenemos la capacidad para sacar adelante tus pedidos grandes. Sabemos que en el taller siempre hay retos, pero contamos con el equipo y la experiencia para adaptarnos y entregarte un trabajo bien hecho.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export default function Servicios() {
             <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed flex-grow">
               Adaptamos prendas estándar o desarrollamos diseños desde cero según sus requerimientos técnicos y manual de identidad corporativa.
             </p>
-            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20personalizaci%C3%B3n" target="_blank" rel="noopener noreferrer">
+            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20personalizaci%C3%B3n" target="_blank" rel="noopener noreferrer">
               Solicitar asesoría <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </a>
           </div>
@@ -93,7 +93,7 @@ export default function Servicios() {
             <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed flex-grow">
               Aplicación de insignias mediante maquinaria de cabezal múltiple de alta velocidad. Hilos resistentes al desgaste y lavado agresivo.
             </p>
-            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20bordado" target="_blank" rel="noopener noreferrer">
+            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20bordado" target="_blank" rel="noopener noreferrer">
               Cotizar servicio <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </a>
           </div>
@@ -107,7 +107,7 @@ export default function Servicios() {
             <p className="text-[#4b5563] mb-8 text-base font-light leading-relaxed flex-grow">
               Estampado técnico para señalética de seguridad. Tintas de alta resistencia curadas térmicamente para durabilidad extrema.
             </p>
-            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20serigrafia" target="_blank" rel="noopener noreferrer">
+            <a className="inline-flex items-center text-sm font-medium text-[#1B1F24] group-hover:text-[#0057FF] transition-colors gap-2 border-t border-[#EAECEF] pt-6" href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20serigrafia" target="_blank" rel="noopener noreferrer">
               Cotizar servicio <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
             </a>
           </div>
@@ -148,7 +148,7 @@ export default function Servicios() {
           <p className="text-[#4b5563] text-lg font-light leading-relaxed mb-10 max-w-2xl mx-auto">
             Nuestro equipo de ingeniería está listo para analizar sus requerimientos y estructurar una propuesta técnica y comercial a la medida de su empresa.
           </p>
-          <a className="inline-flex justify-center items-center gap-2 bg-[#1B1F24] text-white font-medium text-sm px-8 py-4 rounded-full hover:bg-[#2B3138] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(27,31,36,0.15)] hover:-translate-y-0.5" href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20un%20pedido%20por%20volumen" target="_blank" rel="noopener noreferrer">
+          <a className="inline-flex justify-center items-center gap-2 bg-[#1B1F24] text-white font-medium text-sm px-8 py-4 rounded-full hover:bg-[#2B3138] transition-all duration-300 hover:shadow-[0_8px_20px_rgba(27,31,36,0.15)] hover:-translate-y-0.5" href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20un%20pedido%20por%20volumen" target="_blank" rel="noopener noreferrer">
             Contactar Asesor B2B
             <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>

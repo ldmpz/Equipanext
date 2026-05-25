@@ -48,7 +48,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <a 
               className="inline-flex justify-center items-center gap-2 bg-[#0057FF] text-white font-medium text-[13px] px-8 py-4 rounded-full hover:bg-[#0046CC] transition-all duration-500 hover:shadow-[0_12px_24px_rgba(0,87,255,0.25)] hover:-translate-y-1 uppercase tracking-widest" 
-              href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20uniformes" 
+              href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20uniformes" 
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -125,7 +125,7 @@ export default function Home() {
                 <li className="flex flex-col gap-3 group">
                   <span className="material-symbols-outlined text-[24px] text-[#1B1F24] group-hover:text-[#0057FF] transition-colors">shield</span>
                   <h4 className="text-[#1B1F24] font-medium text-[15px]">Materiales Certificados</h4>
-                  <p className="text-[#9ca3af] text-[13px] font-light leading-relaxed">Telas ignífugas y de alta visibilidad bajo normativas globales.</p>
+                  <p className="text-[#9ca3af] text-[13px] font-light leading-relaxed">Telas de alta visibilidad bajo normativas globales.</p>
                 </li>
                 <li className="flex flex-col gap-3 group">
                   <span className="material-symbols-outlined text-[24px] text-[#1B1F24] group-hover:text-[#0057FF] transition-colors">print</span>
@@ -175,40 +175,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Sectores (Cinematic Dark) */}
-      <section className="py-[160px] bg-[#0A0D12] relative" id="industrias">
+      {/* 5. Sectores (Light Theme) */}
+      <section className="py-[160px] bg-white relative border-t border-[#EAECEF]" id="industrias">
         <div className="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
               <span className="text-[10px] font-semibold text-[#0057FF] uppercase tracking-[0.25em] mb-6 block">
                 Cobertura Industrial
               </span>
-              <h2 className="font-display font-semibold text-white text-4xl md:text-[56px] leading-[1.05] tracking-[-0.03em]">
+              <h2 className="font-display font-semibold text-[#1B1F24] text-4xl md:text-[56px] leading-[1.05] tracking-[-0.03em]">
                 Sectores que equipamos.
               </h2>
             </div>
-            <p className="text-white/60 text-[18px] font-light leading-[1.6] max-w-md pb-3">
+            <p className="text-[#4b5563] text-[18px] font-light leading-[1.6] max-w-md pb-3">
               Proveemos soluciones especializadas a corporaciones que definen el rumbo de la industria nacional.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Cinematic Cards */}
-            <div className="group relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-[#111827]">
-              <img src="/assets/images/instalaciones/embroidery_machine.png" alt="Construcción" className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-[2s] ease-out filter grayscale-[0.3]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D12] via-[#0A0D12]/10 to-transparent"></div>
+            {/* Cinematic Cards - Light Variant */}
+            <div className="group relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-[#F5F7FA] border border-[#EAECEF] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-[1s]">
+              <img src="/assets/images/instalaciones/embroidery_machine.png" alt="Construcción" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-[2s] ease-out filter grayscale-[0.5]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent"></div>
               <div className="absolute bottom-10 left-10 right-10">
-                <h3 className="text-white font-display text-3xl mb-3 tracking-tight">Infraestructura y Construcción</h3>
-                <p className="text-white/70 font-light text-[15px] max-w-md">Indumentaria de uso rudo para los megaproyectos más exigentes.</p>
+                <h3 className="text-[#1B1F24] font-display text-3xl mb-3 tracking-tight">Infraestructura y Construcción</h3>
+                <p className="text-[#4b5563] font-light text-[15px] max-w-md">Indumentaria de uso rudo para los megaproyectos más exigentes.</p>
               </div>
             </div>
             
-            <div className="group relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-[#111827]">
-              <img src="/assets/images/instalaciones/stitching_fabric.png" alt="Logística" className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-[2s] ease-out filter grayscale-[0.3]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D12] via-[#0A0D12]/10 to-transparent"></div>
+            <div className="group relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-[#F5F7FA] border border-[#EAECEF] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-[1s]">
+              <img src="/assets/images/instalaciones/stitching_fabric.png" alt="Logística" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-[2s] ease-out filter grayscale-[0.5]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent"></div>
               <div className="absolute bottom-10 left-10 right-10">
-                <h3 className="text-white font-display text-3xl mb-3 tracking-tight">Logística y Distribución</h3>
-                <p className="text-white/70 font-light text-[15px] max-w-md">Alta visibilidad para centros operativos y transporte de carga.</p>
+                <h3 className="text-[#1B1F24] font-display text-3xl mb-3 tracking-tight">Logística y Distribución</h3>
+                <p className="text-[#4b5563] font-light text-[15px] max-w-md">Alta visibilidad para centros operativos y transporte de carga.</p>
               </div>
             </div>
           </div>

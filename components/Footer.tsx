@@ -54,7 +54,7 @@ export default function Footer() {
             {/* Brand Column */}
             <div className="md:col-span-12 lg:col-span-5 flex flex-col items-start">
               <Link href="/" className="inline-block mb-6">
-                <img alt="EQUIPANEXT" className="h-10 w-auto object-contain grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-300" src="/assets/images/marca/Logo.png"/>
+                <img alt="EQUIPANEXT" className="h-20 w-auto object-contain grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-300" src="/assets/images/marca/Logo.png"/>
               </Link>
               <p className="text-[#4b5563] text-sm leading-relaxed max-w-sm mb-8 font-light">
                 Ingeniería en indumentaria industrial. Proveemos soluciones textiles de alto rendimiento para entornos operativos exigentes, con procesos de manufactura 4.0.
@@ -183,7 +183,7 @@ export default function Footer() {
         {/* Footer with CTA */}
         <div className="p-4 bg-white border-t border-slate-100 flex justify-center">
           <a 
-            href="https://wa.me/521234567890?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20uniformes" 
+            href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20uniformes" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-3 px-6 rounded-full w-full flex items-center justify-center gap-2.5 shadow-md transform hover:scale-[1.02] active:scale-[0.98] transition-all text-[15px]"
