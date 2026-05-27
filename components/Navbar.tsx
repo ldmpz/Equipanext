@@ -36,7 +36,7 @@ export default function Navbar() {
     { href: '/contacto', label: 'Contacto' },
   ];
 
-  const isTransparentTop = !scrolled && pathname === '/';
+  const isTransparentTop = !scrolled && (pathname === '/' || pathname === '/productos' || pathname === '/servicios' || pathname === '/nosotros');
 
   return (
     <nav 

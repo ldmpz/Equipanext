@@ -5,30 +5,35 @@ export default function Nosotros() {
   return (
     <div className="bg-[#FFFFFF] text-[#1B1F24] min-h-screen selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
       {/* 1. Hero Section — Cinematic Premium Industrial */}
-      <section className="relative min-h-[70vh] flex items-center bg-[#F5F7FA] overflow-hidden">
+      <section className="relative min-h-[70vh] flex items-center bg-[#1B1F24] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-90 filter grayscale-[0.2] scale-105"
+          style={{ backgroundImage: "url('/assets/images/instalaciones/embroidery_machine.png')" }}
+        ></div>
         
-        {/* Clean, Subtle Gradient Background */}
-        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] z-0"></div>
+        {/* Cinematic Dark Overlay & Bottom Fade */}
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
+        <div className="absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
 
-        {/* Ambient Subtle Depth */}
-        <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-b from-[#0057FF]/[0.02] to-transparent rounded-full blur-3xl pointer-events-none z-0"></div>
-
-        <div className="relative z-10 w-full px-6 md:px-12 max-w-7xl mx-auto py-[160px] md:py-[200px]">
+        <div className="relative z-20 w-full px-6 md:px-12 max-w-7xl mx-auto py-[160px] md:py-[200px]">
           <div className="max-w-4xl animate-fade-in-up">
             {/* Tag / Micro-Badge */}
-            <div className="inline-flex items-center gap-2.5 bg-white border border-[#EAECEF] text-[#4b5563] font-medium text-[11px] px-4 py-1.5 rounded-full mb-8 uppercase tracking-[0.15em] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
-              <span className="w-1.5 h-1.5 bg-[#0057FF] rounded-full animate-pulse"></span>
+            <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/30 text-white font-medium text-[11px] px-5 py-2 rounded-full mb-8 uppercase tracking-[0.15em] shadow-lg">
+              <span className="w-2 h-2 bg-[#4D8CFF] rounded-full shadow-[0_0_10px_rgba(77,140,255,1)]"></span>
               Historia & ADN
             </div>
             
             {/* Premium Heading */}
-            <h1 className="font-display font-semibold mb-6 text-5xl sm:text-6xl md:text-8xl leading-[1.05] tracking-[-0.03em] text-[#1B1F24]">
+            <h1 className="font-display font-bold mb-6 text-5xl sm:text-6xl md:text-8xl leading-[1.05] tracking-[-0.03em] text-white drop-shadow-2xl">
               Precisión forjada <br className="hidden md:inline" />
-              <span className="text-[#0057FF]">en México.</span>
+              <span className="text-[#4D8CFF]">en México.</span>
             </h1>
             
             {/* Description */}
-            <p className="font-body-lg text-[#4b5563] max-w-2xl text-lg md:text-2xl leading-relaxed font-light tracking-tight">
+            <p className="font-body-lg text-white max-w-2xl text-lg md:text-2xl leading-relaxed font-normal tracking-tight drop-shadow-lg opacity-90">
               Décadas de excelencia textil creando el equipo de protección y uniformidad que impulsa a las industrias más exigentes del país.
             </p>
           </div>

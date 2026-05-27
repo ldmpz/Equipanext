@@ -195,8 +195,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Cinematic Cards - Light Variant */}
             <div className="group relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-[#F5F7FA] border border-[#EAECEF] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-[1s]">
-              <img src="/assets/images/instalaciones/embroidery_machine.png" alt="Construcción" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-[2s] ease-out filter grayscale-[0.5]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent"></div>
+              <img src="/assets/images/instalaciones/embroidery_machine.png" alt="Construcción" className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-all duration-[2s] ease-out" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent"></div>
               <div className="absolute bottom-10 left-10 right-10">
                 <h3 className="text-[#1B1F24] font-display text-3xl mb-3 tracking-tight">Infraestructura y Construcción</h3>
                 <p className="text-[#4b5563] font-light text-[15px] max-w-md">Indumentaria de uso rudo para los megaproyectos más exigentes.</p>
@@ -204,8 +204,8 @@ export default function Home() {
             </div>
             
             <div className="group relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-[#F5F7FA] border border-[#EAECEF] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-[1s]">
-              <img src="/assets/images/instalaciones/stitching_fabric.png" alt="Logística" className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-[2s] ease-out filter grayscale-[0.5]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent"></div>
+              <img src="/assets/images/instalaciones/stitching_fabric.png" alt="Logística" className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-all duration-[2s] ease-out" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent"></div>
               <div className="absolute bottom-10 left-10 right-10">
                 <h3 className="text-[#1B1F24] font-display text-3xl mb-3 tracking-tight">Logística y Distribución</h3>
                 <p className="text-[#4b5563] font-light text-[15px] max-w-md">Alta visibilidad para centros operativos y transporte de carga.</p>

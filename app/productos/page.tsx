@@ -8,57 +8,112 @@ const productsData = [
     id: 'roy',
     name: 'Chaleco ROY',
     tag: 'Uso General',
-    image: '/assets/images/productos/safety_vest.png',
+    image: '/assets/images/chalecos/MODELO ROY - GABARDINA/roy.png',
     description: 'Chaleco de gabardina ligera y resistente, cómodo para uso prolongado. Cuenta con 6 cintas reflejantes, múltiples bolsillos funcionales, costuras reforzadas en puntos estratégicos y cierre reforzado para mayor practicidad.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco ROY',
     colors: [
-      { name: 'Naranja Seguridad', hex: '#FF6B00' },
-      { name: 'Amarillo Alta Visibilidad', hex: '#E8FF00' },
-      { name: 'Azul Marino Corporativo', hex: '#1C2938' },
-      { name: 'Rojo Industrial', hex: '#D32F2F' }
+      { name: 'Azul Rey', hex: '#1976D2', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/azul rey.png' },
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/negro.png' },
+      { name: 'Rojo', hex: '#D32F2F', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/ROJO-REFLE.png' },
+      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/vino.png' },
+      { name: 'Gris / Negro', hex: '#9E9E9E', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/GRISNEGRO.png' },
+      { name: 'Negro / Azul Rey', hex: '#1B1F24', secondaryHex: '#1976D2', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/NEGRO-REY.png' },
+      { name: 'Azul Rey / Negro', hex: '#1976D2', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/REY-NEGRO.png' },
+      { name: 'Amarillo Neón / Negro', hex: '#E8FF00', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/amaraillo neon negro.png' },
+      { name: 'Amarillo Neón / Azul Rey', hex: '#E8FF00', secondaryHex: '#1976D2', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/amarillo neon azul rey.png' },
+      { name: 'Gris Oxford / Vino', hex: '#4B5563', secondaryHex: '#800020', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/gris oxford vino.png' },
+      { name: 'Gris / Rosa', hex: '#9E9E9E', secondaryHex: '#FFC0CB', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/gris rosa.png' },
+      { name: 'Morado / Negro', hex: '#800080', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/morado negro.png' },
+      { name: 'Negro / Gris Oxford', hex: '#1B1F24', secondaryHex: '#4B5563', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/negro gris oxford.png' },
+      { name: 'Negro / Naranja', hex: '#1B1F24', secondaryHex: '#FF6B00', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/negro naranja.png' },
+      { name: 'Negro / Rojo', hex: '#1B1F24', secondaryHex: '#D32F2F', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/negro rojo.png' },
+      { name: 'Vino / Caqui', hex: '#800020', secondaryHex: '#F0E68C', image: '/assets/images/chalecos/MODELO ROY - GABARDINA/vino caqui.png' }
     ]
   },
   {
     id: 'nova',
     name: 'Chaleco NOVA',
     tag: 'Ergonómico',
-    image: '/assets/images/productos/safety_vest.png',
+    image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/nova.png',
     description: 'Chaleco reflejante de gabardina ligera y resistente, cómodo y durable para uso laboral. Cuenta con 8 bandas reflejantes, 2 bolsillos frontales, cierre reforzado y cubre cuello para mayor seguridad y comodidad.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco NOVA',
     colors: [
-      { name: 'Naranja Seguridad', hex: '#FF6B00' },
-      { name: 'Amarillo Alta Visibilidad', hex: '#E8FF00' },
-      { name: 'Gris Oxford', hex: '#4B5563' }
+      { name: 'Amarillo Neón', hex: '#E8FF00', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/amarillo neon.png' },
+      { name: 'Naranja', hex: '#FF6B00', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/naranja.png' },
+      { name: 'Azul Rey', hex: '#1976D2', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/azul rey.png' },
+      { name: 'Rojo', hex: '#D32F2F', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/roja.png' },
+      { name: 'Gris Oxford', hex: '#4B5563', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/GRIS OXFORD.png' },
+      { name: 'Caqui', hex: '#F0E68C', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/CAQUI.png' },
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/NEGRO.png' },
+      { name: 'Marino', hex: '#1C2938', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/marino.png' },
+      { name: 'Rosa', hex: '#FFC0CB', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/rosa.png' },
+      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/vino.png' }
     ]
   },
   {
     id: 'brigadista',
     name: 'Chaleco Brigadista',
     tag: 'Multi-Bolsillos',
-    image: '/assets/images/productos/safety_vest.png',
+    image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/brigadista.png',
     description: 'Chaleco de gabardina ligera y cómoda con 5 cintas reflejantes de alta visibilidad. Incluye múltiples bolsillos funcionales, porta radio, porta lámpara, bolsa trasera para documentos y ajuste lateral.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco Brigadista',
     colors: [
-      { name: 'Rojo Emergencia', hex: '#D32F2F' },
-      { name: 'Verde Médico', hex: '#2E7D32' },
-      { name: 'Azul Rescate', hex: '#1976D2' },
-      { name: 'Naranja Evacuación', hex: '#FF6B00' },
-      { name: 'Amarillo Tránsito', hex: '#E8FF00' },
-      { name: 'Negro Seguridad', hex: '#1B1F24' }
+      { name: 'Amarillo', hex: '#FFD600', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/amarillo.png' },
+      { name: 'Rojo', hex: '#D32F2F', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/rojo.png' },
+      { name: 'Verde', hex: '#4CAF50', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/verde.png' },
+      { name: 'Azul Rey', hex: '#1976D2', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/azul rey.png' },
+      { name: 'Naranja', hex: '#FF6B00', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/naranja.png' },
+      { name: 'Gris Oxford', hex: '#4B5563', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/gris oxford.png' },
+      { name: 'Marino', hex: '#1C2938', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/marino.png' },
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/negro.png' },
+      { name: 'Rosa', hex: '#FFC0CB', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/rosa.png' },
+      { name: 'Verde Bandera', hex: '#2E7D32', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/verde bandera.png' },
+      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/vino.png' }
     ]
   },
   {
     id: 'isa',
     name: 'Chaleco ISA',
     tag: 'Transpirable',
-    image: '/assets/images/productos/safety_vest.png',
+    image: '/assets/images/chalecos/MODELO ISA/ISA.png',
     description: 'Chaleco de seguridad reflejante, ideal para construcción y personal técnico. Cuenta con 6 bandas reflejantes visibles hasta 300m, múltiples bolsillos funcionales y malla transpirable.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco ISA',
     colors: [
-      { name: 'Naranja / Malla Negra', hex: '#FF6B00', secondaryHex: '#1B1F24' },
-      { name: 'Amarillo / Malla Negra', hex: '#E8FF00', secondaryHex: '#1B1F24' },
-      { name: 'Verde Limón / Malla', hex: '#AEEA00', secondaryHex: '#AEEA00' }
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA/NEGRO.png' },
+      { name: 'Negro / Amarillo Neón', hex: '#1B1F24', secondaryHex: '#E8FF00', image: '/assets/images/chalecos/MODELO ISA/NEGRO AMARILLO NEON.png' },
+      { name: 'Naranja / Azul Marino', hex: '#FF6B00', secondaryHex: '#1C2938', image: '/assets/images/chalecos/MODELO ISA/NARANJA AZUL MARINO.png' },
+      { name: 'Azul Rey / Marino', hex: '#1976D2', secondaryHex: '#1C2938', image: '/assets/images/chalecos/MODELO ISA/AZUL REY MARINO.png' },
+      { name: 'Verde Neón / Negro', hex: '#AEEA00', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA/VERDE NEON NEGRO.png' },
+      { name: 'Gris Perla / Vino', hex: '#B0BEC5', secondaryHex: '#800020', image: '/assets/images/chalecos/MODELO ISA/GRIS PERLA VINO.png' },
+      { name: 'Negro / Caqui', hex: '#1B1F24', secondaryHex: '#F0E68C', image: '/assets/images/chalecos/MODELO ISA/NEGRO CAQUI.png' },
+      { name: 'Negro / Naranja', hex: '#1B1F24', secondaryHex: '#FF6B00', image: '/assets/images/chalecos/MODELO ISA/NEGRO NARANJA.png' },
+      { name: 'Negro / Verde Bandera', hex: '#1B1F24', secondaryHex: '#2E7D32', image: '/assets/images/chalecos/MODELO ISA/NEGRO VERDE BANDERA.png' }
     ]
+  },
+  {
+    id: 'isa-max',
+    name: 'Chaleco ISA MAX',
+    tag: 'Premium',
+    image: '/assets/images/chalecos/MODELO ISA MAX/ISA MAX.png',
+    description: 'Chaleco de seguridad reflejante premium con diseño reforzado. Ideal para entornos exigentes, ofrece alta visibilidad, durabilidad y confort con múltiples bolsillos organizadores.',
+    whatsappText: 'Hola, me gustaría cotizar el Chaleco ISA MAX',
+    colors: [
+      { name: 'Amarillo Neón / Negro', hex: '#E8FF00', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/amararillo neon negro.png' },
+      { name: 'Gris Perla / Negro', hex: '#B0BEC5', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/gris perla negro.png' },
+      { name: 'Negro / Naranja', hex: '#1B1F24', secondaryHex: '#FF6B00', image: '/assets/images/chalecos/MODELO ISA MAX/negro naranja.png' },
+      { name: 'Negro / Vino', hex: '#1B1F24', secondaryHex: '#800020', image: '/assets/images/chalecos/MODELO ISA MAX/negro vino.png' },
+      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/MODELO ISA MAX/vino.png' }
+    ]
+  },
+  {
+    id: 'nuevo-modelo',
+    name: 'Nuevo Modelo',
+    tag: 'Próximamente',
+    image: '/assets/images/productos/safety_vest.png',
+    description: 'Estamos diseñando la próxima generación de chalecos de alta seguridad. Nuevas características, mejor ergonomía y materiales innovadores.',
+    whatsappText: '',
+    colors: [],
+    comingSoon: true
   }
 ];
 
@@ -83,8 +138,7 @@ export default function Productos() {
   useEffect(() => {
     if (!selectedProduct) return;
     
-    // Default to 3 same images for demo if 'images' array doesn't exist
-    const images = selectedProduct.images || [selectedProduct.image, selectedProduct.image, selectedProduct.image];
+    const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
     
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -96,28 +150,37 @@ export default function Productos() {
   return (
     <div className="bg-[#FFFFFF] text-[#1B1F24] min-h-screen selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
       {/* Hero Section */}
-      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#F5F7FA] overflow-hidden">
-        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] z-0"></div>
-        <div className="absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#0057FF]/[0.02] to-transparent rounded-full blur-3xl pointer-events-none z-0"></div>
+      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#1B1F24] overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-90 filter grayscale-[0.2] scale-105"
+          style={{ backgroundImage: "url('/assets/images/productos/hero_bg.png')" }}
+        ></div>
+        
+        {/* Cinematic Dark Overlay & Bottom Fade (Igual que en Inicio) */}
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
+        <div className="absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center fade-in-up">
-          <div className="inline-flex items-center gap-2.5 bg-white border border-[#EAECEF] text-[#4b5563] font-medium text-[11px] px-4 py-1.5 rounded-full mb-8 uppercase tracking-[0.15em] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
-            <span className="w-1.5 h-1.5 bg-[#0057FF] rounded-full"></span>
+        <div className="relative z-20 max-w-4xl mx-auto text-center fade-in-up">
+          <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/30 text-white font-medium text-[11px] px-5 py-2 rounded-full mb-8 uppercase tracking-[0.15em] shadow-lg">
+            <span className="w-2 h-2 bg-[#4D8CFF] rounded-full shadow-[0_0_10px_rgba(77,140,255,1)]"></span>
             Catálogo Industrial
           </div>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-semibold text-[#1B1F24] mb-8 leading-[1.05] tracking-[-0.03em]">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold text-white mb-8 leading-[1.05] tracking-[-0.03em] drop-shadow-2xl">
             Equipamiento de <br className="hidden md:block"/>
-            <span className="text-[#0057FF]">alto rendimiento.</span>
+            <span className="text-[#4D8CFF]">alto rendimiento.</span>
           </h1>
-          <p className="text-[#4b5563] max-w-2xl mx-auto text-lg md:text-2xl font-light leading-relaxed tracking-tight">
+          <p className="text-white max-w-2xl mx-auto text-lg md:text-2xl font-normal leading-relaxed tracking-tight drop-shadow-lg opacity-90">
             Nuestra línea de productos está diseñada bajo estrictos estándares industriales para garantizar durabilidad, seguridad y presentación profesional en cualquier entorno operativo.
           </p>
         </div>
       </section>
 
       {/* Nuestros Chalecos Reflejantes */}
-      <section className="py-[120px] md:py-[180px] px-6 md:px-12 max-w-7xl mx-auto bg-white">
-        <div className="mb-16 md:mb-24 text-center max-w-3xl mx-auto fade-in-up">
+      <section className="py-[60px] md:py-[80px] px-6 md:px-12 max-w-7xl mx-auto bg-white">
+        <div className="mb-16 md:mb-20 text-center max-w-3xl mx-auto fade-in-up">
           <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
             Línea de Alta Visibilidad
           </span>
@@ -132,29 +195,35 @@ export default function Productos() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {productsData.map((product) => (
-            <div key={product.id} className="bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500 group flex flex-col">
-              <div className="relative h-[320px] bg-[#F5F7FA] overflow-hidden flex items-center justify-center p-8 group-hover:bg-white transition-colors duration-500">
+            <div key={product.id} className={`bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col ${product.comingSoon ? 'cursor-not-allowed' : 'hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500 group'}`}>
+              <div className={`relative h-[320px] overflow-hidden flex items-center justify-center p-8 ${product.comingSoon ? 'bg-[#F5F7FA]' : 'bg-[#F5F7FA] group-hover:bg-white transition-colors duration-500'}`}>
                 <div className="absolute top-6 left-6 bg-white border border-[#EAECEF] px-3 py-1.5 rounded-full font-medium text-[10px] text-[#1B1F24] uppercase tracking-widest shadow-sm z-20">
                   {product.tag}
                 </div>
                 <img 
                   alt={product.name}
-                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" 
+                  className={`max-h-full max-w-full object-contain z-10 ${product.comingSoon ? 'filter grayscale-[0.8] opacity-60' : 'group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]'}`} 
                   src={product.image}
                 />
               </div>
               <div className="p-8 md:p-10 flex flex-col flex-grow bg-white border-t border-[#EAECEF]">
-                <h3 className="font-display font-semibold text-2xl text-[#1B1F24] mb-4 tracking-tight">{product.name}</h3>
-                <p className="text-[#4b5563] flex-grow mb-8 text-base font-light leading-relaxed">
+                <h3 className={`font-display font-semibold text-2xl text-[#1B1F24] mb-4 tracking-tight ${product.comingSoon ? 'opacity-60' : ''}`}>{product.name}</h3>
+                <p className={`text-[#4b5563] flex-grow mb-8 text-base font-light leading-relaxed ${product.comingSoon ? 'opacity-60' : ''}`}>
                   {product.description}
                 </p>
-                <button 
-                  onClick={() => setSelectedProduct(product)}
-                  className="inline-flex justify-center items-center gap-2 bg-[#F5F7FA] text-[#1B1F24] border border-[#EAECEF] font-medium text-sm px-6 py-3.5 rounded-full hover:bg-[#1B1F24] hover:text-white transition-all duration-300 w-full"
-                >
-                  Ver colores y detalles
-                  <span className="material-symbols-outlined text-[18px]">palette</span>
-                </button>
+                {product.comingSoon ? (
+                  <div className="inline-flex justify-center items-center gap-2 bg-[#F5F7FA] text-[#9ca3af] border border-[#EAECEF] font-semibold text-[11px] px-6 py-3.5 rounded-full uppercase tracking-widest w-full cursor-not-allowed">
+                    Próximamente
+                  </div>
+                ) : (
+                  <button 
+                    onClick={() => setSelectedProduct(product)}
+                    className="inline-flex justify-center items-center gap-2 bg-[#F5F7FA] text-[#1B1F24] border border-[#EAECEF] font-medium text-sm px-6 py-3.5 rounded-full hover:bg-[#1B1F24] hover:text-white transition-all duration-300 w-full"
+                  >
+                    Ver colores y detalles
+                    <span className="material-symbols-outlined text-[18px]">palette</span>
+                  </button>
+                )}
               </div>
             </div>
           ))}
@@ -178,52 +247,52 @@ export default function Productos() {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(300px,auto)]">
             {/* Camisas Industriales */}
-            <a className="group relative block w-full h-[400px] md:col-span-8 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500" href="https://wa.me/525524398773?text=Hola,%20me%20gustaría%20cotizar%20camisas%20industriales" target="_blank" rel="noopener noreferrer">
-              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-12 flex items-center justify-center group-hover:bg-white transition-colors duration-500">
-                <img alt="Camisas Industriales" className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" src="/assets/images/productos/work_shirt.png"/>
+            <div className="relative block w-full h-[400px] md:col-span-8 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
+              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-12 flex items-center justify-center">
+                <img alt="Camisas Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_shirt.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center transition-colors">
+              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
                 <div>
-                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1">Camisas Industriales</h3>
-                  <p className="text-[#4b5563] text-sm font-light">Resistencia y transpirabilidad superior.</p>
+                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1 text-opacity-60">Camisas Industriales</h3>
+                  <p className="text-[#4b5563] text-sm font-light text-opacity-60">Resistencia y transpirabilidad superior.</p>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center group-hover:bg-[#1B1F24] group-hover:border-[#1B1F24] transition-all duration-300">
-                  <span className="material-symbols-outlined text-[#1B1F24] group-hover:text-white transition-colors">arrow_forward</span>
+                <div className="px-4 py-2 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center">
+                  <span className="text-[11px] font-semibold text-[#9ca3af] uppercase tracking-widest">Próximamente</span>
                 </div>
               </div>
-            </a>
+            </div>
 
             {/* Overoles */}
-            <a className="group relative block w-full h-[400px] md:col-span-4 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500" href="https://wa.me/525524398773?text=Hola,%20me%20gustaría%20cotizar%20overoles%20industriales" target="_blank" rel="noopener noreferrer">
-              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-10 flex items-center justify-center group-hover:bg-white transition-colors duration-500">
-                <img alt="Overoles Industriales" className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" src="/assets/images/productos/coveralls.png"/>
+            <div className="relative block w-full h-[400px] md:col-span-4 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
+              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-10 flex items-center justify-center">
+                <img alt="Overoles Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/coveralls.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center transition-colors">
+              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
                 <div>
-                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1">Overoles</h3>
-                  <p className="text-[#4b5563] text-sm font-light">Protección integral.</p>
+                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1 text-opacity-60">Overoles</h3>
+                  <p className="text-[#4b5563] text-sm font-light text-opacity-60">Protección integral.</p>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center group-hover:bg-[#1B1F24] group-hover:border-[#1B1F24] transition-all duration-300">
-                  <span className="material-symbols-outlined text-[#1B1F24] group-hover:text-white transition-colors">arrow_forward</span>
+                <div className="px-4 py-2 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center">
+                  <span className="text-[11px] font-semibold text-[#9ca3af] uppercase tracking-widest">Próximamente</span>
                 </div>
               </div>
-            </a>
+            </div>
 
             {/* Pantalones Industriales */}
-            <a className="group relative block w-full h-[400px] md:col-span-12 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500" href="https://wa.me/525524398773?text=Hola,%20me%20gustaría%20cotizar%20pantalones%20industriales" target="_blank" rel="noopener noreferrer">
-              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-12 flex items-center justify-center group-hover:bg-white transition-colors duration-500">
-                <img alt="Pantalones Industriales" className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" src="/assets/images/productos/work_pants.png"/>
+            <div className="relative block w-full h-[400px] md:col-span-12 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
+              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-12 flex items-center justify-center">
+                <img alt="Pantalones Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_pants.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center transition-colors">
+              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
                 <div>
-                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1">Pantalones Industriales</h3>
-                  <p className="text-[#4b5563] text-sm font-light">Ergonomía activa y refuerzos estratégicos para el uso diario.</p>
+                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1 text-opacity-60">Pantalones Industriales</h3>
+                  <p className="text-[#4b5563] text-sm font-light text-opacity-60">Ergonomía activa y refuerzos estratégicos para el uso diario.</p>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center group-hover:bg-[#1B1F24] group-hover:border-[#1B1F24] transition-all duration-300">
-                  <span className="material-symbols-outlined text-[#1B1F24] group-hover:text-white transition-colors">arrow_forward</span>
+                <div className="px-4 py-2 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center">
+                  <span className="text-[11px] font-semibold text-[#9ca3af] uppercase tracking-widest">Próximamente</span>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
@@ -285,7 +354,7 @@ export default function Productos() {
             <div className="w-full md:w-1/2 bg-[#F5F7FA] flex items-center justify-center relative min-h-[300px] md:min-h-full overflow-hidden group">
               {/* Images */}
               {(() => {
-                const images = selectedProduct.images || [selectedProduct.image, selectedProduct.image, selectedProduct.image];
+                const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                 return images.map((img: string, idx: number) => (
                   <div 
                     key={idx}
@@ -303,7 +372,7 @@ export default function Productos() {
               {/* Pagination Dots */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                 {(() => {
-                  const images = selectedProduct.images || [selectedProduct.image, selectedProduct.image, selectedProduct.image];
+                  const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                   return images.map((_, idx: number) => (
                     <button 
                       key={idx}
@@ -319,7 +388,7 @@ export default function Productos() {
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
-                  const images = selectedProduct.images || [selectedProduct.image, selectedProduct.image, selectedProduct.image];
+                  const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                   setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
                 }}
                 className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-[#1B1F24] opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white shadow-sm hover:shadow-md"
@@ -329,7 +398,7 @@ export default function Productos() {
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
-                  const images = selectedProduct.images || [selectedProduct.image, selectedProduct.image, selectedProduct.image];
+                  const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                   setCurrentImageIndex((prev) => (prev + 1) % images.length);
                 }}
                 className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-[#1B1F24] opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white shadow-sm hover:shadow-md"
@@ -358,7 +427,11 @@ export default function Productos() {
                 </h4>
                 <div className="grid grid-cols-2 gap-4">
                   {selectedProduct.colors.map((color: any, index: number) => (
-                    <div key={index} className="flex items-center gap-3 p-3 rounded-2xl border border-[#EAECEF] bg-[#F5F7FA]/50 hover:bg-[#F5F7FA] transition-colors">
+                    <button 
+                      key={index} 
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`flex items-center gap-3 p-3 rounded-2xl border transition-all text-left ${currentImageIndex === index ? 'border-[#0057FF] bg-[#0057FF]/5 shadow-sm' : 'border-[#EAECEF] bg-[#F5F7FA]/50 hover:bg-[#F5F7FA]'}`}
+                    >
                       <div 
                         className="w-8 h-8 rounded-full border border-black/10 shadow-sm relative overflow-hidden flex-shrink-0"
                         style={{ backgroundColor: color.hex }}
@@ -370,10 +443,10 @@ export default function Productos() {
                           ></div>
                         )}
                       </div>
-                      <span className="text-sm text-[#4b5563] font-medium leading-tight">
+                      <span className={`text-sm font-medium leading-tight ${currentImageIndex === index ? 'text-[#0057FF]' : 'text-[#4b5563]'}`}>
                         {color.name}
                       </span>
-                    </div>
+                    </button>
                   ))}
                 </div>
               </div>
