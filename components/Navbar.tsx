@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,10 +50,13 @@ export default function Navbar() {
       <div className="flex justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <img 
+          <Image 
             alt="EQUIPANEXT" 
+            width={180}
+            height={96}
             className={`w-auto object-contain transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'h-14' : 'h-24'} opacity-90 group-hover:opacity-100 drop-shadow-md origin-left`} 
             src="/assets/images/marca/Logo.png"
+            priority
           />
         </Link>
 

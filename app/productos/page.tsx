@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Base products data
 const productsData = [
@@ -161,14 +162,14 @@ export default function Productos() {
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
-        <div className="absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
+        <div className="hidden md:block absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
 
         <div className="relative z-20 max-w-4xl mx-auto text-center fade-in-up">
           <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/30 text-white font-medium text-[11px] px-5 py-2 rounded-full mb-8 uppercase tracking-[0.15em] shadow-lg">
             <span className="w-2 h-2 bg-[#4D8CFF] rounded-full shadow-[0_0_10px_rgba(77,140,255,1)]"></span>
             Catálogo Industrial
           </div>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold text-white mb-8 leading-[1.05] tracking-[-0.03em] drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-[1.05] tracking-[-0.03em] drop-shadow-2xl">
             Equipamiento de <br className="hidden md:block"/>
             <span className="text-[#4D8CFF]">alto rendimiento.</span>
           </h1>
@@ -184,7 +185,7 @@ export default function Productos() {
           <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
             Línea de Alta Visibilidad
           </span>
-          <h2 className="font-display font-semibold text-[#1B1F24] text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
+          <h2 className="font-display font-semibold text-[#1B1F24] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
             Chalecos Reflejantes
           </h2>
           <p className="text-[#4b5563] text-lg font-light leading-relaxed">
@@ -200,8 +201,10 @@ export default function Productos() {
                 <div className="absolute top-6 left-6 bg-white border border-[#EAECEF] px-3 py-1.5 rounded-full font-medium text-[10px] text-[#1B1F24] uppercase tracking-widest shadow-sm z-20">
                   {product.tag}
                 </div>
-                <img 
+                <Image 
                   alt={product.name}
+                  width={400}
+                  height={400}
                   className={`max-h-full max-w-full object-contain z-10 ${product.comingSoon ? 'filter grayscale-[0.8] opacity-60' : 'group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]'}`} 
                   src={product.image}
                 />
@@ -237,7 +240,7 @@ export default function Productos() {
             <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
               Gama Completa
             </span>
-            <h2 className="font-display font-semibold text-[#1B1F24] text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
+            <h2 className="font-display font-semibold text-[#1B1F24] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
               Explora todas las categorías
             </h2>
             <p className="text-[#4b5563] text-lg font-light leading-relaxed">
@@ -249,7 +252,7 @@ export default function Productos() {
             {/* Camisas Industriales */}
             <div className="relative block w-full h-[400px] md:col-span-8 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
               <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-12 flex items-center justify-center">
-                <img alt="Camisas Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_shirt.png"/>
+                <Image width={400} height={400} alt="Camisas Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_shirt.png"/>
               </div>
               <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
                 <div>
@@ -265,7 +268,7 @@ export default function Productos() {
             {/* Overoles */}
             <div className="relative block w-full h-[400px] md:col-span-4 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
               <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-10 flex items-center justify-center">
-                <img alt="Overoles Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/coveralls.png"/>
+                <Image width={400} height={400} alt="Overoles Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/coveralls.png"/>
               </div>
               <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
                 <div>
@@ -281,7 +284,7 @@ export default function Productos() {
             {/* Pantalones Industriales */}
             <div className="relative block w-full h-[400px] md:col-span-12 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
               <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-12 flex items-center justify-center">
-                <img alt="Pantalones Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_pants.png"/>
+                <Image width={400} height={400} alt="Pantalones Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_pants.png"/>
               </div>
               <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
                 <div>
@@ -321,7 +324,7 @@ export default function Productos() {
             </div>
           </div>
           <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden group bg-[#F5F7FA]">
-            <img alt="Máquina de Bordado Industrial" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-0" src="/assets/images/instalaciones/embroidery_machine.png"/>
+            <Image width={800} height={800} alt="Máquina de Bordado Industrial" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-0" src="/assets/images/instalaciones/embroidery_machine.png"/>
             {/* Soft inner shadow */}
             <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] pointer-events-none"></div>
           </div>
@@ -360,9 +363,11 @@ export default function Productos() {
                     key={idx}
                     className={`absolute inset-0 flex items-center justify-center p-8 transition-opacity duration-1000 ease-in-out ${currentImageIndex === idx ? 'opacity-100' : 'opacity-0'}`}
                   >
-                    <img 
+                    <Image 
                       src={img} 
                       alt={`${selectedProduct.name} vista ${idx + 1}`}
+                      width={600}
+                      height={600}
                       className="max-h-[300px] md:max-h-[400px] object-contain drop-shadow-xl"
                     />
                   </div>

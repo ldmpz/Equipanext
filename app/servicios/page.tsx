@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Servicios() {
   return (
@@ -16,14 +17,14 @@ export default function Servicios() {
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
-        <div className="absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
+        <div className="hidden md:block absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
 
         <div className="relative z-20 max-w-4xl mx-auto text-center fade-in-up">
           <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/30 text-white font-medium text-[11px] px-5 py-2 rounded-full mb-8 uppercase tracking-[0.15em] shadow-lg">
             <span className="w-2 h-2 bg-[#4D8CFF] rounded-full shadow-[0_0_10px_rgba(77,140,255,1)]"></span>
             División Industrial
           </div>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-bold text-white mb-8 leading-[1.05] tracking-[-0.03em] drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-[1.05] tracking-[-0.03em] drop-shadow-2xl">
             Ingeniería a <br className="hidden md:block"/>
             <span className="text-[#4D8CFF]">escala industrial.</span>
           </h1>
@@ -39,7 +40,7 @@ export default function Servicios() {
           <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
             Nuestros Servicios
           </span>
-          <h2 className="font-display font-semibold text-[#1B1F24] text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
+          <h2 className="font-display font-semibold text-[#1B1F24] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
             Capacidad Operativa B2B
           </h2>
           <p className="text-[#4b5563] text-lg font-light leading-relaxed">
@@ -66,10 +67,12 @@ export default function Servicios() {
             </div>
             {/* Background Image Area for Fabricacion */}
             <div className="relative w-full lg:w-1/2 min-h-[300px] lg:min-h-full overflow-hidden bg-[#F5F7FA]">
-              <img 
+              <Image 
                 src="/assets/images/instalaciones/manufacturing_floor.png" 
                 alt="Planta de manufactura"
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent hidden lg:block"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent lg:hidden"></div>
@@ -150,7 +153,7 @@ export default function Servicios() {
       {/* CTA Section */}
       <section className="py-[120px] md:py-[160px] bg-[#F5F7FA] border-t border-[#EAECEF] relative overflow-hidden text-center">
         <div className="max-w-3xl mx-auto px-6 md:px-12 relative z-10 fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-display font-semibold text-[#1B1F24] mb-6 tracking-tight">¿Requiere producción por volumen?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-[#1B1F24] mb-6 tracking-tight">¿Requiere producción por volumen?</h2>
           <p className="text-[#4b5563] text-lg font-light leading-relaxed mb-10 max-w-2xl mx-auto">
             Nuestro equipo de ingeniería está listo para analizar sus requerimientos y estructurar una propuesta técnica y comercial a la medida de su empresa.
           </p>

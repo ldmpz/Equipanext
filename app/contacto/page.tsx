@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 export default function Contacto() {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ ${formData.message}`;
         <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] z-0"></div>
 
         {/* Ambient Subtle Depth */}
-        <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-b from-[#0057FF]/[0.02] to-transparent rounded-full blur-3xl pointer-events-none z-0"></div>
+        <div className="hidden md:block absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-b from-[#0057FF]/[0.02] to-transparent rounded-full blur-3xl pointer-events-none z-0"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center fade-in-up">
           <div className="inline-flex items-center gap-2.5 bg-white border border-[#EAECEF] text-[#4b5563] font-medium text-[11px] px-4 py-1.5 rounded-full mb-8 uppercase tracking-[0.15em] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
@@ -184,7 +185,7 @@ ${formData.message}`;
             
             {/* Primary Action Card */}
             <div className="bg-[#1B1F24] rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] p-10 flex flex-col items-start gap-6 relative overflow-hidden group hover:-translate-y-1 transition-all duration-500">
-              <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-[60px] pointer-events-none z-0"></div>
+              <div className="hidden md:block absolute top-0 right-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-[60px] pointer-events-none z-0"></div>
               
               <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-2 border border-white/10 relative z-10">
                 <span className="material-symbols-outlined text-white text-[32px] font-light">support_agent</span>
@@ -247,7 +248,7 @@ ${formData.message}`;
 
             {/* Map Placeholder or Visual Element */}
             <div className="h-[200px] rounded-3xl border border-[#EAECEF] overflow-hidden relative group">
-              <img alt="Ubicación" className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" src="/assets/images/interactivo/map.png"/>
+              <Image alt="Ubicación" fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" src="/assets/images/interactivo/map.png"/>
               <div className="absolute inset-0 bg-gradient-to-t from-[#1B1F24]/80 to-transparent flex items-end p-6">
                  <span className="text-white text-sm font-medium flex items-center gap-2">
                     <span className="w-2 h-2 bg-[#0057FF] rounded-full"></span>

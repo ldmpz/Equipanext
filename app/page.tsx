@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -9,16 +10,14 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1B1F24]" id="inicio">
         {/* Background Video with Poster Fallback */}
         <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#1B1F24]">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
-            poster="/assets/images/instalaciones/hero_background.png"
-            className="absolute top-1/2 left-1/2 w-auto min-w-full min-h-full max-w-none -translate-x-1/2 -translate-y-1/2 object-cover filter grayscale-[0.2] opacity-90 scale-105"
-          >
-            <source src="/assets/videos/hero_industrial.mp4" type="video/mp4" />
-          </video>
+          <Image 
+            src="/assets/images/instalaciones/hero_background.png" 
+            alt="Hero Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover filter grayscale-[0.2] opacity-90 scale-105"
+          />
         </div>
 
         {/* Cinematic Dark Overlay & Bottom Fade */}
@@ -28,26 +27,26 @@ export default function Home() {
 
         <div className="relative z-20 w-full px-6 md:px-12 max-w-6xl mx-auto pt-32 pb-20 text-center flex flex-col items-center animate-fade-in-up">
           {/* Micro-Badge */}
-          <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-[10px] px-4 py-2 rounded-full mb-8 uppercase tracking-[0.25em] shadow-lg">
-            <span className="w-1.5 h-1.5 bg-[#0057FF] rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium text-[10px] md:text-[12px] px-5 py-2.5 rounded-full mb-8 uppercase tracking-[0.25em] shadow-xl">
+            <span className="w-2 h-2 bg-[#0057FF] rounded-full animate-pulse shadow-[0_0_8px_rgba(0,87,255,0.8)]"></span>
             Ingeniería Textil Corporativa
           </div>
           
           {/* Premium Heading */}
-          <h1 className="font-display font-semibold mb-8 text-5xl sm:text-6xl md:text-[92px] leading-[1.02] tracking-[-0.03em] text-white">
-            Precisión industrial. <br className="hidden md:inline" />
-            <span className="text-[#0057FF]">Rendimiento absoluto.</span>
+          <h1 className="font-display font-extrabold mb-8 text-5xl sm:text-6xl md:text-[100px] leading-[1] tracking-[-0.04em] text-white drop-shadow-2xl">
+            ¡BIENVENIDO A <br className="hidden md:inline" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0057FF] via-[#0088FF] to-[#00A3FF] drop-shadow-none">EQUIPANEXT!</span>
           </h1>
           
           {/* Description */}
-          <p className="font-body-lg text-white/80 mb-12 max-w-2xl text-lg md:text-[22px] leading-[1.6] font-light tracking-[-0.01em]">
-            Indumentaria técnica y equipo de alta visibilidad para operaciones críticas. Elevamos el estándar de seguridad de las empresas líderes en México.
+          <p className="font-body-lg text-white/90 mb-12 max-w-3xl text-lg md:text-[24px] leading-[1.6] font-light tracking-[-0.01em] drop-shadow-md">
+            Diseñamos indumentaria técnica y equipo de alta visibilidad para operaciones críticas. <strong className="font-medium text-white">Elevamos el estándar de seguridad</strong> de las empresas líderes en México con precisión industrial y rendimiento absoluto.
           </p>
           
           {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-4">
             <a 
-              className="inline-flex justify-center items-center gap-2 bg-[#0057FF] text-white font-medium text-[13px] px-8 py-4 rounded-full hover:bg-[#0046CC] transition-all duration-500 hover:shadow-[0_12px_24px_rgba(0,87,255,0.25)] hover:-translate-y-1 uppercase tracking-widest" 
+              className="inline-flex justify-center items-center gap-2 bg-[#0057FF] text-white font-medium text-[13px] px-8 py-4 rounded-full hover:bg-[#0046CC] transition-all duration-500 hover:shadow-[0_12px_24px_rgba(0,87,255,0.25)] hover:-translate-y-1 uppercase tracking-widest w-full sm:w-auto" 
               href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20uniformes" 
               target="_blank" 
               rel="noopener noreferrer"
@@ -55,7 +54,7 @@ export default function Home() {
               Cotizar Proyecto
             </a>
             <Link 
-              className="inline-flex justify-center items-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 font-medium text-[13px] px-8 py-4 rounded-full hover:bg-white hover:text-[#1B1F24] transition-all duration-500 hover:shadow-[0_12px_24px_rgba(0,0,0,0.15)] hover:-translate-y-1 uppercase tracking-widest" 
+              className="inline-flex justify-center items-center gap-2 bg-white/10 backdrop-blur-md text-white border border-white/20 font-medium text-[13px] px-8 py-4 rounded-full hover:bg-white hover:text-[#1B1F24] transition-all duration-500 hover:shadow-[0_12px_24px_rgba(0,0,0,0.15)] hover:-translate-y-1 uppercase tracking-widest w-full sm:w-auto" 
               href="/productos"
             >
               Explorar Catálogo
@@ -95,10 +94,13 @@ export default function Home() {
             
             <div className="order-2 lg:order-1 relative group">
               <div className="relative rounded-3xl overflow-hidden bg-[#F5F7FA] aspect-[4/5] sm:aspect-square">
-                <img 
+                <Image 
                   alt="Fabricación de uniformes de precisión" 
-                  className="w-full h-full object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 filter contrast-[1.05] grayscale-[0.1]" 
+                  className="object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 filter contrast-[1.05] grayscale-[0.1]" 
                   src="/assets/images/instalaciones/stitching_fabric.png"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.04)] pointer-events-none rounded-3xl"></div>
               </div>
@@ -195,7 +197,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Cinematic Cards - Light Variant */}
             <div className="group relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-[#F5F7FA] border border-[#EAECEF] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-[1s]">
-              <img src="/assets/images/instalaciones/embroidery_machine.png" alt="Construcción" className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-all duration-[2s] ease-out" />
+              <Image src="/assets/images/instalaciones/embroidery_machine.png" alt="Construcción" fill sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" className="object-cover opacity-100 group-hover:scale-105 transition-transform duration-[2s] ease-out" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent"></div>
               <div className="absolute bottom-10 left-10 right-10">
                 <h3 className="text-[#1B1F24] font-display text-3xl mb-3 tracking-tight">Infraestructura y Construcción</h3>
@@ -204,7 +206,7 @@ export default function Home() {
             </div>
             
             <div className="group relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-[#F5F7FA] border border-[#EAECEF] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-all duration-[1s]">
-              <img src="/assets/images/instalaciones/stitching_fabric.png" alt="Logística" className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-all duration-[2s] ease-out" />
+              <Image src="/assets/images/instalaciones/stitching_fabric.png" alt="Logística" fill sizes="(max-width: 768px) 100vw, 50vw" loading="lazy" className="object-cover opacity-100 group-hover:scale-105 transition-transform duration-[2s] ease-out" />
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent"></div>
               <div className="absolute bottom-10 left-10 right-10">
                 <h3 className="text-[#1B1F24] font-display text-3xl mb-3 tracking-tight">Logística y Distribución</h3>

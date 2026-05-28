@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Nosotros() {
   return (
@@ -16,7 +17,7 @@ export default function Nosotros() {
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
-        <div className="absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
+        <div className="hidden md:block absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
 
         <div className="relative z-20 w-full px-6 md:px-12 max-w-7xl mx-auto py-[160px] md:py-[200px]">
           <div className="max-w-4xl animate-fade-in-up">
@@ -27,7 +28,7 @@ export default function Nosotros() {
             </div>
             
             {/* Premium Heading */}
-            <h1 className="font-display font-bold mb-6 text-5xl sm:text-6xl md:text-8xl leading-[1.05] tracking-[-0.03em] text-white drop-shadow-2xl">
+            <h1 className="font-display font-bold mb-6 text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.05] tracking-[-0.03em] text-white drop-shadow-2xl">
               Precisión forjada <br className="hidden md:inline" />
               <span className="text-[#4D8CFF]">en México.</span>
             </h1>
@@ -50,7 +51,7 @@ export default function Nosotros() {
               <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
                 Origen Industrial
               </span>
-              <h2 className="font-display font-semibold text-[#1B1F24] text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
+              <h2 className="font-display font-semibold text-[#1B1F24] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
                 Nuestra Historia
               </h2>
               
@@ -77,10 +78,12 @@ export default function Nosotros() {
             {/* Visual Column */}
             <div className="relative group">
               <div className="relative rounded-2xl overflow-hidden bg-[#F5F7FA] shadow-[0_20px_40px_rgba(0,0,0,0.06)] border border-[#EAECEF] aspect-[4/5] sm:aspect-square">
-                <img 
+                <Image 
                   alt="Maquinaria de precisión" 
-                  className="w-full h-full object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" 
+                  className="object-cover transition-transform duration-[2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" 
                   src="/assets/images/instalaciones/embroidery_machine.png"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)] pointer-events-none rounded-2xl"></div>
               </div>
@@ -127,7 +130,7 @@ export default function Nosotros() {
             <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
               Nuestro Compromiso
             </span>
-            <h2 className="font-display font-semibold text-[#1B1F24] text-4xl md:text-5xl leading-[1.15] tracking-[-0.02em]">
+            <h2 className="font-display font-semibold text-[#1B1F24] text-3xl sm:text-4xl md:text-5xl leading-[1.15] tracking-[-0.02em]">
               Atención que forja relaciones.
             </h2>
           </div>
