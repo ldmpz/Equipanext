@@ -56,9 +56,9 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 group">
             <Image
               alt="EQUIPANEXT Logo"
-              width={160}
-              height={50}
-              className="h-10 md:h-12 w-auto object-contain transition-all duration-300 opacity-95 group-hover:opacity-100 drop-shadow-md origin-left"
+              width={220}
+              height={70}
+              className="h-12 md:h-16 w-auto object-contain transition-all duration-300 opacity-95 group-hover:opacity-100 drop-shadow-md origin-left"
               src="/assets/images/marca/Logo.png"
               priority
             />
