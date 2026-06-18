@@ -149,9 +149,9 @@ export default function Productos() {
   }, [selectedProduct]);
 
   return (
-    <div className="bg-[#FFFFFF] text-[#1B1F24] min-h-screen selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
+    <div className="bg-[#F5F5F5] text-[#111111] min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#1B1F24] overflow-hidden">
+      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#071A33] overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-90 filter grayscale-[0.2] scale-105"
@@ -162,16 +162,16 @@ export default function Productos() {
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
-        <div className="hidden md:block absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#4D8CFF]/20 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
+        <div className="hidden md:block absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#FFC107]/5 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
 
         <div className="relative z-20 max-w-4xl mx-auto text-center fade-in-up">
-          <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/30 text-white font-medium text-[11px] px-5 py-2 rounded-full mb-8 uppercase tracking-[0.15em] shadow-lg">
-            <span className="w-2 h-2 bg-[#4D8CFF] rounded-full shadow-[0_0_10px_rgba(77,140,255,1)]"></span>
+          <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-[#FFC107]/30 text-[#FFC107] font-bold text-[11px] px-5 py-2 rounded-md mb-8 uppercase tracking-[0.2em]">
+            <span className="w-2 h-2 bg-[#FFC107] rounded-full animate-pulse"></span>
             Catálogo Industrial
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-[1.05] tracking-[-0.03em] drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white mb-8 leading-[1.0] tracking-[-0.03em] drop-shadow-2xl uppercase">
             Equipamiento de <br className="hidden md:block"/>
-            <span className="text-[#4D8CFF]">alto rendimiento.</span>
+            <span className="text-[#FFC107]">alto rendimiento.</span>
           </h1>
           <p className="text-white max-w-2xl mx-auto text-lg md:text-2xl font-normal leading-relaxed tracking-tight drop-shadow-lg opacity-90">
             Nuestra línea de productos está diseñada bajo estrictos estándares industriales para garantizar durabilidad, seguridad y presentación profesional en cualquier entorno operativo.
@@ -182,10 +182,10 @@ export default function Productos() {
       {/* Nuestros Chalecos Reflejantes */}
       <section className="py-[60px] md:py-[80px] px-6 md:px-12 max-w-7xl mx-auto bg-white">
         <div className="mb-16 md:mb-20 text-center max-w-3xl mx-auto fade-in-up">
-          <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
+          <span className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-4 block">
             Línea de Alta Visibilidad
           </span>
-          <h2 className="font-display font-semibold text-[#1B1F24] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
+          <h2 className="font-display font-extrabold text-[#071A33] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
             Chalecos Reflejantes
           </h2>
           <p className="text-[#4b5563] text-lg font-light leading-relaxed">
@@ -221,7 +221,7 @@ export default function Productos() {
                 ) : (
                   <button 
                     onClick={() => setSelectedProduct(product)}
-                    className="inline-flex justify-center items-center gap-2 bg-[#F5F7FA] text-[#1B1F24] border border-[#EAECEF] font-medium text-sm px-6 py-3.5 rounded-full hover:bg-[#1B1F24] hover:text-white transition-all duration-300 w-full"
+                  className="inline-flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#E6B325] text-[#071A33] font-extrabold text-[12px] px-6 py-3.5 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.25)] hover:-translate-y-0.5 transition-all duration-300 w-full tracking-widest uppercase"
                   >
                     Ver colores y detalles
                     <span className="material-symbols-outlined text-[18px]">palette</span>
@@ -237,10 +237,10 @@ export default function Productos() {
       <section className="py-[120px] md:py-[180px] bg-[#F5F7FA] border-y border-[#EAECEF] relative">
         <div className="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
           <div className="mb-16 md:mb-24 text-center max-w-3xl mx-auto">
-            <span className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.2em] mb-4 block">
+            <span className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-4 block">
               Gama Completa
             </span>
-            <h2 className="font-display font-semibold text-[#1B1F24] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6">
+            <h2 className="font-display font-extrabold text-[#071A33] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
               Explora todas las categorías
             </h2>
             <p className="text-[#4b5563] text-lg font-light leading-relaxed">
@@ -305,10 +305,10 @@ export default function Productos() {
         <div className="border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col lg:flex-row">
           <div className="p-10 md:p-16 lg:w-1/2 flex flex-col justify-center bg-white">
             <div className="flex items-center gap-3 mb-6">
-              <span className="material-symbols-outlined text-[#0057FF] text-[28px]">precision_manufacturing</span>
-              <span className="font-medium text-[11px] text-[#0057FF] uppercase tracking-[0.2em]">Servicios Especializados</span>
+              <span className="material-symbols-outlined text-[#FFC107] text-[28px]">precision_manufacturing</span>
+              <span className="font-bold text-[11px] text-[#FFC107] uppercase tracking-[0.2em]">Servicios Especializados</span>
             </div>
-            <h3 className="font-display font-semibold text-4xl text-[#1B1F24] mb-6 tracking-tight">Uniformes personalizados</h3>
+            <h3 className="font-display font-extrabold text-3xl text-[#071A33] mb-6 tracking-tight uppercase">Uniformes personalizados</h3>
             <p className="text-[#4b5563] mb-10 text-lg font-light leading-relaxed">
               Integramos la identidad corporativa de su empresa directamente en la manufactura del equipamiento mediante técnicas de alta precisión.
             </p>
@@ -382,7 +382,7 @@ export default function Productos() {
                     <button 
                       key={idx}
                       onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx); }}
-                      className={`h-2 rounded-full transition-all duration-300 ${currentImageIndex === idx ? 'bg-[#1B1F24] w-6' : 'bg-[#1B1F24]/20 w-2'}`}
+                      className={`h-2 rounded-full transition-all duration-300 ${currentImageIndex === idx ? 'bg-[#FFC107] w-6' : 'bg-[#071A33]/20 w-2'}`}
                       aria-label={`Go to slide ${idx + 1}`}
                     />
                   ));
@@ -414,10 +414,10 @@ export default function Productos() {
 
             {/* Product Details & Colors */}
             <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto flex flex-col">
-              <span className="text-[10px] font-medium text-[#0057FF] uppercase tracking-widest mb-2 block">
+              <span className="text-[10px] font-bold text-[#FFC107] uppercase tracking-widest mb-2 block">
                 {selectedProduct.tag}
               </span>
-              <h2 className="text-3xl font-display font-semibold text-[#1B1F24] mb-4">
+              <h2 className="text-2xl font-display font-extrabold text-[#071A33] mb-4 uppercase">
                 {selectedProduct.name}
               </h2>
               <p className="text-[#4b5563] text-sm font-light leading-relaxed mb-8">
@@ -435,7 +435,7 @@ export default function Productos() {
                     <button 
                       key={index} 
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex items-center gap-3 p-3 rounded-2xl border transition-all text-left ${currentImageIndex === index ? 'border-[#0057FF] bg-[#0057FF]/5 shadow-sm' : 'border-[#EAECEF] bg-[#F5F7FA]/50 hover:bg-[#F5F7FA]'}`}
+                      className={`flex items-center gap-3 p-3 rounded-xl border transition-all text-left ${currentImageIndex === index ? 'border-[#FFC107] bg-[#FFC107]/10 shadow-sm' : 'border-[#B0B7C3]/30 bg-[#F5F5F5]/50 hover:bg-[#F5F5F5]'}`}
                     >
                       <div 
                         className="w-8 h-8 rounded-full border border-black/10 shadow-sm relative overflow-hidden flex-shrink-0"
@@ -448,7 +448,7 @@ export default function Productos() {
                           ></div>
                         )}
                       </div>
-                      <span className={`text-sm font-medium leading-tight ${currentImageIndex === index ? 'text-[#0057FF]' : 'text-[#4b5563]'}`}>
+                      <span className={`text-sm font-semibold leading-tight ${currentImageIndex === index ? 'text-[#071A33]' : 'text-[#B0B7C3]'}`}>
                         {color.name}
                       </span>
                     </button>
@@ -462,7 +462,7 @@ export default function Productos() {
                   href={`https://wa.me/525524398773?text=${encodeURIComponent(selectedProduct.whatsappText)}`}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-full flex justify-center items-center gap-2 bg-[#1B1F24] text-white font-medium text-sm px-6 py-4 rounded-full hover:bg-[#0057FF] transition-all duration-300 shadow-[0_8px_20px_rgba(27,31,36,0.15)]"
+                  className="w-full flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#E6B325] text-[#071A33] font-extrabold text-sm px-6 py-4 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.3)] transition-all duration-300 tracking-widest uppercase"
                 >
                   <span className="material-symbols-outlined text-[18px]">chat</span>
                   Cotizar este modelo

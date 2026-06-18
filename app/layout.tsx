@@ -38,7 +38,7 @@ export default function RootLayout({
           rel="stylesheet" 
         />
       </head>
-      <body className="bg-[#FFFFFF] text-[#1B1F24] font-sans antialiased selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
+      <body className="bg-[#F5F5F5] text-[#111111] font-sans antialiased">
         <ScrollObserver />
         <div className="flex flex-col min-h-screen">
           <Navbar />

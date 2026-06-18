@@ -31,15 +31,15 @@ html {
 
 /* ── Selection ───────────────────────────────────────────── */
 ::selection {
-  background: rgba(0, 102, 255, 0.15);
-  color: #0050cb;
+  background: rgba(255, 193, 7, 0.2);
+  color: #071A33;
 }
 
 /* ── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #f3f4f5; }
-::-webkit-scrollbar-thumb { background: #c2c6d8; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #0050cb; }
+::-webkit-scrollbar-track { background: #0F2747; }
+::-webkit-scrollbar-thumb { background: #FFC107; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #E6B325; }
 
 /* ============================================================
    BUTTONS — Premium depth & interaction
@@ -48,7 +48,7 @@ html {
   position: relative;
   overflow: hidden;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 8px rgba(0, 80, 203, 0.25), 0 1px 2px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.25), 0 1px 2px rgba(0,0,0,0.08);
 }
 .btn-primary::after {
   content: '';
@@ -60,13 +60,43 @@ html {
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 80, 203, 0.35), 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.35), 0 2px 6px rgba(0,0,0,0.1);
 }
 .btn-primary:hover::after { opacity: 1; }
 .btn-primary:active {
   transform: translateY(0px);
-  box-shadow: 0 1px 4px rgba(0,80,203,0.2);
+  box-shadow: 0 1px 4px rgba(255,193,7,0.2);
 }
+
+/* Premium hero industrial button */
+.btn-hero {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.12em;
+}
+.btn-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 50%);
+  opacity: 1;
+}
+.btn-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  transform: scale(1.5);
+}
+.btn-hero:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(255,193,7,0.45), 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+}
+.btn-hero:hover::after { opacity: 1; }
+.btn-hero:active { transform: translateY(-1px); }
 
 .btn-secondary {
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);

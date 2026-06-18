@@ -42,45 +42,43 @@ ${formData.message}`;
   // Usamos el envío mediante WhatsApp
 
   return (
-    <main className="bg-[#FFFFFF] text-[#1B1F24] min-h-screen selection:bg-[#0057FF]/10 selection:text-[#0057FF]">
+    <main className="bg-[#F5F5F5] text-[#111111] min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#F5F7FA] overflow-hidden">
-        {/* Subtle Gradient Background */}
-        <div className="absolute top-0 inset-x-0 h-full bg-gradient-to-b from-[#FFFFFF] to-[#F5F7FA] z-0"></div>
-
-        {/* Ambient Subtle Depth */}
-        <div className="hidden md:block absolute -top-40 -right-40 w-[800px] h-[800px] bg-gradient-to-b from-[#0057FF]/[0.02] to-transparent rounded-full blur-3xl pointer-events-none z-0"></div>
+      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#071A33] overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#FFC107]/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#0F2747]/60 rounded-full blur-[80px] pointer-events-none z-0"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center fade-in-up">
-          <div className="inline-flex items-center gap-2.5 bg-white border border-[#EAECEF] text-[#4b5563] font-medium text-[11px] px-4 py-1.5 rounded-full mb-8 uppercase tracking-[0.15em] shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
-            <span className="w-1.5 h-1.5 bg-[#0057FF] rounded-full"></span>
+          <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-[#FFC107]/30 text-[#FFC107] font-bold text-[11px] px-5 py-2 rounded-md mb-8 uppercase tracking-[0.2em]">
+            <span className="w-1.5 h-1.5 bg-[#FFC107] rounded-full animate-pulse"></span>
             Soporte & Ventas B2B
           </div>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-semibold text-[#1B1F24] mb-8 leading-[1.05] tracking-[-0.03em]">
-            Estamos Aquí para <br className="hidden md:block"/>
-            <span className="text-[#0057FF]">Ayudarle.</span>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-extrabold text-white mb-8 leading-[1.0] tracking-[-0.03em] uppercase">
+            Estamos Aquí Para<br />
+            <span className="text-[#FFC107]">Ayudarle.</span>
           </h1>
-          <p className="text-[#4b5563] max-w-3xl mx-auto text-lg md:text-2xl font-light leading-relaxed tracking-tight">
+          <p className="text-white/70 max-w-3xl mx-auto text-lg md:text-xl font-light leading-relaxed">
             Conecte con nuestro equipo de especialistas. Proveemos soluciones en uniformes industriales y personalización diseñadas para la máxima exigencia.
           </p>
         </div>
       </section>
 
       {/* Bento Grid Layout */}
-      <section className="py-[120px] md:py-[160px] px-6 md:px-12 max-w-7xl mx-auto bg-white">
+      <section className="py-[80px] md:py-[120px] px-6 md:px-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
           
           {/* Contact Form */}
-          <div className="md:col-span-12 lg:col-span-8 bg-white border border-[#EAECEF] rounded-3xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] p-8 md:p-14 relative overflow-hidden group">
-            
-            <h2 className="text-3xl font-display font-semibold text-[#1B1F24] mb-8 tracking-tight">Envíenos un Mensaje</h2>
+          <div className="md:col-span-12 lg:col-span-8 bg-white border border-[#B0B7C3]/30 rounded-2xl shadow-sm p-8 md:p-14 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1 h-full bg-[#FFC107]"></div>
+            <h2 className="text-2xl font-display font-extrabold text-[#071A33] mb-2 tracking-tight uppercase">Envíenos un Mensaje</h2>
+            <p className="text-[#B0B7C3] text-sm mb-10 font-light">Responderemos en un máximo de 24 horas hábiles.</p>
             
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex flex-col gap-3">
                   <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="name">Nombre Completo</label>
                   <input 
-                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
+                    className="w-full bg-[#F5F5F5] border border-[#B0B7C3]/40 rounded-lg px-5 py-3.5 text-sm text-[#111111] transition-all focus:outline-none focus:ring-2 focus:ring-[#FFC107]/40 focus:border-[#FFC107] placeholder-[#B0B7C3] font-light" 
                     id="name" 
                     name="name" 
                     placeholder="Ej. Juan Pérez" 
@@ -93,7 +91,7 @@ ${formData.message}`;
                 <div className="flex flex-col gap-3">
                   <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="company">Empresa</label>
                   <input 
-                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
+                    className="w-full bg-[#F5F5F5] border border-[#B0B7C3]/40 rounded-lg px-5 py-3.5 text-sm text-[#111111] transition-all focus:outline-none focus:ring-2 focus:ring-[#FFC107]/40 focus:border-[#FFC107] placeholder-[#B0B7C3] font-light" 
                     id="company" 
                     name="company" 
                     placeholder="Ej. Industrias ABC" 
@@ -108,7 +106,7 @@ ${formData.message}`;
                 <div className="flex flex-col gap-3">
                   <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="phone">Teléfono</label>
                   <input 
-                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
+                    className="w-full bg-[#F5F5F5] border border-[#B0B7C3]/40 rounded-lg px-5 py-3.5 text-sm text-[#111111] transition-all focus:outline-none focus:ring-2 focus:ring-[#FFC107]/40 focus:border-[#FFC107] placeholder-[#B0B7C3] font-light" 
                     id="phone" 
                     name="phone" 
                     placeholder="Ej. 55 1234 5678" 
@@ -120,7 +118,7 @@ ${formData.message}`;
                 <div className="flex flex-col gap-3">
                   <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="email">Correo Electrónico</label>
                   <input 
-                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
+                    className="w-full bg-[#F5F5F5] border border-[#B0B7C3]/40 rounded-lg px-5 py-3.5 text-sm text-[#111111] transition-all focus:outline-none focus:ring-2 focus:ring-[#FFC107]/40 focus:border-[#FFC107] placeholder-[#B0B7C3] font-light" 
                     id="email" 
                     name="email" 
                     placeholder="correo@empresa.com" 
@@ -136,7 +134,7 @@ ${formData.message}`;
                 <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="product">Producto o Servicio de Interés</label>
                 <div className="relative">
                   <select 
-                    className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] appearance-none transition-all focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 font-light" 
+                    className="w-full bg-[#F5F5F5] border border-[#B0B7C3]/40 rounded-lg px-5 py-3.5 text-sm text-[#111111] appearance-none transition-all focus:outline-none focus:ring-2 focus:ring-[#FFC107]/40 focus:border-[#FFC107] font-light" 
                     id="product" 
                     name="product"
                     value={formData.product}
@@ -162,7 +160,7 @@ ${formData.message}`;
               <div className="flex flex-col gap-3">
                 <label className="text-[11px] font-semibold text-[#4b5563] uppercase tracking-[0.1em]" htmlFor="message">Detalle de Solicitud</label>
                 <textarea 
-                  className="w-full bg-[#F5F7FA] border-none rounded-xl px-5 py-4 text-base text-[#1B1F24] transition-all resize-none focus:outline-none focus:ring-2 focus:ring-[#0057FF]/20 placeholder-[#9ca3af] font-light" 
+                  className="w-full bg-[#F5F5F5] border border-[#B0B7C3]/40 rounded-lg px-5 py-3.5 text-sm text-[#111111] transition-all resize-none focus:outline-none focus:ring-2 focus:ring-[#FFC107]/40 focus:border-[#FFC107] placeholder-[#B0B7C3] font-light" 
                   id="message" 
                   name="message" 
                   placeholder="Describa el volumen estimado y requisitos técnicos..." 
@@ -173,9 +171,9 @@ ${formData.message}`;
                 ></textarea>
               </div>
 
-              <button className="w-full md:w-auto bg-[#1B1F24] text-white px-10 py-4 rounded-full font-medium text-sm tracking-wide hover:bg-[#2B3138] transition-all shadow-[0_4px_14px_rgba(0,0,0,0.1)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.15)] hover:-translate-y-0.5 flex justify-center items-center gap-2" type="submit">
+              <button className="w-full md:w-auto inline-flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#E6B325] text-[#071A33] font-extrabold text-[13px] tracking-[0.1em] px-10 py-4 rounded-md hover:shadow-[0_12px_24px_rgba(255,193,7,0.35)] hover:-translate-y-0.5 transition-all duration-300 uppercase shadow-lg" type="submit">
                 Enviar Solicitud
-                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                <span className="material-symbols-outlined text-[18px]">send</span>
               </button>
             </form>
           </div>
@@ -184,76 +182,65 @@ ${formData.message}`;
           <div className="md:col-span-12 lg:col-span-4 flex flex-col gap-6 lg:gap-8">
             
             {/* Primary Action Card */}
-            <div className="bg-[#1B1F24] rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.15)] p-10 flex flex-col items-start gap-6 relative overflow-hidden group hover:-translate-y-1 transition-all duration-500">
-              <div className="hidden md:block absolute top-0 right-0 w-[200px] h-[200px] bg-white/5 rounded-full blur-[60px] pointer-events-none z-0"></div>
-              
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-2 border border-white/10 relative z-10">
-                <span className="material-symbols-outlined text-white text-[32px] font-light">support_agent</span>
+            <div className="bg-[#071A33] rounded-2xl shadow-xl p-10 flex flex-col items-start gap-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-[#FFC107]/5 rounded-full blur-[60px] pointer-events-none z-0"></div>
+              <div className="w-14 h-14 bg-[#FFC107] rounded-xl flex items-center justify-center mb-2 relative z-10 shadow-lg">
+                <span className="material-symbols-outlined text-[#071A33] text-[28px]">support_agent</span>
               </div>
-              
               <div className="relative z-10">
-                <h3 className="text-2xl font-display font-semibold text-white mb-3 tracking-tight">Atención Directa</h3>
-                <p className="text-[#9ca3af] text-base font-light leading-relaxed mb-8">
+                <h3 className="text-xl font-display font-extrabold text-white mb-3 tracking-tight uppercase">Atención Directa</h3>
+                <p className="text-white/60 text-sm font-light leading-relaxed mb-8">
                   Para cotizaciones urgentes, licitaciones o requerimientos especializados, nuestro equipo de ingeniería está disponible.
                 </p>
-                <a className="inline-flex justify-center items-center gap-2 bg-white text-[#1B1F24] font-medium text-sm px-8 py-4 rounded-full hover:bg-neutral-100 transition-all duration-300 w-full" href="https://wa.me/525524398773?text=Hola,%20requiero%20asistencia%20inmediata" target="_blank" rel="noopener noreferrer">
+                <a className="inline-flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#E6B325] text-[#071A33] font-extrabold text-[12px] px-6 py-3.5 rounded-md transition-all duration-300 w-full tracking-widest uppercase" href="https://wa.me/525524398773?text=Hola,%20requiero%20asistencia%20inmediata" target="_blank" rel="noopener noreferrer">
                   Contactar vía WhatsApp
                 </a>
               </div>
             </div>
 
             {/* Contact Details Card */}
-            <div className="bg-[#F5F7FA] border border-[#EAECEF] p-10 rounded-3xl flex flex-col gap-8 relative overflow-hidden group hover:shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-all duration-500">
-              
-              {/* Location */}
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#EAECEF] shadow-sm flex items-center justify-center text-[#1B1F24] flex-shrink-0">
-                  <span className="material-symbols-outlined font-light">location_on</span>
+            <div className="bg-white border border-[#B0B7C3]/30 p-8 rounded-2xl flex flex-col gap-6 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0 shadow-md">
+                  <span className="material-symbols-outlined text-[#FFC107] text-[20px]">location_on</span>
                 </div>
                 <div>
-                  <h4 className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.1em] mb-2">Centro de Operaciones</h4>
-                  <p className="text-[#1B1F24] font-medium text-base">Chimalhuacán, Estado de México</p>
+                  <h4 className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.15em] mb-1">Centro de Operaciones</h4>
+                  <p className="text-[#111111] font-semibold text-sm">Chimalhuacán, Estado de México</p>
                 </div>
               </div>
-              
-              <hr className="border-[#EAECEF]"/>
-              
-              {/* Hours */}
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#EAECEF] shadow-sm flex items-center justify-center text-[#1B1F24] flex-shrink-0">
-                  <span className="material-symbols-outlined font-light">schedule</span>
+              <hr className="border-[#B0B7C3]/20"/>
+              <div className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0 shadow-md">
+                  <span className="material-symbols-outlined text-[#FFC107] text-[20px]">schedule</span>
                 </div>
                 <div>
-                  <h4 className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.1em] mb-2">Horario de Atención</h4>
-                  <p className="text-[#1B1F24] font-medium text-base">Lunes a Viernes</p>
-                  <p className="text-[#4b5563] text-sm font-light mt-1">9:00 AM - 6:00 PM (Hora Central)</p>
+                  <h4 className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.15em] mb-1">Horario de Atención</h4>
+                  <p className="text-[#111111] font-semibold text-sm">Lunes a Viernes</p>
+                  <p className="text-[#B0B7C3] text-xs font-light mt-0.5">9:00 AM – 6:00 PM (Hora Central)</p>
                 </div>
               </div>
-              
-              <hr className="border-[#EAECEF]"/>
-              
-              {/* Email */}
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-2xl bg-white border border-[#EAECEF] shadow-sm flex items-center justify-center text-[#1B1F24] flex-shrink-0">
-                  <span className="material-symbols-outlined font-light">mail</span>
+              <hr className="border-[#B0B7C3]/20"/>
+              <div className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-lg bg-[#071A33] flex items-center justify-center flex-shrink-0 shadow-md">
+                  <span className="material-symbols-outlined text-[#FFC107] text-[20px]">mail</span>
                 </div>
                 <div>
-                  <h4 className="text-[11px] font-semibold text-[#0057FF] uppercase tracking-[0.1em] mb-2">Contacto Digital</h4>
-                  <a className="text-[#1B1F24] font-medium text-base hover:text-[#0057FF] transition-colors" href="mailto:ventasequipanext@gmail.com">ventasequipanext@gmail.com</a>
-                  <p className="text-[#4b5563] text-sm font-light mt-1">Respuesta en max. 24hrs.</p>
+                  <h4 className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.15em] mb-1">Contacto Digital</h4>
+                  <a className="text-[#111111] font-semibold text-sm hover:text-[#FFC107] transition-colors" href="mailto:ventasequipanext@gmail.com">ventasequipanext@gmail.com</a>
+                  <p className="text-[#B0B7C3] text-xs font-light mt-0.5">Respuesta en máx. 24hrs.</p>
                 </div>
               </div>
-              
             </div>
 
-            {/* Map Placeholder or Visual Element */}
-            <div className="h-[200px] rounded-3xl border border-[#EAECEF] overflow-hidden relative group">
-              <Image alt="Ubicación" fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" src="/assets/images/interactivo/map.png"/>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1B1F24]/80 to-transparent flex items-end p-6">
-                 <span className="text-white text-sm font-medium flex items-center gap-2">
-                    <span className="w-2 h-2 bg-[#0057FF] rounded-full"></span>
-                    Estado de México
-                 </span>
+            {/* Map */}
+            <div className="h-[200px] rounded-2xl border border-[#B0B7C3]/30 overflow-hidden relative group shadow-sm">
+              <Image alt="Ubicación" fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover grayscale opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="/assets/images/interactivo/map.png"/>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071A33]/80 to-transparent flex items-end p-5">
+                <span className="text-white text-sm font-bold flex items-center gap-2 uppercase tracking-widest">
+                  <span className="w-2 h-2 bg-[#FFC107] rounded-full animate-pulse"></span>
+                  Estado de México
+                </span>
               </div>
             </div>
 
