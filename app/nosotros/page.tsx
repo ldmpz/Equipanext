@@ -65,8 +65,8 @@ export default function Nosotros() {
 
               <div className="grid grid-cols-2 gap-8 border-t border-[#EAECEF] pt-8 mt-4">
                 <div>
-                  <span className="block text-4xl md:text-5xl font-display font-extrabold text-[#071A33] tracking-tight mb-2">20+</span>
-                <span className="text-[11px] font-bold text-[#B0B7C3] tracking-[0.1em] uppercase">Años de experiencia</span>
+                  <span className="block text-4xl md:text-5xl font-display font-extrabold text-[#071A33] tracking-tight mb-2">15+</span>
+                  <span className="text-[11px] font-bold text-[#B0B7C3] tracking-[0.1em] uppercase">Años de trayectoria</span>
                 </div>
                 <div>
                   <span className="block text-4xl md:text-5xl font-display font-extrabold text-[#071A33] tracking-tight mb-2">100%</span>

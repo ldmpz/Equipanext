@@ -127,64 +127,124 @@ export default function Home() {
         </div>
       </section>
 
-      {/* POR QUÉ EQUIPANEXT */}
-      <section className="py-24 bg-white relative border-t border-[#EAECEF]" id="ventajas">
-        <div className="px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-[10px] font-bold text-[#FFC107] uppercase tracking-[0.25em] mb-4 block">Diferenciadores</span>
-              <h2 className="font-display font-black text-[#111111] text-4xl md:text-[52px] leading-[1.05] tracking-[-0.02em] uppercase mb-6">
-                ¿Por qué elegir<br/><span className="text-[#FFC107]">Equipanext?</span>
+      {/* POR QUÉ EQUIPANEXT (REDISEÑO ESTILO TESLA) */}
+      <section className="py-28 bg-[#030A16] relative border-t border-white/5 overflow-hidden" id="ventajas">
+        {/* Subtle grid and light accents */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{backgroundImage: 'radial-gradient(ellipse at center, #FFC107 0%, transparent 80%)'}}></div>
+        <div className="absolute top-0 left-1/3 w-[1px] h-full bg-gradient-to-b from-white/10 via-transparent to-transparent"></div>
+        <div className="absolute top-0 right-1/3 w-[1px] h-full bg-gradient-to-b from-white/10 via-transparent to-transparent"></div>
+
+        <div className="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-16 lg:gap-24 items-center">
+            
+            {/* Left Column: Brand Story and Tesla-like Stats */}
+            <div className="flex flex-col text-left">
+              <span className="text-[10px] font-bold text-[#FFC107] uppercase tracking-[0.3em] mb-4 block">
+                Nuestra Trayectoria B2B
+              </span>
+              <h2 className="font-display font-black text-white text-4xl md:text-[52px] leading-[1.05] tracking-[-0.03em] uppercase mb-6">
+                Ingeniería textil<br/>
+                <span className="text-white/60">con precisión industrial.</span>
               </h2>
-              <p className="text-[#4b5563] text-[17px] font-light leading-[1.7] mb-10 max-w-md">
-                No somos una simple tienda de uniformes. Somos tu socio estratégico en indumentaria industrial corporativa.
+              
+              <div className="w-12 h-[2px] bg-[#FFC107] mb-8 rounded-full opacity-80"></div>
+              
+              <p className="text-white/80 text-[16px] md:text-[18px] font-light leading-[1.75] mb-10 max-w-xl">
+                Fundada hace más de <strong className="text-[#FFC107] font-semibold">15 años</strong>, Equipanext se ha consolidado como el socio estratégico definitivo para la indumentaria corporativa en México. Diseñamos y fabricamos uniformes técnicos de alto rendimiento que no solo protegen al personal en entornos exigentes, sino que proyectan la máxima seriedad y solidez de su marca.
               </p>
-              <ul className="flex flex-col gap-5">
-                {[
-                  { icon: 'palette', title: 'Uniformes Personalizados', desc: 'Diseño exclusivo con tu logo y colores corporativos.' },
-                  { icon: 'precision_manufacturing', title: 'Producción a Medida', desc: 'Tallaje técnico para cada industria y entorno.' },
-                  { icon: 'support_agent', title: 'Atención Especializada', desc: 'Asesoría B2B con tiempos de respuesta en minutos.' },
-                  { icon: 'local_shipping', title: 'Entregas Nacionales', desc: 'Logística a todo México con seguimiento.' },
-                  { icon: 'bolt', title: 'Diseñador B2B Exclusivo', desc: 'Herramienta online para configurar tu uniforme ideal.' },
-                  { icon: 'verified', title: 'Calidad Industrial', desc: 'Materiales certificados para entornos de alta exigencia.' },
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 group">
-                    <div className="w-10 h-10 rounded-xl bg-[#F5F5F5] group-hover:bg-[#FFC107] flex items-center justify-center flex-shrink-0 transition-colors duration-300">
-                      <span className="material-symbols-outlined text-[#071A33] text-[20px] group-hover:text-white transition-colors duration-300">{item.icon}</span>
-                    </div>
-                    <div>
-                      <h4 className="text-[#111111] font-bold text-[14px] mb-0.5">{item.title}</h4>
-                      <p className="text-[#9ca3af] text-[13px] font-light leading-relaxed">{item.desc}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* Nex CTA card */}
-            <div className="bg-[#071A33] rounded-3xl p-10 relative overflow-hidden flex flex-col items-center text-center">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#FFC107]/5 rounded-full blur-[80px] pointer-events-none"></div>
-              <div className="relative mb-6 w-40 h-40">
-                <Image src="/assets/images/marca/mascota_hero.png" alt="Nex" fill className="object-contain" style={{filter:'drop-shadow(0 8px 24px rgba(255,193,7,0.2))'}}/>
+
+              {/* Tesla-style Stats Row */}
+              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10 mb-10">
+                <div>
+                  <div className="font-display font-light text-white text-4xl md:text-5xl tracking-tighter mb-1.5 flex items-baseline">
+                    15<span className="text-[#FFC107] text-2xl font-bold ml-0.5">+</span>
+                  </div>
+                  <div className="text-[10px] font-semibold text-white/50 uppercase tracking-widest leading-normal">
+                    Años de Experiencia
+                  </div>
+                </div>
+                <div>
+                  <div className="font-display font-light text-white text-4xl md:text-5xl tracking-tighter mb-1.5 flex items-baseline">
+                    500K<span className="text-[#FFC107] text-2xl font-bold ml-0.5">+</span>
+                  </div>
+                  <div className="text-[10px] font-semibold text-white/50 uppercase tracking-widest leading-normal">
+                    Prendas Entregadas
+                  </div>
+                </div>
+                <div>
+                  <div className="font-display font-light text-white text-4xl md:text-5xl tracking-tighter mb-1.5 flex items-baseline">
+                    100<span className="text-[#FFC107] text-2xl font-bold ml-0.5">%</span>
+                  </div>
+                  <div className="text-[10px] font-semibold text-white/50 uppercase tracking-widest leading-normal">
+                    Garantía B2B
+                  </div>
+                </div>
               </div>
-              <p className="text-white/50 text-[11px] uppercase tracking-[0.2em] mb-2 font-bold">Nex · Asesor Oficial</p>
-              <h3 className="text-white font-black text-2xl mb-4 leading-tight">
-                ¿Listo para equipar<br/>a tu empresa?
-              </h3>
-              <p className="text-white/60 text-[14px] font-light leading-relaxed mb-8 max-w-xs">
-                Cuéntanos tus necesidades y te preparamos una propuesta personalizada sin costo.
-              </p>
-              <a href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20uniformes%20para%20mi%20empresa"
-                target="_blank" rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-xl font-black text-[13px] tracking-wider uppercase text-white mb-3"
-                style={{background:'linear-gradient(135deg, #25D366 0%, #1aab52 100%)', boxShadow:'0 4px 20px rgba(37,211,102,0.35)'}}>
-                <svg fill="white" height="18" viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
-                Hablar con un asesor
-              </a>
-              <Link href="/disenador" className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-black text-[12px] tracking-wider uppercase bg-[#FFC107] text-[#071A33] hover:bg-white transition-colors">
-                <span className="material-symbols-outlined text-[16px]">bolt</span>
-                Diseñar mi uniforme
-              </Link>
+
+              {/* Key pillars */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-white/95">
+                <div className="flex gap-3">
+                  <span className="material-symbols-outlined text-[#FFC107] mt-0.5">verified</span>
+                  <div>
+                    <h4 className="text-[14px] font-bold uppercase tracking-wider mb-1">Tecnología Certificada</h4>
+                    <p className="text-white/60 text-[12px] font-light leading-relaxed">Tejidos con protección UV, retardantes al fuego y de alta durabilidad mecánica.</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <span className="material-symbols-outlined text-[#FFC107] mt-0.5">local_shipping</span>
+                  <div>
+                    <h4 className="text-[14px] font-bold uppercase tracking-wider mb-1">Logística Integrada</h4>
+                    <p className="text-white/60 text-[12px] font-light leading-relaxed">Surtido programado y entregas consolidadas en todas sus plantas de producción.</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
+
+            {/* Right Column: Nex Premium CTA Box */}
+            <div className="bg-[#071A33] rounded-[32px] p-8 md:p-10 relative overflow-hidden border border-white/10 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+              {/* Glowing decorative rings */}
+              <div className="absolute top-0 right-0 w-80 h-80 bg-[#FFC107]/5 rounded-full blur-[90px] pointer-events-none"></div>
+              <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+              
+              {/* Inner container with subtle border */}
+              <div className="w-full flex flex-col items-center relative z-10">
+                <div className="relative mb-6 w-44 h-44 hover:scale-105 transition-transform duration-500">
+                  {/* Subtle rim light for Nex */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#FFC107]/20 to-transparent blur-xl scale-75"></div>
+                  <Image src="/assets/images/marca/mascota_hero.png" alt="Nex" fill className="object-contain relative z-10" style={{filter:'drop-shadow(0 12px 32px rgba(255,193,7,0.25))'}}/>
+                </div>
+                
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-white/70 uppercase tracking-[0.2em] font-bold mb-4">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></span>
+                  Nex · Asesor B2B
+                </span>
+
+                <h3 className="text-white font-display font-black text-2xl md:text-3xl mb-4 uppercase tracking-tight leading-none">
+                  ¿Listo para equipar <br/><span className="text-[#FFC107]">a tu empresa?</span>
+                </h3>
+                
+                <p className="text-white/60 text-[14px] font-light leading-relaxed mb-8 max-w-sm">
+                  Planifiquemos una propuesta personalizada adaptada a las normas técnicas y volumen de tu sector industrial.
+                </p>
+                
+                <div className="w-full flex flex-col gap-3">
+                  <a href="https://wa.me/525524398773?text=Hola,%20me%20gustar%C3%ADa%20cotizar%20uniformes%20para%20mi%20empresa"
+                    target="_blank" rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center gap-3 py-4 px-6 rounded-xl font-black text-[13px] tracking-wider uppercase text-white hover:opacity-90 transition-opacity"
+                    style={{background:'linear-gradient(135deg, #25D366 0%, #1aab52 100%)', boxShadow:'0 4px 20px rgba(37,211,102,0.35)'}}>
+                    <svg fill="white" height="18" viewBox="0 0 16 16" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                    Contactar Vía WhatsApp
+                  </a>
+                  
+                  <Link href="/disenador" className="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-black text-[12px] tracking-wider uppercase bg-[#FFC107] text-[#071A33] hover:bg-white hover:text-[#071A33] transition-all duration-300">
+                    <span className="material-symbols-outlined text-[16px]">bolt</span>
+                    Diseñador 3D Exclusivo
+                  </Link>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
