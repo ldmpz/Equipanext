@@ -152,7 +152,7 @@ export default function Navbar() {
               </Link>
               <Link href="/productos" aria-label="Carrito" className="hover:text-[#FFC107] transition-colors p-1 relative">
                 <ShoppingCart className="w-[18px] h-[18px]" />
-                <span className="absolute -top-1.5 -right-1.5 bg-[#FFC107] text-[#071A33] text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border border-[#071A33]">0</span>
+                <span className="absolute -top-1.5 -right-1.5 bg-[#FFC107] text-[#071A33] text-[9px] font-extrabold w-4 h-4 rounded-full flex items-center justify-center border border-[#071A33] notranslate" translate="no" style={{ color: '#071A33' }}>0</span>
               </Link>
             </div>
             <Link href="/contacto" className="bg-[#FFC107] text-[#071A33] text-[11px] font-extrabold tracking-widest px-6 py-2.5 rounded-full hover:bg-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] uppercase">
@@ -164,7 +164,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-3">
             <Link href="/productos" aria-label="Carrito" className="text-white hover:text-[#FFC107] transition-colors p-1 relative">
               <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 bg-[#FFC107] text-[#071A33] text-[8px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
+              <span className="absolute -top-1 -right-1 bg-[#FFC107] text-[#071A33] text-[8px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center notranslate" translate="no" style={{ color: '#071A33' }}>0</span>
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
