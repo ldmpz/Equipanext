@@ -1,14 +1,39 @@
+# Dependencies
 node_modules/
+
+# Next.js build output
+.next/
+out/
+build/
 dist/
+
+# TypeScript build cache — CRITICAL: must never be committed
+# Nixpacks mounts a cache directory at this path; a file here causes
+# "not a directory" container init errors.
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Vercel & deployment
+.vercel/
+.cache/
+
+# Environment variables
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
 .DS_Store
 Thumbs.db
-.next/
-out/
-build/
 
+# Editor/IDE
+.vscode/
+.idea/

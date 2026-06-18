@@ -1,0 +1,42 @@
+# Dependencies — never needed, Docker installs fresh
+node_modules/
+
+# Next.js build output — rebuilt inside container
+.next/
+out/
+build/
+dist/
+
+# TypeScript build cache — CRITICAL for Nixpacks/BuildKit compatibility
+# BuildKit mounts a cache directory at this path during `npm run build`.
+# If this file exists in the build context, the mount fails with:
+#   "error mounting target=/app/tsconfig.tsbuildinfo not a directory"
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Version control
+.git/
+.gitignore
+
+# Environment secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs & caches
+*.log
+npm-debug.log*
+.cache/
+.vercel/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Misc dev files
+README.md
+*.md
