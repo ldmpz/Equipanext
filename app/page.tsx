@@ -84,27 +84,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-1 z-20 bg-gradient-to-r from-transparent via-[#FFC107]/20 to-transparent"></div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="bg-[#071A33] py-12 relative z-20 border-b border-white/5">
-        <div className="px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { icon: 'verified_user', title: 'Calidad Garantizada', desc: 'Productos resistentes y de alto rendimiento.' },
-              { icon: 'workspace_premium', title: 'Uniformes Certificados', desc: 'Cumplimos con normas de seguridad industrial.' },
-              { icon: 'support_agent', title: 'Atención Especializada', desc: 'Asesoría B2B personalizada para tu empresa.' },
-              { icon: 'local_shipping', title: 'Envíos Nacionales', desc: 'Entregas rápidas a toda la República.' }
-            ].map((b, idx) => (
-              <div key={idx} className={`flex flex-col items-center text-center px-6 py-10 group transition-all duration-300 ${idx < 3 ? 'border-b sm:border-b lg:border-b-0 lg:border-r border-white/10' : ''}`}>
-                <div className="w-16 h-16 rounded-full bg-[#FFC107] flex items-center justify-center mb-5 group-hover:scale-110 transition-all duration-500 shadow-lg shadow-yellow-500/20">
-                  <span className="material-symbols-outlined text-[#071A33] text-[28px]">{b.icon}</span>
-                </div>
-                <h3 className="text-white font-bold text-[13px] tracking-widest mb-2 uppercase">{b.title}</h3>
-                <p className="text-white/50 text-[12px] leading-relaxed max-w-[190px] font-light">{b.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* SOLUCIONES PARA EMPRESAS */}
       <section className="py-24 bg-[#071A33] relative overflow-hidden" id="soluciones">
