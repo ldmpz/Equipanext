@@ -268,7 +268,7 @@ export default function Footer() {
                 src="/assets/images/marca/mascota_widget.png"
                 alt="Nex"
                 fill
-                className="object-cover"
+                className="object-contain p-1"
               />
               {/* WhatsApp status badge */}
               <span className="absolute bottom-0.5 right-0.5 w-4 h-4 bg-[#25D366] rounded-full flex items-center justify-center border-2 border-[#071A33]">
