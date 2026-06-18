@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { Search, User, Menu, X, ChevronDown, Zap } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -141,16 +141,8 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Desktop Right: Icons + CTA */}
+          {/* Desktop Right: CTA */}
           <div className="hidden md:flex items-center gap-6">
-            <div className="flex items-center gap-4 text-white">
-              <button aria-label="Buscar" className="hover:text-[#FFC107] transition-colors p-1">
-                <Search className="w-[18px] h-[18px]" />
-              </button>
-              <Link href="/contacto" aria-label="Mi Perfil" className="hover:text-[#FFC107] transition-colors p-1">
-                <User className="w-[18px] h-[18px]" />
-              </Link>
-            </div>
             <Link href="/contacto" className="bg-[#FFC107] text-[#071A33] text-[11px] font-extrabold tracking-widest px-6 py-2.5 rounded-full hover:bg-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] uppercase">
               Cotizar
             </Link>
