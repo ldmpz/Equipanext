@@ -171,13 +171,12 @@ export default function Footer() {
             <div className="px-6 pt-5 pb-6">
               {/* Header */}
               <div className="flex items-center gap-3.5 mb-5 pr-8">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#FFC107]/30 bg-[#04142B] flex-shrink-0 flex items-center justify-center">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#FFC107]/30 bg-[#04142B] flex-shrink-0">
                   <Image 
                     src="/assets/images/marca/mascota_hero.png" 
                     alt="Nex" 
-                    width={48} 
-                    height={48} 
-                    className="object-contain"
+                    fill
+                    className="object-cover object-[62%_15%] scale-150"
                   />
                 </div>
                 <div>
