@@ -32,12 +32,12 @@ html {
 /* ── Selection ───────────────────────────────────────────── */
 ::selection {
   background: rgba(255, 193, 7, 0.2);
-  color: #071A33;
+  color: #04142B;
 }
 
 /* ── Scrollbar ───────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #0F2747; }
+::-webkit-scrollbar-track { background: #061A36; }
 ::-webkit-scrollbar-thumb { background: #FFC107; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #E6B325; }
 
@@ -115,9 +115,9 @@ html {
   transition: box-shadow 0.35s cubic-bezier(0.16,1,0.3,1), transform 0.35s cubic-bezier(0.16,1,0.3,1), border-color 0.35s ease;
 }
 .technical-shadow-hover:hover {
-  box-shadow: 0 8px 30px rgba(0,80,203,0.1), 0 4px 12px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 30px rgba(255,193,7,0.08), 0 4px 12px rgba(0,0,0,0.06);
   transform: translateY(-4px);
-  border-color: #b3c5ff !important;
+  border-color: rgba(255,193,7,0.3) !important;
 }
 
 .card-shadow {
@@ -125,9 +125,9 @@ html {
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 .card-shadow:hover {
-  box-shadow: 0 6px 24px rgba(0,80,203,0.1), 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 24px rgba(255,193,7,0.06), 0 2px 8px rgba(0,0,0,0.05);
   transform: translateY(-3px);
-  border-color: #b3c5ff !important;
+  border-color: rgba(255,193,7,0.3) !important;
 }
 
 /* ============================================================
@@ -135,8 +135,8 @@ html {
    ============================================================ */
 .input-glow:focus,
 .form-input:focus {
-  box-shadow: 0 0 0 3px rgba(0,80,203,0.12);
-  border-color: #0050cb !important;
+  box-shadow: 0 0 0 3px rgba(255,193,7,0.15);
+  border-color: #FFC107 !important;
   outline: none;
 }
 
@@ -154,8 +154,8 @@ html {
 .hero-blueprint {
   background-size: 60px 60px;
   background-image:
-    linear-gradient(to right, rgba(0,80,203,0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,80,203,0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255,193,7,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,193,7,0.03) 1px, transparent 1px);
 }
 
 /* Subtle noise texture for depth */
@@ -235,7 +235,7 @@ html {
   100% { background-position: 200% center;  }
 }
 .animate-shimmer {
-  background: linear-gradient(90deg, #0050cb 0%, #0066ff 40%, #b3c5ff 50%, #0066ff 60%, #0050cb 100%);
+  background: linear-gradient(90deg, #FFB300 0%, #FFC107 40%, #FFE082 50%, #FFC107 60%, #FFB300 100%);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -252,9 +252,9 @@ html {
 
 /* Pulse ring */
 @keyframes pulse-ring {
-  0%   { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(0,102,255,0.5); }
-  70%  { transform: scale(1);    box-shadow: 0 0 0 12px rgba(0,102,255,0); }
-  100% { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(0,102,255,0);   }
+  0%   { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.5); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 12px rgba(255, 193, 7, 0); }
+  100% { transform: scale(0.85); box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);   }
 }
 .animate-pulse-ring { animation: pulse-ring 2.2s infinite; }
 
@@ -276,10 +276,10 @@ html {
    ACCENT / DECORATIVE ELEMENTS
    ============================================================ */
 
-/* Animated blue accent bar */
+/* Animated gold accent bar */
 .accent-bar {
   height: 3px;
-  background: linear-gradient(90deg, #0050cb, #0066ff, #b3c5ff, #0066ff, #0050cb);
+  background: linear-gradient(90deg, #FFB300, #FFC107, #FFE082, #FFC107, #FFB300);
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;
   border-radius: 2px;
@@ -287,9 +287,9 @@ html {
 
 /* Gradient hero badge */
 .badge-primary {
-  background: linear-gradient(135deg, rgba(0,80,203,0.1), rgba(0,102,255,0.08));
-  border: 1px solid rgba(0,80,203,0.2);
-  color: #0050cb;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 179, 0, 0.08));
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  color: #FFC107;
   backdrop-filter: blur(4px);
 }
 
@@ -297,9 +297,9 @@ html {
 .dot-live {
   display: inline-block;
   width: 7px; height: 7px;
-  background: #0066ff;
+  background: #FFC107;
   border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(0,102,255,0.4);
+  box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
   animation: pulse-ring 2s infinite;
 }
 
@@ -309,8 +309,8 @@ html {
     45deg,
     transparent,
     transparent 10px,
-    rgba(0,80,203,0.02) 10px,
-    rgba(0,80,203,0.02) 20px
+    rgba(255, 193, 7, 0.02) 10px,
+    rgba(255, 193, 7, 0.02) 20px
   );
 }
 
@@ -319,7 +319,7 @@ html {
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0,80,203,0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.05) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   filter: blur(60px);
@@ -339,7 +339,7 @@ html {
 
 /* ── Highlight text ─────────────────────────────────────── */
 .text-gradient-blue {
-  background: linear-gradient(135deg, #0050cb 0%, #0066ff 100%);
+  background: linear-gradient(135deg, #FFB300 0%, #FFC107 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

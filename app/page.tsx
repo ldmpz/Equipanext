@@ -1,21 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Factory, Truck, Stethoscope, ChefHat, Building2, HardHat } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="bg-[#F5F5F5] text-[#111111] min-h-screen">
+    <div className="bg-[#04142B] text-white min-h-screen">
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#071A33]" id="inicio">
-        <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#071A33]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#04142B]" id="inicio">
+        <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#04142B]">
           <Image src="/assets/images/instalaciones/hero_background.png" alt="Hero Background" fill priority sizes="100vw" className="object-cover filter grayscale-[0.3] opacity-30 scale-110"/>
-          <div className="absolute inset-0 bg-[#071A33]/80 z-10"></div>
+          <div className="absolute inset-0 bg-[#04142B]/80 z-10"></div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-transparent z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent z-10"></div>
         <div className="absolute inset-0 z-10" style={{background:'radial-gradient(ellipse 55% 80% at 25% 55%, rgba(0,0,0,0.45) 0%, transparent 70%)'}}></div>
-        <div className="absolute inset-x-0 bottom-0 h-52 z-10" style={{background:'linear-gradient(to top, #F5F5F5 0%, rgba(245,245,245,0.7) 40%, transparent 100%)'}}></div>
+        <div className="absolute inset-x-0 bottom-0 h-52 z-10" style={{background:'linear-gradient(to top, #04142B 0%, rgba(4,20,43,0.7) 40%, transparent 100%)'}}></div>
         <div className="absolute right-[5%] lg:right-[8%] top-1/2 -translate-y-1/2 w-[560px] h-[560px] rounded-full z-10 pointer-events-none" style={{background:'radial-gradient(circle, rgba(255,193,7,0.12) 0%, rgba(255,193,7,0.04) 40%, transparent 70%)', filter:'blur(40px)'}}></div>
 
         <div className="relative z-20 w-full px-6 md:px-12 max-w-7xl mx-auto pt-52 pb-24 grid grid-cols-1 lg:grid-cols-[45%_55%] gap-6 lg:gap-0 items-center">
@@ -52,7 +53,7 @@ export default function Home() {
             </ul>
 
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-              <Link className="btn-hero inline-flex justify-center items-center gap-2.5 bg-[#FFC107] text-[#071A33] font-black text-[12px] tracking-[0.12em] px-10 py-4 uppercase w-full sm:w-auto" href="/productos"
+              <Link className="btn-hero inline-flex justify-center items-center gap-2.5 bg-[#FFC107] text-[#04142B] font-black text-[12px] tracking-[0.12em] px-10 py-4 uppercase w-full sm:w-auto" href="/productos"
                 style={{clipPath:'polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px))', boxShadow:'0 6px 24px rgba(255,193,7,0.25)'}}>
                 VER CATÁLOGO
                 <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
@@ -87,7 +88,7 @@ export default function Home() {
 
 
       {/* SOLUCIONES PARA EMPRESAS */}
-      <section className="py-24 bg-[#071A33] relative overflow-hidden" id="soluciones">
+      <section className="py-24 bg-[#061A36] relative overflow-hidden" id="soluciones">
         <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage:"url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundSize:'300px'}}></div>
         <div className="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
@@ -102,24 +103,27 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
-              { emoji: '🏭', label: 'Manufactura', desc: 'Overoles, camisas y EPP para planta.' },
-              { emoji: '🚚', label: 'Logística', desc: 'Chalecos reflejantes y uniformes de distribución.' },
-              { emoji: '🏥', label: 'Salud', desc: 'Filipinas médicas y batas clínicas.' },
-              { emoji: '🍳', label: 'Gastronomía', desc: 'Uniformes premium para cocina y servicio.' },
-              { emoji: '🏢', label: 'Corporativo', desc: 'Uniformes de oficina con identidad de marca.' },
-              { emoji: '👷', label: 'Construcción', desc: 'Ropa de trabajo de alta resistencia.' },
-            ].map((s, i) => (
-              <Link key={i} href="/contacto"
-                className="group flex flex-col items-center text-center p-6 rounded-2xl border border-white/10 hover:border-[#FFC107]/40 hover:bg-white/5 transition-all duration-500 cursor-pointer">
-                <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">{s.emoji}</span>
-                <h4 className="text-white font-bold text-[13px] tracking-wider uppercase mb-2">{s.label}</h4>
-                <p className="text-white/40 text-[11px] leading-relaxed font-light">{s.desc}</p>
-              </Link>
-            ))}
+              { icon: Factory, label: 'Manufactura', desc: 'Overoles, camisas y EPP para planta.' },
+              { icon: Truck, label: 'Logística', desc: 'Chalecos reflejantes y uniformes de distribución.' },
+              { icon: Stethoscope, label: 'Salud', desc: 'Filipinas médicas y batas clínicas.' },
+              { icon: ChefHat, label: 'Gastronomía', desc: 'Uniformes premium para cocina y servicio.' },
+              { icon: Building2, label: 'Corporativo', desc: 'Uniformes de oficina con identidad de marca.' },
+              { icon: HardHat, label: 'Construcción', desc: 'Ropa de trabajo de alta resistencia.' },
+            ].map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <Link key={i} href="/contacto"
+                  className="group flex flex-col items-center text-center p-6 rounded-2xl border border-[rgba(255,193,7,0.15)] hover:border-[#FFC107]/40 hover:bg-white/5 transition-all duration-500 cursor-pointer">
+                  <Icon className="w-10 h-10 text-[#FFC107]/80 group-hover:text-[#FFC107] group-hover:scale-110 transition-all duration-300 mb-4 flex-shrink-0" strokeWidth={1.5} />
+                  <h4 className="text-white font-bold text-[13px] tracking-wider uppercase mb-2">{s.label}</h4>
+                  <p className="text-white/40 text-[11px] leading-relaxed font-light">{s.desc}</p>
+                </Link>
+              );
+            })}
           </div>
 
           <div className="mt-12 text-center">
-            <Link href="/contacto" className="inline-flex items-center gap-2 bg-[#FFC107] text-[#071A33] font-black text-[12px] tracking-[0.12em] px-10 py-4 uppercase hover:bg-white transition-all duration-300">
+            <Link href="/contacto" className="inline-flex items-center gap-2 bg-[#FFC107] text-[#04142B] font-black text-[12px] tracking-[0.12em] px-10 py-4 uppercase hover:bg-white hover:text-[#04142B] transition-all duration-300">
               Solicitar Cotización Empresarial
               <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
             </Link>
@@ -128,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* POR QUÉ EQUIPANEXT (REDISEÑO ESTILO TESLA) */}
-      <section className="py-28 bg-[#030A16] relative border-t border-white/5 overflow-hidden" id="ventajas">
+      <section className="py-28 bg-[#04142B] relative border-t border-white/5 overflow-hidden" id="ventajas">
         {/* Subtle grid and light accents */}
         <div className="absolute inset-0 opacity-[0.02]" style={{backgroundImage: 'radial-gradient(ellipse at center, #FFC107 0%, transparent 80%)'}}></div>
         <div className="absolute top-0 left-1/3 w-[1px] h-full bg-gradient-to-b from-white/10 via-transparent to-transparent"></div>
@@ -202,10 +206,10 @@ export default function Home() {
             </div>
 
             {/* Right Column: Nex Premium CTA Box */}
-            <div className="bg-[#071A33] rounded-[32px] p-8 md:p-10 relative overflow-hidden border border-white/10 flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <div className="bg-[#082041] rounded-[32px] p-8 md:p-10 relative overflow-hidden border border-[rgba(255,193,7,0.15)] flex flex-col items-center text-center shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
               {/* Glowing decorative rings */}
               <div className="absolute top-0 right-0 w-80 h-80 bg-[#FFC107]/5 rounded-full blur-[90px] pointer-events-none"></div>
-              <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+              <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-[#FFC107]/5 rounded-full blur-[80px] pointer-events-none"></div>
               
               {/* Inner container with subtle border */}
               <div className="w-full flex flex-col items-center relative z-10">
@@ -237,7 +241,7 @@ export default function Home() {
                     Contactar Vía WhatsApp
                   </a>
                   
-                  <Link href="/disenador" className="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-black text-[12px] tracking-wider uppercase bg-[#FFC107] text-[#071A33] hover:bg-white hover:text-[#071A33] transition-all duration-300">
+                  <Link href="/disenador" className="w-full flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-black text-[12px] tracking-wider uppercase bg-[#FFC107] text-[#04142B] hover:bg-white hover:text-[#04142B] transition-all duration-300">
                     <span className="material-symbols-outlined text-[16px]">bolt</span>
                     Diseñador 3D Exclusivo
                   </Link>
@@ -250,10 +254,10 @@ export default function Home() {
       </section>
 
       {/* CATEGORÍAS */}
-      <section className="py-24 bg-[#F5F5F5] relative border-t border-[#EAECEF]" id="categorias">
+      <section className="py-24 bg-[#061A36] relative border-t border-[rgba(255,193,7,0.15)]" id="categorias">
         <div className="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-display font-extrabold text-[#111111] text-4xl md:text-[52px] leading-[1.05] tracking-[-0.02em] uppercase">
+            <h2 className="font-display font-extrabold text-white text-4xl md:text-[52px] leading-[1.05] tracking-[-0.02em] uppercase">
               CATEGORÍAS <span className="text-[#FFC107]">PRINCIPALES</span>
             </h2>
             <div className="w-16 h-1 bg-[#FFC107] mx-auto mt-4 rounded-full"></div>
@@ -266,11 +270,11 @@ export default function Home() {
               { title: 'INDUSTRIAL', desc: 'Overoles de alta resistencia, pantalones y camisas.', img: '/assets/images/productos/coveralls.png' }
             ].map((cat, idx) => (
               <Link key={idx} href="/productos"
-                className="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-[#F5F7FA] border border-[#EAECEF] shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-end">
+                className="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-[#082041] border border-[rgba(255,193,7,0.15)] shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-end">
                 <Image src={cat.img} alt={cat.title} fill sizes="(max-width: 768px) 100vw, 25vw" loading="lazy" className="object-cover opacity-90 group-hover:scale-110 transition-transform duration-[1.8s] ease-[cubic-bezier(0.16,1,0.3,1)]"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071A33] via-[#071A33]/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-500"></div>
-                <div className="absolute bottom-4 right-4 z-20 w-10 h-10 bg-[#FFC107] rounded-full flex items-center justify-center group-hover:bg-white transition-all duration-300 shadow-lg">
-                  <span className="material-symbols-outlined text-[#071A33] text-[18px] font-bold">arrow_forward</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#04142B] via-[#04142B]/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-500"></div>
+                <div className="absolute bottom-4 right-4 z-20 w-10 h-10 bg-[#FFC107] rounded-full flex items-center justify-center group-hover:bg-[#FFB300] transition-all duration-300 shadow-lg">
+                  <span className="material-symbols-outlined text-[#04142B] text-[18px] font-bold">arrow_forward</span>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
                   <h3 className="text-white font-display font-extrabold text-[14px] tracking-widest uppercase">{cat.title}</h3>
@@ -282,7 +286,7 @@ export default function Home() {
       </section>
 
       {/* PRUEBA SOCIAL */}
-      <section className="py-24 bg-[#071A33] border-t border-white/5">
+      <section className="py-24 bg-[#04142B] border-t border-white/5">
         <div className="px-6 md:px-12 max-w-7xl mx-auto text-center">
           <span className="text-[10px] font-bold text-[#FFC107] uppercase tracking-[0.25em] mb-4 block">Confianza Empresarial</span>
           <h2 className="font-display font-black text-white text-3xl md:text-[44px] uppercase tracking-[-0.02em] mb-4">
@@ -300,11 +304,11 @@ export default function Home() {
           </div>
           {/* CTA final */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contacto" className="inline-flex items-center gap-2 bg-[#FFC107] text-[#071A33] font-black text-[12px] tracking-[0.12em] px-10 py-4 uppercase hover:bg-white transition-all">
+            <Link href="/contacto" className="inline-flex items-center gap-2 bg-[#FFC107] text-[#04142B] font-black text-[12px] tracking-[0.12em] px-10 py-4 uppercase hover:bg-white hover:text-[#04142B] transition-all">
               Solicitar Cotización
               <span className="material-symbols-outlined text-[17px]">arrow_forward</span>
             </Link>
-            <Link href="/disenador" className="inline-flex items-center gap-2 border border-[#FFC107]/40 text-[#FFC107] font-black text-[12px] tracking-[0.12em] px-10 py-4 uppercase hover:bg-[#FFC107] hover:text-[#071A33] transition-all">
+            <Link href="/disenador" className="inline-flex items-center gap-2 border border-[#FFC107]/40 text-[#FFC107] font-black text-[12px] tracking-[0.12em] px-10 py-4 uppercase hover:bg-[#FFC107] hover:text-[#04142B] transition-all">
               <span className="material-symbols-outlined text-[17px]">bolt</span>
               Diseñar Uniforme
             </Link>

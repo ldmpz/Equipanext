@@ -192,27 +192,27 @@ export default function Disenador() {
                     <g>
                       {/* Left Sleeve Reflector */}
                       <path d="M40 120 L48 135 M43 117 L51 132" stroke="#E2E8F0" strokeWidth="5" strokeLinecap="round" />
-                      <path d="M40 120 L48 135 M43 117 L51 132" stroke="#38BDF8" strokeWidth="2" strokeLinecap="round" strokeDasharray="4,1" />
+                      <path d="M40 120 L48 135 M43 117 L51 132" stroke="#FFC107" strokeWidth="2" strokeLinecap="round" strokeDasharray="4,1" />
                       {/* Right Sleeve Reflector */}
                       <path d="M260 120 L252 135 M257 117 L249 132" stroke="#E2E8F0" strokeWidth="5" strokeLinecap="round" />
-                      <path d="M260 120 L252 135 M257 117 L249 132" stroke="#38BDF8" strokeWidth="2" strokeLinecap="round" strokeDasharray="4,1" />
+                      <path d="M260 120 L252 135 M257 117 L249 132" stroke="#FFC107" strokeWidth="2" strokeLinecap="round" strokeDasharray="4,1" />
                       {/* Body Chest Reflectors */}
                       <rect x="82" y="195" width="136" height="8" fill="#E2E8F0" rx="1" />
-                      <rect x="82" width="136" height="3" fill="#38BDF8" y="197.5" />
+                      <rect x="82" width="136" height="3" fill="#FFC107" y="197.5" />
                     </g>
                   )}
 
                   {/* Logo Placeholder Indicators */}
                   {(logoLocation === 'Pecho Izquierdo' || logoLocation === 'Ambos Pechos') && (
                     <g className="opacity-90">
-                      <rect x="108" y="142" width="14" height="10" fill="#0066FF" rx="1" />
-                      <path d="M111 147 H119 M115 144 V150" stroke="#FFFFFF" strokeWidth="1" />
+                      <rect x="108" y="142" width="14" height="10" fill="#FFC107" rx="1" />
+                      <path d="M111 147 H119 M115 144 V150" stroke="#04142B" strokeWidth="1" />
                     </g>
                   )}
                   {(logoLocation === 'Pecho Derecho' || logoLocation === 'Ambos Pechos') && (
                     <g className="opacity-90">
-                      <rect x="178" y="142" width="14" height="10" fill="#0066FF" rx="1" />
-                      <path d="M181 147 H189 M185 144 V150" stroke="#FFFFFF" strokeWidth="1" />
+                      <rect x="178" y="142" width="14" height="10" fill="#FFC107" rx="1" />
+                      <path d="M181 147 H189 M185 144 V150" stroke="#04142B" strokeWidth="1" />
                     </g>
                   )}
                 </svg>
@@ -242,16 +242,16 @@ export default function Disenador() {
                   <g>
                     {/* Left Vertical Tape */}
                     <rect x="105" y="60" width="12" height="240" fill="#E2E8F0" />
-                    <rect x="109" y="60" width="4" height="240" fill="#38BDF8" />
+                    <rect x="109" y="60" width="4" height="240" fill="#FFC107" />
                     {/* Right Vertical Tape */}
                     <rect x="183" y="60" width="12" height="240" fill="#E2E8F0" />
-                    <rect x="187" y="60" width="4" height="240" fill="#38BDF8" />
+                    <rect x="187" y="60" width="4" height="240" fill="#FFC107" />
                     {/* Upper Horizontal Tape */}
                     <rect x="70" y="160" width="160" height="12" fill="#E2E8F0" />
-                    <rect x="70" y="164" width="160" height="4" fill="#38BDF8" />
+                    <rect x="70" y="164" width="160" height="4" fill="#FFC107" />
                     {/* Lower Horizontal Tape */}
                     <rect x="70" y="210" width="160" height="12" fill="#E2E8F0" />
-                    <rect x="70" y="214" width="160" height="4" fill="#38BDF8" />
+                    <rect x="70" y="214" width="160" height="4" fill="#FFC107" />
                   </g>
 
                   {/* Contrast Stitching Details */}
@@ -262,14 +262,14 @@ export default function Disenador() {
                   {/* Logo Boxes */}
                   {(logoLocation === 'Pecho Izquierdo' || logoLocation === 'Ambos Pechos') && (
                     <g className="opacity-90">
-                      <rect x="85" y="125" width="16" height="12" fill="#0066FF" rx="1" />
-                      <path d="M88 131 H98 M93 128 V134" stroke="#FFFFFF" strokeWidth="1" />
+                      <rect x="85" y="125" width="16" height="12" fill="#FFC107" rx="1" />
+                      <path d="M88 131 H98 M93 128 V134" stroke="#04142B" strokeWidth="1" />
                     </g>
                   )}
                   {(logoLocation === 'Pecho Derecho' || logoLocation === 'Ambos Pechos') && (
                     <g className="opacity-90">
-                      <rect x="199" y="125" width="16" height="12" fill="#0066FF" rx="1" />
-                      <path d="M202 131 H212 M207 128 V134" stroke="#FFFFFF" strokeWidth="1" />
+                      <rect x="199" y="125" width="16" height="12" fill="#FFC107" rx="1" />
+                      <path d="M202 131 H212 M207 128 V134" stroke="#04142B" strokeWidth="1" />
                     </g>
                   )}
                 </svg>
@@ -303,10 +303,10 @@ export default function Disenador() {
                     <g>
                       {/* Left Leg Reflector */}
                       <rect x="83.5" y="260" width="55" height="12" fill="#E2E8F0" rx="1" />
-                      <rect x="83.5" y="264" width="55" height="4" fill="#38BDF8" />
+                      <rect x="83.5" y="264" width="55" height="4" fill="#FFC107" />
                       {/* Right Leg Reflector */}
                       <rect x="161.5" y="260" width="55" height="12" fill="#E2E8F0" rx="1" />
-                      <rect x="161.5" y="264" width="55" height="4" fill="#38BDF8" />
+                      <rect x="161.5" y="264" width="55" height="4" fill="#FFC107" />
                     </g>
                   )}
 
@@ -321,8 +321,8 @@ export default function Disenador() {
                   {/* Logo Box */}
                   {logoLocation !== 'Ninguno' && (
                     <g className="opacity-90">
-                      <rect x="185" y="100" width="16" height="12" fill="#0066FF" rx="1" />
-                      <path d="M188 106 H198 M193 103 V109" stroke="#FFFFFF" strokeWidth="1" />
+                      <rect x="185" y="100" width="16" height="12" fill="#FFC107" rx="1" />
+                      <path d="M188 106 H198 M193 103 V109" stroke="#04142B" strokeWidth="1" />
                     </g>
                   )}
                 </svg>

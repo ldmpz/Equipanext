@@ -149,9 +149,9 @@ export default function Productos() {
   }, [selectedProduct]);
 
   return (
-    <div className="bg-[#F5F5F5] text-[#111111] min-h-screen">
+    <div className="bg-[#04142B] text-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#071A33] overflow-hidden">
+      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#061A36] overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-90 filter grayscale-[0.2] scale-105"
@@ -161,7 +161,7 @@ export default function Productos() {
         {/* Cinematic Dark Overlay & Bottom Fade (Igual que en Inicio) */}
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent z-10"></div>
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#04142B] to-transparent z-10"></div>
         <div className="hidden md:block absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#FFC107]/5 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
 
         <div className="relative z-20 max-w-4xl mx-auto text-center fade-in-up">
@@ -180,25 +180,24 @@ export default function Productos() {
       </section>
 
       {/* Nuestros Chalecos Reflejantes */}
-      <section className="py-[60px] md:py-[80px] px-6 md:px-12 max-w-7xl mx-auto bg-white">
+      <section className="py-[60px] md:py-[80px] px-6 md:px-12 max-w-7xl mx-auto bg-[#04142B]">
         <div className="mb-16 md:mb-20 text-center max-w-3xl mx-auto fade-in-up">
           <span className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-4 block">
             Línea de Alta Visibilidad
           </span>
-          <h2 className="font-display font-extrabold text-[#071A33] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
+          <h2 className="font-display font-extrabold text-white text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
             Chalecos Reflejantes
           </h2>
-          <p className="text-[#4b5563] text-lg font-light leading-relaxed">
+          <p className="text-[#D9D9D9] text-lg font-light leading-relaxed">
             Diseñados para brindar máxima visibilidad, confort térmico y funcionalidad en entornos operativos de alto riesgo.
           </p>
         </div>
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {productsData.map((product) => (
-            <div key={product.id} className={`bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col ${product.comingSoon ? 'cursor-not-allowed' : 'hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500 group'}`}>
-              <div className={`relative h-[320px] overflow-hidden flex items-center justify-center p-8 ${product.comingSoon ? 'bg-[#F5F7FA]' : 'bg-[#F5F7FA] group-hover:bg-white transition-colors duration-500'}`}>
-                <div className="absolute top-6 left-6 bg-white border border-[#EAECEF] px-3 py-1.5 rounded-full font-medium text-[10px] text-[#1B1F24] uppercase tracking-widest shadow-sm z-20">
+            <div key={product.id} className={`bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden flex flex-col ${product.comingSoon ? 'cursor-not-allowed' : 'hover:border-[#FFC107]/40 hover:-translate-y-1 transition-all duration-500 group'}`}>
+              <div className={`relative h-[320px] overflow-hidden flex items-center justify-center p-8 ${product.comingSoon ? 'bg-[#061A36]' : 'bg-[#061A36] group-hover:bg-[#082041]/40 transition-colors duration-500'}`}>
+                <div className="absolute top-6 left-6 bg-[#04142B]/80 backdrop-blur-md border border-[rgba(255,193,7,0.15)] px-3 py-1.5 rounded-full font-medium text-[10px] text-[#FFC107] uppercase tracking-widest shadow-sm z-20">
                   {product.tag}
                 </div>
                 <Image 
@@ -209,19 +208,19 @@ export default function Productos() {
                   src={product.image}
                 />
               </div>
-              <div className="p-8 md:p-10 flex flex-col flex-grow bg-white border-t border-[#EAECEF]">
-                <h3 className={`font-display font-semibold text-2xl text-[#1B1F24] mb-4 tracking-tight ${product.comingSoon ? 'opacity-60' : ''}`}>{product.name}</h3>
-                <p className={`text-[#4b5563] flex-grow mb-8 text-base font-light leading-relaxed ${product.comingSoon ? 'opacity-60' : ''}`}>
+              <div className="p-8 md:p-10 flex flex-col flex-grow bg-[#082041] border-t border-[rgba(255,193,7,0.15)]">
+                <h3 className={`font-display font-semibold text-2xl text-white mb-4 tracking-tight ${product.comingSoon ? 'opacity-60' : ''}`}>{product.name}</h3>
+                <p className={`text-[#D9D9D9] flex-grow mb-8 text-base font-light leading-relaxed ${product.comingSoon ? 'opacity-60' : ''}`}>
                   {product.description}
                 </p>
                 {product.comingSoon ? (
-                  <div className="inline-flex justify-center items-center gap-2 bg-[#F5F7FA] text-[#9ca3af] border border-[#EAECEF] font-semibold text-[11px] px-6 py-3.5 rounded-full uppercase tracking-widest w-full cursor-not-allowed">
+                  <div className="inline-flex justify-center items-center gap-2 bg-[#04142B] text-[#D9D9D9]/40 border border-[rgba(255,193,7,0.15)] font-semibold text-[11px] px-6 py-3.5 rounded-full uppercase tracking-widest w-full cursor-not-allowed">
                     Próximamente
                   </div>
                 ) : (
                   <button 
                     onClick={() => setSelectedProduct(product)}
-                  className="inline-flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#E6B325] text-[#071A33] font-extrabold text-[12px] px-6 py-3.5 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.25)] hover:-translate-y-0.5 transition-all duration-300 w-full tracking-widest uppercase"
+                  className="inline-flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#FFB300] text-[#04142B] font-extrabold text-[12px] px-6 py-3.5 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.25)] hover:-translate-y-0.5 transition-all duration-300 w-full tracking-widest uppercase"
                   >
                     Ver colores y detalles
                     <span className="material-symbols-outlined text-[18px]">palette</span>
@@ -234,65 +233,65 @@ export default function Productos() {
       </section>
 
       {/* Otras Categorías (Bento Grid) */}
-      <section className="py-[120px] md:py-[180px] bg-[#F5F7FA] border-y border-[#EAECEF] relative">
+      <section className="py-[120px] md:py-[180px] bg-[#061A36] border-y border-[rgba(255,193,7,0.15)] relative">
         <div className="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
           <div className="mb-16 md:mb-24 text-center max-w-3xl mx-auto">
             <span className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-4 block">
               Gama Completa
             </span>
-            <h2 className="font-display font-extrabold text-[#071A33] text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
+            <h2 className="font-display font-extrabold text-white text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
               Explora todas las categorías
             </h2>
-            <p className="text-[#4b5563] text-lg font-light leading-relaxed">
+            <p className="text-[#D9D9D9] text-lg font-light leading-relaxed">
               Soluciones integrales para la vestimenta y protección de su equipo.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(300px,auto)]">
             {/* Camisas Industriales */}
-            <div className="relative block w-full h-[400px] md:col-span-8 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
-              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-12 flex items-center justify-center">
+            <div className="relative block w-full h-[400px] md:col-span-8 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
+              <div className="absolute inset-0 bg-[#04142B] z-0 p-12 flex items-center justify-center">
                 <Image width={400} height={400} alt="Camisas Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_shirt.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
+              <div className="absolute bottom-0 left-0 w-full bg-[#082041]/90 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-8 z-20 flex justify-between items-center">
                 <div>
-                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1 text-opacity-60">Camisas Industriales</h3>
-                  <p className="text-[#4b5563] text-sm font-light text-opacity-60">Resistencia y transpirabilidad superior.</p>
+                  <h3 className="font-display font-semibold text-white text-2xl tracking-tight mb-1">Camisas Industriales</h3>
+                  <p className="text-[#D9D9D9] text-sm font-light">Resistencia y transpirabilidad superior.</p>
                 </div>
-                <div className="px-4 py-2 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center">
-                  <span className="text-[11px] font-semibold text-[#9ca3af] uppercase tracking-widest">Próximamente</span>
+                <div className="px-4 py-2 rounded-full bg-[#04142B] border border-[rgba(255,193,7,0.15)] flex items-center justify-center">
+                  <span className="text-[11px] font-semibold text-[#D9D9D9]/50 uppercase tracking-widest">Próximamente</span>
                 </div>
               </div>
             </div>
 
             {/* Overoles */}
-            <div className="relative block w-full h-[400px] md:col-span-4 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
-              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-10 flex items-center justify-center">
+            <div className="relative block w-full h-[400px] md:col-span-4 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
+              <div className="absolute inset-0 bg-[#04142B] z-0 p-10 flex items-center justify-center">
                 <Image width={400} height={400} alt="Overoles Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/coveralls.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
+              <div className="absolute bottom-0 left-0 w-full bg-[#082041]/90 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-8 z-20 flex justify-between items-center">
                 <div>
-                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1 text-opacity-60">Overoles</h3>
-                  <p className="text-[#4b5563] text-sm font-light text-opacity-60">Protección integral.</p>
+                  <h3 className="font-display font-semibold text-white text-2xl tracking-tight mb-1">Overoles</h3>
+                  <p className="text-[#D9D9D9] text-sm font-light">Protección integral.</p>
                 </div>
-                <div className="px-4 py-2 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center">
-                  <span className="text-[11px] font-semibold text-[#9ca3af] uppercase tracking-widest">Próximamente</span>
+                <div className="px-4 py-2 rounded-full bg-[#04142B] border border-[rgba(255,193,7,0.15)] flex items-center justify-center">
+                  <span className="text-[11px] font-semibold text-[#D9D9D9]/50 uppercase tracking-widest">Próximamente</span>
                 </div>
               </div>
             </div>
 
             {/* Pantalones Industriales */}
-            <div className="relative block w-full h-[400px] md:col-span-12 bg-white border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
-              <div className="absolute inset-0 bg-[#F5F7FA] z-0 p-12 flex items-center justify-center">
+            <div className="relative block w-full h-[400px] md:col-span-12 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
+              <div className="absolute inset-0 bg-[#04142B] z-0 p-12 flex items-center justify-center">
                 <Image width={400} height={400} alt="Pantalones Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_pants.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-md border-t border-[#EAECEF] p-8 z-20 flex justify-between items-center">
+              <div className="absolute bottom-0 left-0 w-full bg-[#082041]/90 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-8 z-20 flex justify-between items-center">
                 <div>
-                  <h3 className="font-display font-semibold text-[#1B1F24] text-2xl tracking-tight mb-1 text-opacity-60">Pantalones Industriales</h3>
-                  <p className="text-[#4b5563] text-sm font-light text-opacity-60">Ergonomía activa y refuerzos estratégicos para el uso diario.</p>
+                  <h3 className="font-display font-semibold text-white text-2xl tracking-tight mb-1">Pantalones Industriales</h3>
+                  <p className="text-[#D9D9D9] text-sm font-light">Ergonomía activa y refuerzos estratégicos para el uso diario.</p>
                 </div>
-                <div className="px-4 py-2 rounded-full bg-[#F5F7FA] border border-[#EAECEF] flex items-center justify-center">
-                  <span className="text-[11px] font-semibold text-[#9ca3af] uppercase tracking-widest">Próximamente</span>
+                <div className="px-4 py-2 rounded-full bg-[#04142B] border border-[rgba(255,193,7,0.15)] flex items-center justify-center">
+                  <span className="text-[11px] font-semibold text-[#D9D9D9]/50 uppercase tracking-widest">Próximamente</span>
                 </div>
               </div>
             </div>
@@ -301,29 +300,29 @@ export default function Productos() {
       </section>
 
       {/* Servicios Especializados */}
-      <section className="py-[120px] md:py-[180px] px-6 md:px-12 max-w-7xl mx-auto bg-white">
-        <div className="border border-[#EAECEF] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col lg:flex-row">
-          <div className="p-10 md:p-16 lg:w-1/2 flex flex-col justify-center bg-white">
+      <section className="py-[120px] md:py-[180px] px-6 md:px-12 max-w-7xl mx-auto bg-[#04142B]">
+        <div className="border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden flex flex-col lg:flex-row">
+          <div className="p-10 md:p-16 lg:w-1/2 flex flex-col justify-center bg-[#082041]">
             <div className="flex items-center gap-3 mb-6">
               <span className="material-symbols-outlined text-[#FFC107] text-[28px]">precision_manufacturing</span>
               <span className="font-bold text-[11px] text-[#FFC107] uppercase tracking-[0.2em]">Servicios Especializados</span>
             </div>
-            <h3 className="font-display font-extrabold text-3xl text-[#071A33] mb-6 tracking-tight uppercase">Uniformes personalizados</h3>
-            <p className="text-[#4b5563] mb-10 text-lg font-light leading-relaxed">
+            <h3 className="font-display font-extrabold text-3xl text-white mb-6 tracking-tight uppercase">Uniformes personalizados</h3>
+            <p className="text-[#D9D9D9] mb-10 text-lg font-light leading-relaxed">
               Integramos la identidad corporativa de su empresa directamente en la manufactura del equipamiento mediante técnicas de alta precisión.
             </p>
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-3 bg-[#F5F7FA] px-5 py-3 rounded-xl border border-[#EAECEF]">
-                <span className="material-symbols-outlined text-[#1B1F24] text-[20px]">styler</span>
-                <span className="font-medium text-sm text-[#1B1F24]">Bordado CNC</span>
+              <div className="flex items-center gap-3 bg-[#04142B] px-5 py-3 rounded-xl border border-[rgba(255,193,7,0.15)]">
+                <span className="material-symbols-outlined text-white text-[20px]">styler</span>
+                <span className="font-medium text-sm text-white">Bordado CNC</span>
               </div>
-              <div className="flex items-center gap-3 bg-[#F5F7FA] px-5 py-3 rounded-xl border border-[#EAECEF]">
-                <span className="material-symbols-outlined text-[#1B1F24] text-[20px]">format_paint</span>
-                <span className="font-medium text-sm text-[#1B1F24]">Serigrafía Textil</span>
+              <div className="flex items-center gap-3 bg-[#04142B] px-5 py-3 rounded-xl border border-[rgba(255,193,7,0.15)]">
+                <span className="material-symbols-outlined text-white text-[20px]">format_paint</span>
+                <span className="font-medium text-sm text-white">Serigrafía Textil</span>
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden group bg-[#F5F7FA]">
+          <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden group bg-[#04142B]">
             <Image width={800} height={800} alt="Máquina de Bordado Industrial" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-0" src="/assets/images/instalaciones/embroidery_machine.png"/>
             {/* Soft inner shadow */}
             <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] pointer-events-none"></div>
@@ -338,23 +337,23 @@ export default function Productos() {
           onClick={() => setSelectedProduct(null)}
         >
           {/* Overlay Background */}
-          <div className="absolute inset-0 bg-[#1B1F24]/40 backdrop-blur-sm transition-opacity"></div>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
           
           {/* Modal Container */}
           <div 
-            className="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col md:flex-row transform transition-all"
+            className="relative bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col md:flex-row transform transition-all"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button 
               onClick={() => setSelectedProduct(null)}
-              className="absolute top-4 right-4 z-20 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-[#1B1F24] hover:bg-[#F5F7FA] transition-colors shadow-sm"
+              className="absolute top-4 right-4 z-20 w-10 h-10 bg-[#04142B]/85 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-[#061A36] transition-colors shadow-sm"
             >
               <span className="material-symbols-outlined">close</span>
             </button>
 
             {/* Product Image Area Slider */}
-            <div className="w-full md:w-1/2 bg-[#F5F7FA] flex items-center justify-center relative min-h-[300px] md:min-h-full overflow-hidden group">
+            <div className="w-full md:w-1/2 bg-[#061A36] flex items-center justify-center relative min-h-[300px] md:min-h-full overflow-hidden group">
               {/* Images */}
               {(() => {
                 const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
@@ -382,7 +381,7 @@ export default function Productos() {
                     <button 
                       key={idx}
                       onClick={(e) => { e.stopPropagation(); setCurrentImageIndex(idx); }}
-                      className={`h-2 rounded-full transition-all duration-300 ${currentImageIndex === idx ? 'bg-[#FFC107] w-6' : 'bg-[#071A33]/20 w-2'}`}
+                      className={`h-2 rounded-full transition-all duration-300 ${currentImageIndex === idx ? 'bg-[#FFC107] w-6' : 'bg-white/20 w-2'}`}
                       aria-label={`Go to slide ${idx + 1}`}
                     />
                   ));
@@ -396,7 +395,7 @@ export default function Productos() {
                   const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                   setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
                 }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-[#1B1F24] opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white shadow-sm hover:shadow-md"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#04142B]/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#061A36] shadow-sm hover:shadow-md"
               >
                 <span className="material-symbols-outlined">chevron_left</span>
               </button>
@@ -406,7 +405,7 @@ export default function Productos() {
                   const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                   setCurrentImageIndex((prev) => (prev + 1) % images.length);
                 }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-[#1B1F24] opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white shadow-sm hover:shadow-md"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#04142B]/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#061A36] shadow-sm hover:shadow-md"
               >
                 <span className="material-symbols-outlined">chevron_right</span>
               </button>
@@ -417,16 +416,16 @@ export default function Productos() {
               <span className="text-[10px] font-bold text-[#FFC107] uppercase tracking-widest mb-2 block">
                 {selectedProduct.tag}
               </span>
-              <h2 className="text-2xl font-display font-extrabold text-[#071A33] mb-4 uppercase">
+              <h2 className="text-2xl font-display font-extrabold text-white mb-4 uppercase">
                 {selectedProduct.name}
               </h2>
-              <p className="text-[#4b5563] text-sm font-light leading-relaxed mb-8">
+              <p className="text-[#D9D9D9] text-sm font-light leading-relaxed mb-8">
                 {selectedProduct.description}
               </p>
 
               {/* Colors Section */}
               <div className="mb-10">
-                <h4 className="text-sm font-medium text-[#1B1F24] uppercase tracking-widest mb-4 flex items-center gap-2">
+                <h4 className="text-sm font-medium text-white uppercase tracking-widest mb-4 flex items-center gap-2">
                   <span className="material-symbols-outlined text-[18px]">palette</span>
                   Colores Disponibles
                 </h4>
@@ -435,7 +434,7 @@ export default function Productos() {
                     <button 
                       key={index} 
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex items-center gap-3 p-3 rounded-xl border transition-all text-left ${currentImageIndex === index ? 'border-[#FFC107] bg-[#FFC107]/10 shadow-sm' : 'border-[#B0B7C3]/30 bg-[#F5F5F5]/50 hover:bg-[#F5F5F5]'}`}
+                      className={`flex items-center gap-3 p-3 rounded-xl border transition-all text-left ${currentImageIndex === index ? 'border-[#FFC107] bg-[#FFC107]/10 shadow-sm' : 'border-[rgba(255,193,7,0.15)] bg-[#04142B]/50 hover:bg-[#04142B]'}`}
                     >
                       <div 
                         className="w-8 h-8 rounded-full border border-black/10 shadow-sm relative overflow-hidden flex-shrink-0"
@@ -448,7 +447,7 @@ export default function Productos() {
                           ></div>
                         )}
                       </div>
-                      <span className={`text-sm font-semibold leading-tight ${currentImageIndex === index ? 'text-[#071A33]' : 'text-[#B0B7C3]'}`}>
+                      <span className={`text-sm font-semibold leading-tight ${currentImageIndex === index ? 'text-[#FFC107]' : 'text-[#D9D9D9]'}`}>
                         {color.name}
                       </span>
                     </button>
@@ -457,12 +456,12 @@ export default function Productos() {
               </div>
 
               {/* Action Button */}
-              <div className="mt-auto pt-6 border-t border-[#EAECEF]">
+              <div className="mt-auto pt-6 border-t border-[rgba(255,193,7,0.15)]">
                 <a 
                   href={`https://wa.me/525524398773?text=${encodeURIComponent(selectedProduct.whatsappText)}`}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-full flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#E6B325] text-[#071A33] font-extrabold text-sm px-6 py-4 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.3)] transition-all duration-300 tracking-widest uppercase"
+                  className="w-full flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#FFB300] text-[#04142B] font-extrabold text-sm px-6 py-4 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.3)] transition-all duration-300 tracking-widest uppercase"
                 >
                   <span className="material-symbols-outlined text-[18px]">chat</span>
                   Cotizar este modelo
