@@ -170,7 +170,7 @@ export default function Footer() {
             {/* Nex mascot — overflows above widget */}
             <div className="absolute -top-16 right-6 w-[90px] h-[90px] pointer-events-none z-20">
               <Image 
-                src="/assets/images/marca/mascota_widget.png" 
+                src="/assets/images/marca/mascota_hero.png" 
                 alt="Nex" 
                 width={90} 
                 height={90} 
@@ -265,7 +265,7 @@ export default function Footer() {
               style={{boxShadow: '0 8px 24px rgba(255,193,7,0.3), 0 2px 8px rgba(0,0,0,0.3)'}}
             >
               <Image
-                src="/assets/images/marca/mascota_widget.png"
+                src="/assets/images/marca/mascota_hero.png"
                 alt="Nex"
                 fill
                 className="object-contain p-1"

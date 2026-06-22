@@ -77,7 +77,7 @@ export default function Home() {
             <div className="relative flex justify-center items-end" style={{width:'100%', maxWidth:'620px'}}>
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] h-8 rounded-full pointer-events-none z-0" style={{background:'radial-gradient(ellipse, rgba(0,0,0,0.55) 0%, transparent 70%)', filter:'blur(12px)'}}></div>
               <div className="absolute inset-0 rounded-full pointer-events-none z-0" style={{background:'radial-gradient(ellipse 60% 90% at 50% 50%, rgba(255,193,7,0.07) 0%, transparent 70%)', filter:'blur(30px)'}}></div>
-              <Image src="/assets/images/marca/mascota_hero.png" alt="Nex — Asesor Oficial Equipanext" width={620} height={620} priority className="relative z-10 object-contain w-full h-auto select-none"
+              <Image src="/assets/images/marca/mascota_widget.png" alt="Nex — Asesor Oficial Equipanext" width={620} height={620} priority className="relative z-10 object-contain w-full h-auto select-none"
                 style={{maxHeight:'580px', filter:'drop-shadow(-8px 0px 24px rgba(255,193,7,0.12)) drop-shadow(0px 24px 48px rgba(0,0,0,0.7))', transform:'scale(1.18)', transformOrigin:'bottom center'}}/>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function Home() {
                 <div className="relative mb-6 w-44 h-44 hover:scale-105 transition-transform duration-500">
                   {/* Subtle rim light for Nex */}
                   <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#FFC107]/20 to-transparent blur-xl scale-75"></div>
-                  <Image src="/assets/images/marca/mascota_hero.png" alt="Nex" fill className="object-contain relative z-10" style={{filter:'drop-shadow(0 12px 32px rgba(255,193,7,0.25))'}}/>
+                  <Image src="/assets/images/marca/mascota_widget.png" alt="Nex" fill className="object-contain relative z-10" style={{filter:'drop-shadow(0 12px 32px rgba(255,193,7,0.25))'}}/>
                 </div>
                 
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-white/70 uppercase tracking-[0.2em] font-bold mb-4">
