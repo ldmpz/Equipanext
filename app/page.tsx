@@ -264,20 +264,21 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: 'SEGURIDAD INDUSTRIAL', desc: 'Chalecos de alta visibilidad, equipo de protección y arneses.', img: '/assets/images/productos/safety_vest.png' },
-              { title: 'GASTRONOMÍA', desc: 'Filipinas, delantales y uniformes premium para cocina.', img: '/assets/images/instalaciones/stitching_fabric.png' },
-              { title: 'SALUD', desc: 'Filipinas médicas, batas y uniformes clínicos.', img: '/assets/images/instalaciones/embroidery_machine.png' },
-              { title: 'INDUSTRIAL', desc: 'Overoles de alta resistencia, pantalones y camisas.', img: '/assets/images/productos/coveralls.png' }
+              { title: 'SEGURIDAD INDUSTRIAL', desc: 'Chalecos de alta visibilidad, equipo de protección y arneses.', img: '/assets/images/productos/cat_seguridad.png' },
+              { title: 'GASTRONOMÍA', desc: 'Filipinas, delantales y uniformes premium para cocina.', img: '/assets/images/productos/cat_gastronomia.png' },
+              { title: 'SALUD', desc: 'Filipinas médicas, batas y uniformes clínicos.', img: '/assets/images/productos/cat_salud.png' },
+              { title: 'INDUSTRIAL', desc: 'Overoles de alta resistencia, pantalones y camisas.', img: '/assets/images/productos/cat_industrial.png' }
             ].map((cat, idx) => (
               <Link key={idx} href="/productos"
                 className="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-[#082041] border border-[rgba(255,193,7,0.15)] shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-end">
                 <Image src={cat.img} alt={cat.title} fill sizes="(max-width: 768px) 100vw, 25vw" loading="lazy" className="object-cover opacity-90 group-hover:scale-110 transition-transform duration-[1.8s] ease-[cubic-bezier(0.16,1,0.3,1)]"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#04142B] via-[#04142B]/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-500"></div>
-                <div className="absolute bottom-4 right-4 z-20 w-10 h-10 bg-[#FFC107] rounded-full flex items-center justify-center group-hover:bg-[#FFB300] transition-all duration-300 shadow-lg">
-                  <span className="material-symbols-outlined text-[#04142B] text-[18px] font-bold">arrow_forward</span>
+                <div className="absolute bottom-4 right-4 z-20 w-10 h-10 bg-[#FFC107] rounded-full flex items-center justify-center group-hover:bg-[#FFB300] transition-all duration-300 shadow-lg group-hover:scale-110">
+                  <span className="material-symbols-outlined text-[#04142B] text-[18px] font-bold group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-                  <h3 className="text-white font-display font-extrabold text-[14px] tracking-widest uppercase">{cat.title}</h3>
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transition-transform duration-500 group-hover:-translate-y-2">
+                  <h3 className="text-white font-display font-extrabold text-[14px] tracking-widest uppercase mb-1">{cat.title}</h3>
+                  <p className="text-white/70 text-[11px] font-light leading-snug max-w-[80%] opacity-0 group-hover:opacity-100 transition-all duration-500 h-0 group-hover:h-auto overflow-hidden">{cat.desc}</p>
                 </div>
               </Link>
             ))}
