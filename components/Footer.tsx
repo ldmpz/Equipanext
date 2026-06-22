@@ -167,28 +167,27 @@ export default function Footer() {
               <span className="material-symbols-outlined text-white text-[16px]">close</span>
             </button>
 
-            {/* Nex mascot — overflows above widget */}
-            <div className="absolute -top-16 right-6 w-[90px] h-[90px] pointer-events-none z-20">
-              <Image 
-                src="/assets/images/marca/mascota_hero.png" 
-                alt="Nex" 
-                width={90} 
-                height={90} 
-                className="w-full h-full object-contain"
-                style={{filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.5)) drop-shadow(0 -2px 8px rgba(255,193,7,0.15))'}}
-              />
-            </div>
-
             {/* Widget Body */}
             <div className="px-6 pt-5 pb-6">
               {/* Header */}
-              <div className="mb-5 pr-10">
-                <p className="text-white font-black text-[20px] leading-tight mb-1">
-                  ¡Hola, soy <span className="text-[#FFC107]">Nex!</span>
-                </p>
-                <p className="text-white/60 text-[12px] font-medium uppercase tracking-widest">
-                  Asesor Oficial · Equipanext
-                </p>
+              <div className="flex items-center gap-3.5 mb-5 pr-8">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#FFC107]/30 bg-[#04142B] flex-shrink-0 flex items-center justify-center">
+                  <Image 
+                    src="/assets/images/marca/mascota_hero.png" 
+                    alt="Nex" 
+                    width={48} 
+                    height={48} 
+                    className="object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="text-white font-black text-[18px] leading-tight mb-0.5">
+                    ¡Hola, soy <span className="text-[#FFC107]">Nex!</span>
+                  </p>
+                  <p className="text-white/60 text-[10px] font-medium uppercase tracking-wider">
+                    Asesor Oficial · Equipanext
+                  </p>
+                </div>
               </div>
 
               {/* Divider */}
