@@ -176,7 +176,7 @@ export default function Footer() {
                     src="/assets/images/marca/mascota_hero.png" 
                     alt="Nex" 
                     fill
-                    className="object-cover object-[62%_15%] scale-150"
+                    className="object-contain object-[44%_center] scale-105"
                   />
                 </div>
                 <div>
