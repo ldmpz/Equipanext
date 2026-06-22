@@ -213,15 +213,15 @@ export default function Home() {
               
               {/* Inner container with subtle border */}
               <div className="w-full flex flex-col items-center relative z-10">
-                <div className="relative mb-6 w-44 h-44 hover:scale-105 transition-transform duration-500">
-                  {/* Subtle rim light for Nex */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#FFC107]/20 to-transparent blur-xl scale-75"></div>
-                  <Image src="/assets/images/marca/mascota_widget.png" alt="Nex" fill className="object-contain relative z-10" style={{filter:'drop-shadow(0 12px 32px rgba(255,193,7,0.25))'}}/>
+                <div className="relative mb-6 w-full h-48 rounded-2xl overflow-hidden border border-white/10 hover:scale-[1.02] transition-transform duration-500 shadow-lg">
+                  {/* Premium overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#082041] via-transparent to-transparent z-20"></div>
+                  <Image src="/assets/images/marca/b2b_cta_impact.png" alt="Uniformes Industriales Premium" fill className="object-cover relative z-10" />
                 </div>
                 
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-white/70 uppercase tracking-[0.2em] font-bold mb-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></span>
-                  Nex · Asesor B2B
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFC107] animate-pulse"></span>
+                  Socio Estratégico B2B
                 </span>
 
                 <h3 className="text-white font-display font-black text-2xl md:text-3xl mb-4 uppercase tracking-tight leading-none">
