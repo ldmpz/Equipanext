@@ -129,6 +129,39 @@ const productsData = [
     ]
   },
   {
+    id: 'flestvest',
+    name: 'Chaleco FLESTVEST',
+    tag: 'Deportivo / Bicolor',
+    image: '/assets/images/chalecos/MODELO FLESTVEST/Negro_Negro.png',
+    description: 'Chaleco de seguridad con diseño deportivo y detalles bicolores en contraste. Fabricado en gabardina de alta resistencia, cuenta con cintas reflejantes horizontales y verticales, costuras reforzadas y prácticos bolsillos organizadores frontales.',
+    whatsappText: 'Hola, me gustaría cotizar el Chaleco FLESTVEST',
+    colors: [
+      { name: 'Negro / Amarillo Neón', hex: '#1B1F24', secondaryHex: '#E8FF00', image: '/assets/images/chalecos/MODELO FLESTVEST/Negro_Amarillo Neon.png' },
+      { name: 'Negro / Azul Rey', hex: '#1B1F24', secondaryHex: '#1976D2', image: '/assets/images/chalecos/MODELO FLESTVEST/Negro_Azul.png' },
+      { name: 'Negro / Naranja', hex: '#1B1F24', secondaryHex: '#FF6B00', image: '/assets/images/chalecos/MODELO FLESTVEST/Negro_Naranja.png' },
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/chalecos/MODELO FLESTVEST/Negro_Negro.png' },
+      { name: 'Negro / Rojo', hex: '#1B1F24', secondaryHex: '#D32F2F', image: '/assets/images/chalecos/MODELO FLESTVEST/Negro_Rojo.png' }
+    ]
+  },
+  {
+    id: 'forteck',
+    name: 'Chaleco FORTECK',
+    tag: 'Uso Rudo',
+    image: '/assets/images/chalecos/MODELO FORTECK/Negro.png',
+    description: 'Chaleco premium de alta resistencia para condiciones de trabajo exigentes. Confeccionado en gabardina gruesa, cuenta con cierres reforzados, múltiples bolsillos multifuncionales de gran capacidad y bandas reflejantes de alta visibilidad.',
+    whatsappText: 'Hola, me gustaría cotizar el Chaleco FORTECK',
+    colors: [
+      { name: 'Azul Marino', hex: '#1C2938', image: '/assets/images/chalecos/MODELO FORTECK/Azul Marino.png' },
+      { name: 'Caqui', hex: '#F0E68C', image: '/assets/images/chalecos/MODELO FORTECK/Caqui.png' },
+      { name: 'Gris Oxford', hex: '#4B5563', image: '/assets/images/chalecos/MODELO FORTECK/Gris Oxford.png' },
+      { name: 'Gris Perla', hex: '#B0BEC5', image: '/assets/images/chalecos/MODELO FORTECK/Gris Perla.png' },
+      { name: 'Naranja', hex: '#FF6B00', image: '/assets/images/chalecos/MODELO FORTECK/Naranja.png' },
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/chalecos/MODELO FORTECK/Negro.png' },
+      { name: 'Verde', hex: '#4CAF50', image: '/assets/images/chalecos/MODELO FORTECK/Verde.png' },
+      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/MODELO FORTECK/Vino.png' }
+    ]
+  },
+  {
     id: 'nuevo-modelo',
     name: 'Nuevo Modelo',
     tag: 'Próximamente',
