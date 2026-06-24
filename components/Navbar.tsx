@@ -53,7 +53,7 @@ export default function Navbar() {
       </div>
 
       {/* 1. Main Navigation */}
-      <nav className="w-full bg-[#04142B]/95 backdrop-blur-md border-b border-white/5 py-3 transition-all duration-300">
+      <nav className="w-full bg-[#04142B] md:bg-[#04142B]/95 md:backdrop-blur-md border-b border-white/5 py-3 transition-all duration-300">
         <div className="flex justify-between items-center px-6 md:px-12 max-w-7xl mx-auto">
 
           {/* Brand Logo */}
@@ -190,7 +190,7 @@ export default function Navbar() {
 
         {/* Mobile Dropdown */}
         <div
-          className={`md:hidden absolute top-full left-0 w-full bg-[#04142B]/98 backdrop-blur-2xl border-b border-white/10 shadow-2xl transition-all duration-500 origin-top overflow-hidden ${
+          className={`md:hidden absolute top-full left-0 w-full bg-gradient-to-b from-[#04142B] to-[#020b18] border-b border-white/10 shadow-2xl transition-all duration-500 origin-top overflow-hidden ${
             mobileMenuOpen ? 'max-h-[850px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
