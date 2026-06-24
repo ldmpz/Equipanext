@@ -69,7 +69,8 @@ const productsData = [
       { name: 'Negro', hex: '#1B1F24', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/negro.png' },
       { name: 'Rosa', hex: '#FFC0CB', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/rosa.png' },
       { name: 'Verde Bandera', hex: '#2E7D32', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/verde bandera.png' },
-      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/vino.png' }
+      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/vino.png' },
+      { name: 'Amarillo Neón', hex: '#E8FF00', image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/amarillo neon o verde.png' }
     ]
   },
   {
@@ -88,7 +89,13 @@ const productsData = [
       { name: 'Gris Perla / Vino', hex: '#B0BEC5', secondaryHex: '#800020', image: '/assets/images/chalecos/MODELO ISA/GRIS PERLA VINO.png' },
       { name: 'Negro / Caqui', hex: '#1B1F24', secondaryHex: '#F0E68C', image: '/assets/images/chalecos/MODELO ISA/NEGRO CAQUI.png' },
       { name: 'Negro / Naranja', hex: '#1B1F24', secondaryHex: '#FF6B00', image: '/assets/images/chalecos/MODELO ISA/NEGRO NARANJA.png' },
-      { name: 'Negro / Verde Bandera', hex: '#1B1F24', secondaryHex: '#2E7D32', image: '/assets/images/chalecos/MODELO ISA/NEGRO VERDE BANDERA.png' }
+      { name: 'Negro / Verde Bandera', hex: '#1B1F24', secondaryHex: '#2E7D32', image: '/assets/images/chalecos/MODELO ISA/NEGRO VERDE BANDERA.png' },
+      { name: 'Naranja / Marino', hex: '#FF6B00', secondaryHex: '#1C2938', image: '/assets/images/chalecos/MODELO ISA/naranja marino.png' },
+      { name: 'Negro / Marino', hex: '#1B1F24', secondaryHex: '#1C2938', image: '/assets/images/chalecos/MODELO ISA/negro marino.png' },
+      { name: 'Negro / Gris Oxford', hex: '#1B1F24', secondaryHex: '#4B5563', image: '/assets/images/chalecos/MODELO ISA/negro oxford.png' },
+      { name: 'Negro / Azul Rey', hex: '#1B1F24', secondaryHex: '#1976D2', image: '/assets/images/chalecos/MODELO ISA/negro rey.png' },
+      { name: 'Negro / Vino', hex: '#1B1F24', secondaryHex: '#800020', image: '/assets/images/chalecos/MODELO ISA/negro vino.png' },
+      { name: 'Azul Rey', hex: '#1976D2', image: '/assets/images/chalecos/MODELO ISA/rey.png' }
     ]
   },
   {
@@ -103,7 +110,22 @@ const productsData = [
       { name: 'Gris Perla / Negro', hex: '#B0BEC5', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/gris perla negro.png' },
       { name: 'Negro / Naranja', hex: '#1B1F24', secondaryHex: '#FF6B00', image: '/assets/images/chalecos/MODELO ISA MAX/negro naranja.png' },
       { name: 'Negro / Vino', hex: '#1B1F24', secondaryHex: '#800020', image: '/assets/images/chalecos/MODELO ISA MAX/negro vino.png' },
-      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/MODELO ISA MAX/vino.png' }
+      { name: 'Vino', hex: '#800020', image: '/assets/images/chalecos/MODELO ISA MAX/vino.png' },
+      { name: 'Gris Perla / Vino', hex: '#B0BEC5', secondaryHex: '#800020', image: '/assets/images/chalecos/MODELO ISA MAX/grisperla vino.png' },
+      { name: 'Marino / Caqui', hex: '#1C2938', secondaryHex: '#F0E68C', image: '/assets/images/chalecos/MODELO ISA MAX/marino caqui.png' },
+      { name: 'Marino / Azul Rey', hex: '#1C2938', secondaryHex: '#1976D2', image: '/assets/images/chalecos/MODELO ISA MAX/marino rey.png' },
+      { name: 'Marino', hex: '#1C2938', image: '/assets/images/chalecos/MODELO ISA MAX/marino.png' },
+      { name: 'Naranja / Negro', hex: '#FF6B00', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/naranja negro.png' },
+      { name: 'Negro / Amarillo Neón', hex: '#1B1F24', secondaryHex: '#E8FF00', image: '/assets/images/chalecos/MODELO ISA MAX/negro amaneon.png' },
+      { name: 'Negro / Gris Oxford', hex: '#1B1F24', secondaryHex: '#4B5563', image: '/assets/images/chalecos/MODELO ISA MAX/negro oxford.png' },
+      { name: 'Negro / Rojo', hex: '#1B1F24', secondaryHex: '#D32F2F', image: '/assets/images/chalecos/MODELO ISA MAX/negro rojo.png' },
+      { name: 'Negro / Verde Bandera', hex: '#1B1F24', secondaryHex: '#2E7D32', image: '/assets/images/chalecos/MODELO ISA MAX/negro verde bandera.png' },
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/negro.png' },
+      { name: 'Azul Rey / Negro', hex: '#1976D2', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/rey negro.png' },
+      { name: 'Azul Rey', hex: '#1976D2', image: '/assets/images/chalecos/MODELO ISA MAX/rey.png' },
+      { name: 'Rojo / Negro', hex: '#D32F2F', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/rojo negro.png' },
+      { name: 'Turquesa / Negro', hex: '#40E0D0', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/turquesa negro.png' },
+      { name: 'Verde Bandera / Negro', hex: '#2E7D32', secondaryHex: '#1B1F24', image: '/assets/images/chalecos/MODELO ISA MAX/verde bandera negro.png' }
     ]
   },
   {
