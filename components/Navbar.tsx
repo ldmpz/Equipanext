@@ -101,9 +101,14 @@ export default function Navbar() {
                 {/* Categorías header */}
                 <p className="px-4 pt-1 pb-1.5 text-[9px] font-extrabold text-[#FFC107] uppercase tracking-[0.2em]">Categorías</p>
                 
-                {/* Industrial (Active) */}
-                <Link href="/productos" className="flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-white/95 hover:bg-white/5 hover:text-[#FFC107] group/item transition-all">
-                  <Factory size={15} className="text-[#FFC107]/80 group-hover/item:text-[#FFC107] transition-colors" /> Industrial
+                {/* Chalecos Reflejantes (Active) */}
+                <Link href="/productos?category=chalecos" className="flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-white/95 hover:bg-white/5 hover:text-[#FFC107] group/item transition-all">
+                  <Factory size={15} className="text-[#FFC107]/80 group-hover/item:text-[#FFC107] transition-colors" /> Chalecos Reflejantes
+                </Link>
+
+                {/* Overoles (Active) */}
+                <Link href="/productos?category=overoles" className="flex items-center gap-2.5 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-white/95 hover:bg-white/5 hover:text-[#FFC107] group/item transition-all">
+                  <Factory size={15} className="text-[#FFC107]/80 group-hover/item:text-[#FFC107] transition-colors" /> Overoles Industriales
                 </Link>
 
                 <div className="mx-4 my-2 h-px bg-white/10"></div>
@@ -238,12 +243,20 @@ export default function Navbar() {
                   {/* Categorías header */}
                   <p className="pt-1 pb-1 text-[9px] font-extrabold text-[#FFC107] uppercase tracking-[0.2em]">Categorías</p>
                   
-                  {/* Industrial (Active) */}
+                  {/* Chalecos Reflejantes (Active) */}
                   <Link
-                    href="/productos"
+                    href="/productos?category=chalecos"
                     className="flex items-center gap-2.5 py-2 text-xs font-bold uppercase tracking-wider text-white/90 hover:text-[#FFC107] group/item transition-all"
                   >
-                    <Factory size={15} className="text-[#FFC107]/80 group-hover/item:text-[#FFC107] transition-colors" /> Industrial
+                    <Factory size={15} className="text-[#FFC107]/80 group-hover/item:text-[#FFC107] transition-colors" /> Chalecos Reflejantes
+                  </Link>
+
+                  {/* Overoles (Active) */}
+                  <Link
+                    href="/productos?category=overoles"
+                    className="flex items-center gap-2.5 py-2 text-xs font-bold uppercase tracking-wider text-white/90 hover:text-[#FFC107] group/item transition-all"
+                  >
+                    <Factory size={15} className="text-[#FFC107]/80 group-hover/item:text-[#FFC107] transition-colors" /> Overoles Industriales
                   </Link>
 
                   <div className="my-1.5 h-px bg-white/5 mr-4"></div>

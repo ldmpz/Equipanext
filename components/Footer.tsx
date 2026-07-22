@@ -96,8 +96,8 @@ export default function Footer() {
             {/* Divisiones Column */}
             <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-4">
               <h4 className="text-white font-semibold text-[11px] uppercase tracking-[0.15em] mb-2">Divisiones</h4>
-              <Link href="/productos" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Chalecos Reflejantes</Link>
-              <Link href="/productos" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Uniformes Industriales</Link>
+              <Link href="/productos?category=chalecos" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Chalecos Reflejantes</Link>
+              <Link href="/productos?category=overoles" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Overoles Industriales</Link>
               <Link href="/servicios" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Bordado Corporativo</Link>
               <Link href="/servicios" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Serigrafía Técnica</Link>
             </div>

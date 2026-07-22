@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 
 // Base products data
 const productsData = [
@@ -9,6 +10,7 @@ const productsData = [
     id: 'roy',
     name: 'Chaleco ROY',
     tag: 'Uso General',
+    category: 'chalecos',
     image: '/assets/images/chalecos/MODELO ROY - GABARDINA/roy.png',
     description: 'Chaleco de gabardina ligera y resistente, cómodo para uso prolongado. Cuenta con 6 cintas reflejantes, múltiples bolsillos funcionales, costuras reforzadas en puntos estratégicos y cierre reforzado para mayor practicidad.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco ROY',
@@ -35,6 +37,7 @@ const productsData = [
     id: 'nova',
     name: 'Chaleco NOVA',
     tag: 'Ergonómico',
+    category: 'chalecos',
     image: '/assets/images/chalecos/MODELO NOVA - GABARDINA/nova.png',
     description: 'Chaleco reflejante de gabardina ligera y resistente, cómodo y durable para uso laboral. Cuenta con 8 bandas reflejantes, 2 bolsillos frontales, cierre reforzado y cubre cuello para mayor seguridad y comodidad.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco NOVA',
@@ -55,6 +58,7 @@ const productsData = [
     id: 'brigadista',
     name: 'Chaleco Brigadista',
     tag: 'Multi-Bolsillos',
+    category: 'chalecos',
     image: '/assets/images/chalecos/CHALECO BRIGADISTA - GABARDINA/brigadista.png',
     description: 'Chaleco de gabardina ligera y cómoda con 5 cintas reflejantes de alta visibilidad. Incluye múltiples bolsillos funcionales, porta radio, porta lámpara, bolsa trasera para documentos y ajuste lateral.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco Brigadista',
@@ -77,6 +81,7 @@ const productsData = [
     id: 'isa',
     name: 'Chaleco ISA',
     tag: 'Transpirable',
+    category: 'chalecos',
     image: '/assets/images/chalecos/MODELO ISA/ISA.png',
     description: 'Chaleco de seguridad reflejante, ideal para construcción y personal técnico. Cuenta con 6 bandas reflejantes visibles hasta 300m, múltiples bolsillos funcionales y malla transpirable.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco ISA',
@@ -102,6 +107,7 @@ const productsData = [
     id: 'isa-max',
     name: 'Chaleco ISA MAX',
     tag: 'Premium',
+    category: 'chalecos',
     image: '/assets/images/chalecos/MODELO ISA MAX/ISA MAX.png',
     description: 'Chaleco de seguridad reflejante premium con diseño reforzado. Ideal para entornos exigentes, ofrece alta visibilidad, durabilidad y confort con múltiples bolsillos organizadores.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco ISA MAX',
@@ -132,6 +138,7 @@ const productsData = [
     id: 'flestvest',
     name: 'Chaleco FLESTVEST',
     tag: 'Deportivo / Bicolor',
+    category: 'chalecos',
     image: '/assets/images/chalecos/MODELO FLESTVEST/Negro_Negro.png',
     description: 'Chaleco de seguridad con diseño deportivo y detalles bicolores en contraste. Fabricado en gabardina de alta resistencia, cuenta con cintas reflejantes horizontales y verticales, costuras reforzadas y prácticos bolsillos organizadores frontales.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco FLESTVEST',
@@ -147,6 +154,7 @@ const productsData = [
     id: 'forteck',
     name: 'Chaleco FORTECK',
     tag: 'Uso Rudo',
+    category: 'chalecos',
     image: '/assets/images/chalecos/MODELO FORTECK/Negro.png',
     description: 'Chaleco premium de alta resistencia para condiciones de trabajo exigentes. Confeccionado en gabardina gruesa, cuenta con cierres reforzados, múltiples bolsillos multifuncionales de gran capacidad y bandas reflejantes de alta visibilidad.',
     whatsappText: 'Hola, me gustaría cotizar el Chaleco FORTECK',
@@ -162,9 +170,46 @@ const productsData = [
     ]
   },
   {
+    id: 'overol-con-reflejante',
+    name: 'Overol Con Reflejante',
+    tag: 'Alta Visibilidad',
+    category: 'overoles',
+    image: '/assets/images/Overoles/Overol Con Reflejante/Azul Rey Con Reflejante.png',
+    description: 'Overol industrial de gabardina premium con cintas reflejantes de alta visibilidad de 2 pulgadas. Diseñado para ofrecer protección completa en condiciones de trabajo pesado y entornos de baja iluminación. Cuenta con costuras de alta resistencia y múltiples bolsillos reforzados para herramientas.',
+    whatsappText: 'Hola, me gustaría cotizar el Overol Con Reflejante',
+    colors: [
+      { name: 'Azul Rey', hex: '#1976D2', image: '/assets/images/Overoles/Overol Con Reflejante/Azul Rey Con Reflejante.png' },
+      { name: 'Azul Marino', hex: '#1C2938', image: '/assets/images/Overoles/Overol Con Reflejante/Azul marino Con Reflejante.png' },
+      { name: 'Caqui', hex: '#F0E68C', image: '/assets/images/Overoles/Overol Con Reflejante/Caqui Con Reflejante.png' },
+      { name: 'Gris Oxford', hex: '#4B5563', image: '/assets/images/Overoles/Overol Con Reflejante/Gris Oxford Con Reflejante.png' },
+      { name: 'Naranja', hex: '#FF6B00', image: '/assets/images/Overoles/Overol Con Reflejante/Naranja Con Reflejante.png' },
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/Overoles/Overol Con Reflejante/Negro Con Reflejante.png' },
+      { name: 'Rojo', hex: '#D32F2F', image: '/assets/images/Overoles/Overol Con Reflejante/Rojo Con Reflejante.png' }
+    ]
+  },
+  {
+    id: 'overol-sin-reflejante',
+    name: 'Overol Sin Reflejante',
+    tag: 'Protección Clásica',
+    category: 'overoles',
+    image: '/assets/images/Overoles/Overol Sin Reflejante/Azul Rey Sin Reflejante.png',
+    description: 'Overol industrial clásico confeccionado en gabardina de alta durabilidad y confort. Ideal para talleres, mantenimiento general, pintura y manufactura. Cuenta con ajuste ergonómico, cierre de doble vía latón reforzado y costuras dobles de alta resistencia.',
+    whatsappText: 'Hola, me gustaría cotizar el Overol Sin Reflejante',
+    colors: [
+      { name: 'Azul Rey', hex: '#1976D2', image: '/assets/images/Overoles/Overol Sin Reflejante/Azul Rey Sin Reflejante.png' },
+      { name: 'Azul Marino', hex: '#1C2938', image: '/assets/images/Overoles/Overol Sin Reflejante/Azul marino Sin Reflejante.png' },
+      { name: 'Caqui', hex: '#F0E68C', image: '/assets/images/Overoles/Overol Sin Reflejante/Caqui Sin Reflejante.png' },
+      { name: 'Gris Oxford', hex: '#4B5563', image: '/assets/images/Overoles/Overol Sin Reflejante/Gris Oxford Sin Reflejante.png' },
+      { name: 'Naranja', hex: '#FF6B00', image: '/assets/images/Overoles/Overol Sin Reflejante/Naranja Sin Reflejante.png' },
+      { name: 'Negro', hex: '#1B1F24', image: '/assets/images/Overoles/Overol Sin Reflejante/Negro Sin Reflejante.png' },
+      { name: 'Rojo', hex: '#D32F2F', image: '/assets/images/Overoles/Overol Sin Reflejante/Rojo Sin Reflejante.png' }
+    ]
+  },
+  {
     id: 'nuevo-modelo',
     name: 'Nuevo Modelo',
     tag: 'Próximamente',
+    category: 'chalecos',
     image: '/assets/images/productos/safety_vest.png',
     description: 'Estamos diseñando la próxima generación de chalecos de alta seguridad. Nuevas características, mejor ergonomía y materiales innovadores.',
     whatsappText: '',
@@ -173,9 +218,24 @@ const productsData = [
   }
 ];
 
-export default function Productos() {
+function ProductosContent() {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const searchParams = useSearchParams();
+  const [activeCategory, setActiveCategory] = useState('todos');
+
+  useEffect(() => {
+    const cat = searchParams.get('category');
+    if (cat === 'chalecos' || cat === 'overoles') {
+      setActiveCategory(cat);
+      setTimeout(() => {
+        const element = document.getElementById('catalogo-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [searchParams]);
 
   // Prevent scrolling when modal is open
   useEffect(() => {
@@ -202,6 +262,28 @@ export default function Productos() {
 
     return () => clearInterval(interval);
   }, [selectedProduct]);
+
+  const filteredProducts = productsData.filter(p => activeCategory === 'todos' || p.category === activeCategory);
+
+  const categoryHeaders: Record<string, { tag: string, title: string, desc: string }> = {
+    todos: {
+      tag: 'Gama Completa',
+      title: 'Todos los productos',
+      desc: 'Explora nuestra línea de equipamiento industrial diseñado para brindar máxima seguridad y comodidad.'
+    },
+    chalecos: {
+      tag: 'Línea de Alta Visibilidad',
+      title: 'Chalecos Reflejantes',
+      desc: 'Diseñados para brindar máxima visibilidad, confort térmico y funcionalidad en entornos operativos de alto riesgo.'
+    },
+    overoles: {
+      tag: 'Protección Corporal Integral',
+      title: 'Overoles Industriales',
+      desc: 'Máxima protección corporal y durabilidad excepcional en telas de gabardina premium para trabajo rudo.'
+    }
+  };
+
+  const currentHeader = categoryHeaders[activeCategory] || categoryHeaders.todos;
 
   return (
     <div className="bg-[#04142B] text-white min-h-screen">
@@ -234,22 +316,48 @@ export default function Productos() {
         </div>
       </section>
 
-      {/* Nuestros Chalecos Reflejantes */}
-      <section className="py-[60px] md:py-[80px] px-6 md:px-12 max-w-7xl mx-auto bg-[#04142B]">
-        <div className="mb-16 md:mb-20 text-center max-w-3xl mx-auto fade-in-up">
+      {/* Nuestros Productos */}
+      <section id="catalogo-section" className="py-[60px] md:py-[80px] px-6 md:px-12 max-w-7xl mx-auto bg-[#04142B] scroll-mt-28">
+        <div className="mb-12 text-center max-w-3xl mx-auto fade-in-up">
           <span className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-4 block">
-            Línea de Alta Visibilidad
+            {currentHeader.tag}
           </span>
           <h2 className="font-display font-extrabold text-white text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
-            Chalecos Reflejantes
+            {currentHeader.title}
           </h2>
           <p className="text-[#D9D9D9] text-lg font-light leading-relaxed">
-            Diseñados para brindar máxima visibilidad, confort térmico y funcionalidad en entornos operativos de alto riesgo.
+            {currentHeader.desc}
           </p>
         </div>
 
+        {/* Pestañas de Categoría */}
+        <div className="flex flex-wrap justify-center items-center gap-3 mb-16 max-w-2xl mx-auto">
+          {[
+            { id: 'todos', name: 'Todos los Productos', count: productsData.filter(p => !p.comingSoon).length },
+            { id: 'chalecos', name: 'Chalecos Reflejantes', count: productsData.filter(p => p.category === 'chalecos' && !p.comingSoon).length },
+            { id: 'overoles', name: 'Overoles Industriales', count: productsData.filter(p => p.category === 'overoles' && !p.comingSoon).length }
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveCategory(tab.id)}
+              className={`px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-widest transition-all duration-300 flex items-center gap-2 ${
+                activeCategory === tab.id
+                  ? 'bg-[#FFC107] text-[#04142B] shadow-[0_4px_15px_rgba(255,193,7,0.25)]'
+                  : 'bg-[#082041] text-white border border-[rgba(255,193,7,0.15)] hover:border-[#FFC107]/40 hover:-translate-y-0.5'
+              }`}
+            >
+              {tab.name}
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                activeCategory === tab.id ? 'bg-[#04142B]/10 text-[#04142B]' : 'bg-white/10 text-[#D9D9D9]/60'
+              }`}>
+                {tab.count}
+              </span>
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-          {productsData.map((product) => (
+          {filteredProducts.map((product) => (
             <div key={product.id} className={`bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden flex flex-col ${product.comingSoon ? 'cursor-not-allowed' : 'hover:border-[#FFC107]/40 hover:-translate-y-1 transition-all duration-500 group'}`}>
               <div className={`relative h-[320px] overflow-hidden flex items-center justify-center p-8 ${product.comingSoon ? 'bg-[#061A36]' : 'bg-[#061A36] group-hover:bg-[#082041]/40 transition-colors duration-500'}`}>
                 <div className="absolute top-6 left-6 bg-[#04142B]/80 backdrop-blur-md border border-[rgba(255,193,7,0.15)] px-3 py-1.5 rounded-full font-medium text-[10px] text-[#FFC107] uppercase tracking-widest shadow-sm z-20">
@@ -320,17 +428,26 @@ export default function Productos() {
             </div>
 
             {/* Overoles */}
-            <div className="relative block w-full h-[400px] md:col-span-4 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
-              <div className="absolute inset-0 bg-[#04142B] z-0 p-10 flex items-center justify-center">
-                <Image width={400} height={400} alt="Overoles Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/coveralls.png"/>
+            <div 
+              onClick={() => {
+                setActiveCategory('overoles');
+                const element = document.getElementById('catalogo-section');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="relative block w-full h-[400px] md:col-span-4 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-pointer hover:border-[#FFC107]/40 hover:-translate-y-1 transition-all duration-500 group"
+            >
+              <div className="absolute inset-0 bg-[#04142B] z-0 p-10 flex items-center justify-center group-hover:bg-[#082041]/40 transition-colors duration-500">
+                <Image width={400} height={400} alt="Overoles Industriales" className="max-w-full max-h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" src="/assets/images/productos/coveralls.png"/>
               </div>
               <div className="absolute bottom-0 left-0 w-full bg-[#082041]/90 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-8 z-20 flex justify-between items-center">
                 <div>
                   <h3 className="font-display font-semibold text-white text-2xl tracking-tight mb-1">Overoles</h3>
                   <p className="text-[#D9D9D9] text-sm font-light">Protección integral.</p>
                 </div>
-                <div className="px-4 py-2 rounded-full bg-[#04142B] border border-[rgba(255,193,7,0.15)] flex items-center justify-center">
-                  <span className="text-[11px] font-semibold text-[#D9D9D9]/50 uppercase tracking-widest">Próximamente</span>
+                <div className="px-5 py-2.5 rounded-md bg-[#FFC107] text-[#04142B] flex items-center justify-center font-bold text-xs uppercase tracking-wider group-hover:shadow-[0_4px_12px_rgba(255,193,7,0.25)] transition-all">
+                  Ver Productos
                 </div>
               </div>
             </div>
@@ -527,5 +644,20 @@ export default function Productos() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function Productos() {
+  return (
+    <Suspense fallback={
+      <div className="bg-[#04142B] text-white min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-10 h-10 border-4 border-[#FFC107] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-sm uppercase tracking-widest font-bold">Cargando Catálogo...</p>
+        </div>
+      </div>
+    }>
+      <ProductosContent />
+    </Suspense>
   );
 }
