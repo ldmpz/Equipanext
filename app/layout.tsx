@@ -38,11 +38,11 @@ export default function RootLayout({
           rel="stylesheet" 
         />
       </head>
-      <body className="bg-[#04142B] text-[#FFFFFF] font-sans antialiased">
+      <body className="bg-[#04142B] text-[#FFFFFF] font-sans antialiased overflow-x-hidden selection:bg-[#FFC107]/20 selection:text-[#04142B]">
         <ScrollObserver />
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen w-full overflow-x-hidden relative">
           <Navbar />
-          <main className="flex-grow">
+          <main className="flex-grow w-full overflow-x-hidden">
             {children}
           </main>
           <Footer />

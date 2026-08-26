@@ -64,19 +64,19 @@ export default function Footer() {
   return (
     <>
       {/* Footer */}
-      <footer className="bg-[#04142B] border-t border-[#FFC107]/15 pt-24 pb-12 relative overflow-hidden">
+      <footer className="bg-[#04142B] border-t border-[#FFC107]/15 pt-16 sm:pt-24 pb-10 sm:pb-12 relative overflow-hidden">
         {/* Subtle Ambient Background */}
         <div className="hidden md:block absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#FFC107]/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 mb-12 sm:mb-16">
             
             {/* Brand Column */}
-            <div className="md:col-span-12 lg:col-span-5 flex flex-col items-start">
+            <div className="sm:col-span-2 md:col-span-12 lg:col-span-5 flex flex-col items-start">
               <Link href="/" className="inline-block mb-6">
-                <Image alt="EQUIPANEXT" width={180} height={80} className="h-20 w-auto object-contain grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-opacity duration-300" src="/assets/images/marca/Logo.png"/>
+                <Image alt="EQUIPANEXT" width={180} height={80} className="h-16 sm:h-20 w-auto object-contain grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-opacity duration-300" src="/assets/images/marca/Logo.png"/>
               </Link>
-              <p className="text-[#D9D9D9]/80 text-sm leading-relaxed max-w-sm mb-8 font-light">
+              <p className="text-[#D9D9D9]/80 text-sm leading-relaxed max-w-sm mb-6 sm:mb-8 font-light">
                 Ingeniería en indumentaria industrial. Proveemos soluciones textiles de alto rendimiento para entornos operativos exigentes, con procesos de manufactura 4.0.
               </p>
               
@@ -94,16 +94,17 @@ export default function Footer() {
             </div>
 
             {/* Divisiones Column */}
-            <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-4">
+            <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-3 sm:gap-4">
               <h4 className="text-white font-semibold text-[11px] uppercase tracking-[0.15em] mb-2">Divisiones</h4>
               <Link href="/productos?category=chalecos" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Chalecos Reflejantes</Link>
               <Link href="/productos?category=overoles" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Overoles Industriales</Link>
+              <Link href="/productos?category=camisas" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Camisas y Camisolas</Link>
+              <Link href="/productos?category=pantalones" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Pantalones de Trabajo</Link>
               <Link href="/servicios" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Bordado Corporativo</Link>
-              <Link href="/servicios" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Serigrafía Técnica</Link>
             </div>
 
             {/* Empresa Column */}
-            <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-4">
+            <div className="md:col-span-4 lg:col-span-2 flex flex-col gap-3 sm:gap-4">
               <h4 className="text-white font-semibold text-[11px] uppercase tracking-[0.15em] mb-2">Empresa</h4>
               <Link href="/nosotros" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Sobre Nosotros</Link>
               <Link href="/nosotros" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors">Infraestructura</Link>
@@ -111,18 +112,18 @@ export default function Footer() {
             </div>
 
             {/* Soporte Column */}
-            <div className="md:col-span-4 lg:col-span-3 flex flex-col gap-4">
+            <div className="sm:col-span-2 md:col-span-4 lg:col-span-3 flex flex-col gap-3 sm:gap-4">
               <h4 className="text-white font-semibold text-[11px] uppercase tracking-[0.15em] mb-2">Atención a Clientes</h4>
-              <a href="mailto:ventasequipanext@gmail.com" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors flex items-center gap-2">
-                <span className="material-symbols-outlined text-[16px]">mail</span>
+              <a href="mailto:ventasequipanext@gmail.com" className="text-[#D9D9D9]/80 hover:text-[#FFC107] text-sm font-light transition-colors flex items-center gap-2 break-all">
+                <span className="material-symbols-outlined text-[16px] flex-shrink-0">mail</span>
                 ventasequipanext@gmail.com
               </a>
               <p className="text-[#D9D9D9]/80 text-sm font-light flex items-center gap-2">
-                <span className="material-symbols-outlined text-[16px]">location_on</span>
+                <span className="material-symbols-outlined text-[16px] flex-shrink-0">location_on</span>
                 Chimalhuacán, Estado de México
               </p>
               
-              <div className="mt-4 p-4 bg-[#082041] border border-[#FFC107]/15 rounded-2xl flex items-start gap-3">
+              <div className="mt-2 sm:mt-4 p-4 bg-[#082041] border border-[#FFC107]/15 rounded-2xl flex items-start gap-3">
                  <span className="w-1.5 h-1.5 bg-[#FFC107] rounded-full mt-1.5 flex-shrink-0"></span>
                  <p className="text-[#D9D9D9] text-[11px] font-medium leading-relaxed">
                    Atendemos licitaciones y proyectos por volumen a nivel nacional.
@@ -132,11 +133,11 @@ export default function Footer() {
 
           </div>
 
-          <div className="pt-8 border-t border-[#FFC107]/15 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="pt-8 border-t border-[#FFC107]/15 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
             <p className="text-[#D9D9D9]/60 text-[11px] font-light">
               &copy; {new Date().getFullYear()} EQUIPANEXT. Todos los derechos reservados.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
               <Link href="#" className="text-[#D9D9D9]/60 hover:text-white text-[11px] font-light transition-colors">Aviso de Privacidad</Link>
               <Link href="#" className="text-[#D9D9D9]/60 hover:text-white text-[11px] font-light transition-colors">Términos y Condiciones</Link>
             </div>
@@ -149,7 +150,7 @@ export default function Footer() {
         <div 
           ref={widgetRef}
           id="whatsapp-chat-widget"
-          className={`fixed bottom-28 right-4 sm:right-6 md:right-8 z-50 w-[calc(100vw-2rem)] sm:w-[340px] max-w-[340px] transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${
+          className={`fixed bottom-24 sm:bottom-28 right-3 sm:right-6 md:right-8 z-50 w-[calc(100vw-1.5rem)] sm:w-[340px] max-w-[340px] max-h-[82vh] overflow-y-auto transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${
             chatOpen 
               ? 'scale-100 opacity-100 pointer-events-auto translate-y-0' 
               : 'scale-95 opacity-0 pointer-events-none translate-y-4'

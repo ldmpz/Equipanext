@@ -206,12 +206,77 @@ const productsData = [
     ]
   },
   {
+    id: 'camisola-con-reflejante',
+    name: 'Camisola Con Reflejante',
+    tag: 'Alta Visibilidad',
+    category: 'camisas',
+    image: '/assets/images/Camisola/Con Reflejante/Camisola Con Reflejante Azul Marino.png',
+    description: 'Camisola industrial de alta visibilidad fabricada en gabardina resistente y fresca. Equipada con cintas reflejantes de 2 pulgadas, doble bolsa frontal con cartera y botones de alta durabilidad. Diseñada para máxima visibilidad y durabilidad en campo.',
+    whatsappText: 'Hola, me gustaría cotizar la Camisola Con Reflejante',
+    colors: [
+      { name: 'Azul Marino', hex: '#1C2938', image: '/assets/images/Camisola/Con Reflejante/Camisola Con Reflejante Azul Marino.png' },
+      { name: 'Caqui', hex: '#C3B091', image: '/assets/images/Camisola/Con Reflejante/Camisola Con Reflejante Caqui.png' },
+      { name: 'Naranja', hex: '#FF6B00', image: '/assets/images/Camisola/Con Reflejante/Camisola Con reflejante Naranja.png' }
+    ]
+  },
+  {
+    id: 'camisola-sin-reflejante',
+    name: 'Camisola Sin Reflejante',
+    tag: 'Uso Operativo',
+    category: 'camisas',
+    image: '/assets/images/Camisola/Sin Reflejante/Camisola Azul Marino.png',
+    description: 'Camisola de trabajo tradicional confeccionada en gabardina premium de alto desempeño. Ofrece excelente resistencia al desgaste, transpirabilidad superior, corte amplio y cómodo para jornadas extendidas de trabajo.',
+    whatsappText: 'Hola, me gustaría cotizar la Camisola Sin Reflejante',
+    colors: [
+      { name: 'Azul Marino', hex: '#1C2938', image: '/assets/images/Camisola/Sin Reflejante/Camisola Azul Marino.png' },
+      { name: 'Caqui', hex: '#C3B091', image: '/assets/images/Camisola/Sin Reflejante/Camisola Caqui.png' },
+      { name: 'Naranja', hex: '#FF6B00', image: '/assets/images/Camisola/Sin Reflejante/Camisola Naranaj.png' }
+    ]
+  },
+  {
+    id: 'camisola-mezclilla',
+    name: 'Camisola de Mezclilla Industrial',
+    tag: '100% Algodón & 80/20',
+    category: 'camisas',
+    image: '/assets/images/Camisa De  Mezclilla.png',
+    description: 'Camisola de mezclilla industrial disponible en composición 100% algodón y en mezcla 80/20 de alto gramaje con costuras reforzadas en triple puntada. Brinda protección contra rebabas, fricción y trabajo rudo con una presentación formal e impecable.',
+    whatsappText: 'Hola, me gustaría cotizar la Camisola de Mezclilla Industrial (100% Algodón / 80/20)',
+    colors: [
+      { name: 'Azul Mezclilla', hex: '#2B4C7E', image: '/assets/images/Camisa De  Mezclilla.png' }
+    ]
+  },
+  {
+    id: 'playera-polo',
+    name: 'Playera Tipo Polo / Ejecutiva',
+    tag: 'Confort & Corporativo',
+    category: 'camisas',
+    image: '/assets/images/Playera.png',
+    description: 'Playera tipo polo corporativa confeccionada en tela piqué fresca, suave y transpirable. Ideal para áreas administrativas, ventas, supervisión y personal de servicio. Lista para bordado fino institucional.',
+    whatsappText: 'Hola, me gustaría cotizar la Playera Tipo Polo / Ejecutiva',
+    colors: [
+      { name: 'Blanco', hex: '#F8FAFC', image: '/assets/images/Playera.png' }
+    ]
+  },
+  {
+    id: 'pantalon-ejecutivo',
+    name: 'Pantalón Ejecutivo de Gabardina',
+    tag: 'Corte Ergonómico',
+    category: 'pantalones',
+    image: '/assets/images/Pantalon Ejecutivo/Pantalon Azul Marino.png',
+    description: 'Pantalón de gabardina de uso rudo con corte ergonómico y elegante. Cuenta con costuras reforzadas en tiro y entrepierna, pretina reforzada y bolsas de alta profundidad. Diseñado para resistir la jornada operativa conservando una imagen pulcra.',
+    whatsappText: 'Hola, me gustaría cotizar el Pantalón Ejecutivo de Gabardina',
+    colors: [
+      { name: 'Azul Marino', hex: '#1C2938', image: '/assets/images/Pantalon Ejecutivo/Pantalon Azul Marino.png' },
+      { name: 'Caqui', hex: '#C3B091', image: '/assets/images/Pantalon Ejecutivo/Pantalon Caqui.png' }
+    ]
+  },
+  {
     id: 'nuevo-modelo',
     name: 'Nuevo Modelo',
     tag: 'Próximamente',
     category: 'chalecos',
     image: '/assets/images/productos/safety_vest.png',
-    description: 'Estamos diseñando la próxima generación de chalecos de alta seguridad. Nuevas características, mejor ergonomía y materiales innovadores.',
+    description: 'Estamos diseñando la próxima generación de indumentaria de alta seguridad. Nuevas características, mejor ergonomía y materiales innovadores.',
     whatsappText: '',
     colors: [],
     comingSoon: true
@@ -226,7 +291,7 @@ function ProductosContent() {
 
   useEffect(() => {
     const cat = searchParams.get('category');
-    if (cat === 'chalecos' || cat === 'overoles') {
+    if (cat && ['chalecos', 'overoles', 'camisas', 'pantalones'].includes(cat)) {
       setActiveCategory(cat);
       setTimeout(() => {
         const element = document.getElementById('catalogo-section');
@@ -280,6 +345,16 @@ function ProductosContent() {
       tag: 'Protección Corporal Integral',
       title: 'Overoles Industriales',
       desc: 'Máxima protección corporal y durabilidad excepcional en telas de gabardina premium para trabajo rudo.'
+    },
+    camisas: {
+      tag: 'Presentación y Resistencia',
+      title: 'Camisas y Camisolas Industriales',
+      desc: 'Camisolas técnicas con y sin reflejante, camisolas de mezclilla (100% algodón y mezcla 80/20) y playeras polo corporativas.'
+    },
+    pantalones: {
+      tag: 'Ergonomía y Durabilidad',
+      title: 'Pantalones Industriales y Ejecutivos',
+      desc: 'Confeccionados en gabardina de alta resistencia con refuerzos estratégicos para la máxima libertad de movimiento y presencia.'
     }
   };
 
@@ -287,67 +362,60 @@ function ProductosContent() {
 
   return (
     <div className="bg-[#04142B] text-white min-h-screen">
-      {/* Hero Section */}
-      <section className="relative w-full pt-[160px] pb-[100px] md:pt-[200px] md:pb-[140px] px-6 md:px-12 bg-[#061A36] overflow-hidden">
-        {/* Background Image */}
+      <section className="relative w-full pt-36 sm:pt-44 md:pt-48 pb-16 sm:pb-20 px-4 sm:px-6 md:px-12 bg-[#04142B] overflow-hidden">
         <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-90 filter grayscale-[0.2] scale-105"
-          style={{ backgroundImage: "url('/assets/images/productos/hero_bg.png')" }}
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40 filter grayscale-[0.2] scale-105"
+          style={{ backgroundImage: "url('/assets/images/instalaciones/manufacturing_floor.png')" }}
         ></div>
         
-        {/* Cinematic Dark Overlay & Bottom Fade (Igual que en Inicio) */}
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-[#04142B]/60 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#04142B]/80 via-transparent to-transparent z-10"></div>
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#04142B] to-transparent z-10"></div>
         <div className="hidden md:block absolute -top-40 -left-40 w-[800px] h-[800px] bg-gradient-to-b from-[#FFC107]/5 to-transparent rounded-full blur-[100px] pointer-events-none z-10"></div>
 
         <div className="relative z-20 max-w-4xl mx-auto text-center fade-in-up">
-          <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-[#FFC107]/30 text-[#FFC107] font-bold text-[11px] px-5 py-2 rounded-md mb-8 uppercase tracking-[0.2em]">
-            <span className="w-2 h-2 bg-[#FFC107] rounded-full animate-pulse"></span>
-            Catálogo Industrial
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white mb-8 leading-[1.0] tracking-[-0.03em] drop-shadow-2xl uppercase">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-extrabold text-white mb-6 sm:mb-8 leading-[1.0] tracking-[-0.03em] drop-shadow-2xl uppercase break-words">
             Equipamiento de <br className="hidden md:block"/>
             <span className="text-[#FFC107]">alto rendimiento.</span>
           </h1>
-          <p className="text-white max-w-2xl mx-auto text-lg md:text-2xl font-normal leading-relaxed tracking-tight drop-shadow-lg opacity-90">
+          <p className="text-white/90 max-w-2xl mx-auto text-base sm:text-lg md:text-2xl font-normal leading-relaxed tracking-tight drop-shadow-lg opacity-90">
             Nuestra línea de productos está diseñada bajo estrictos estándares industriales para garantizar durabilidad, seguridad y presentación profesional en cualquier entorno operativo.
           </p>
         </div>
       </section>
 
-      {/* Nuestros Productos */}
-      <section id="catalogo-section" className="py-[60px] md:py-[80px] px-6 md:px-12 max-w-7xl mx-auto bg-[#04142B] scroll-mt-28">
-        <div className="mb-12 text-center max-w-3xl mx-auto fade-in-up">
-          <span className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-4 block">
+      <section id="catalogo-section" className="py-12 sm:py-16 md:py-[80px] px-4 sm:px-6 md:px-12 max-w-7xl mx-auto bg-[#04142B] scroll-mt-28">
+        <div className="mb-10 sm:mb-12 text-center max-w-3xl mx-auto fade-in-up">
+          <span className="text-[10px] sm:text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-3 sm:mb-4 block">
             {currentHeader.tag}
           </span>
-          <h2 className="font-display font-extrabold text-white text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
+          <h2 className="font-display font-extrabold text-white text-2xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-4 sm:mb-6 uppercase">
             {currentHeader.title}
           </h2>
-          <p className="text-[#D9D9D9] text-lg font-light leading-relaxed">
+          <p className="text-[#D9D9D9] text-sm sm:text-lg font-light leading-relaxed">
             {currentHeader.desc}
           </p>
         </div>
 
-        {/* Pestañas de Categoría */}
-        <div className="flex flex-wrap justify-center items-center gap-3 mb-16 max-w-2xl mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-12 sm:mb-16 max-w-4xl mx-auto">
           {[
             { id: 'todos', name: 'Todos los Productos', count: productsData.filter(p => !p.comingSoon).length },
             { id: 'chalecos', name: 'Chalecos Reflejantes', count: productsData.filter(p => p.category === 'chalecos' && !p.comingSoon).length },
-            { id: 'overoles', name: 'Overoles Industriales', count: productsData.filter(p => p.category === 'overoles' && !p.comingSoon).length }
+            { id: 'overoles', name: 'Overoles Industriales', count: productsData.filter(p => p.category === 'overoles' && !p.comingSoon).length },
+            { id: 'camisas', name: 'Camisas y Camisolas', count: productsData.filter(p => p.category === 'camisas' && !p.comingSoon).length },
+            { id: 'pantalones', name: 'Pantalones', count: productsData.filter(p => p.category === 'pantalones' && !p.comingSoon).length }
           ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveCategory(tab.id)}
-              className={`px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-widest transition-all duration-300 flex items-center gap-2 ${
+              className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-widest transition-all duration-300 flex items-center gap-1.5 sm:gap-2 ${
                 activeCategory === tab.id
                   ? 'bg-[#FFC107] text-[#04142B] shadow-[0_4px_15px_rgba(255,193,7,0.25)]'
                   : 'bg-[#082041] text-white border border-[rgba(255,193,7,0.15)] hover:border-[#FFC107]/40 hover:-translate-y-0.5'
               }`}
             >
               {tab.name}
-              <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+              <span className={`text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full font-bold ${
                 activeCategory === tab.id ? 'bg-[#04142B]/10 text-[#04142B]' : 'bg-white/10 text-[#D9D9D9]/60'
               }`}>
                 {tab.count}
@@ -356,11 +424,11 @@ function ProductosContent() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-24">
           {filteredProducts.map((product) => (
             <div key={product.id} className={`bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden flex flex-col ${product.comingSoon ? 'cursor-not-allowed' : 'hover:border-[#FFC107]/40 hover:-translate-y-1 transition-all duration-500 group'}`}>
-              <div className={`relative h-[320px] overflow-hidden flex items-center justify-center p-8 ${product.comingSoon ? 'bg-[#061A36]' : 'bg-[#061A36] group-hover:bg-[#082041]/40 transition-colors duration-500'}`}>
-                <div className="absolute top-6 left-6 bg-[#04142B]/80 backdrop-blur-md border border-[rgba(255,193,7,0.15)] px-3 py-1.5 rounded-full font-medium text-[10px] text-[#FFC107] uppercase tracking-widest shadow-sm z-20">
+              <div className={`relative h-[260px] sm:h-[320px] overflow-hidden flex items-center justify-center p-6 sm:p-8 ${product.comingSoon ? 'bg-[#061A36]' : 'bg-[#061A36] group-hover:bg-[#082041]/40 transition-colors duration-500'}`}>
+                <div className="absolute top-4 sm:top-6 left-4 sm:left-6 bg-[#04142B]/80 backdrop-blur-md border border-[rgba(255,193,7,0.15)] px-3 py-1.5 rounded-full font-medium text-[10px] text-[#FFC107] uppercase tracking-widest shadow-sm z-20">
                   {product.tag}
                 </div>
                 <Image 
@@ -371,9 +439,9 @@ function ProductosContent() {
                   src={product.image}
                 />
               </div>
-              <div className="p-8 md:p-10 flex flex-col flex-grow bg-[#082041] border-t border-[rgba(255,193,7,0.15)]">
-                <h3 className={`font-display font-semibold text-2xl text-white mb-4 tracking-tight ${product.comingSoon ? 'opacity-60' : ''}`}>{product.name}</h3>
-                <p className={`text-[#D9D9D9] flex-grow mb-8 text-base font-light leading-relaxed ${product.comingSoon ? 'opacity-60' : ''}`}>
+              <div className="p-6 sm:p-8 md:p-10 flex flex-col flex-grow bg-[#082041] border-t border-[rgba(255,193,7,0.15)]">
+                <h3 className={`font-display font-semibold text-xl sm:text-2xl text-white mb-3 sm:mb-4 tracking-tight ${product.comingSoon ? 'opacity-60' : ''}`}>{product.name}</h3>
+                <p className={`text-[#D9D9D9] flex-grow mb-6 sm:mb-8 text-sm sm:text-base font-light leading-relaxed ${product.comingSoon ? 'opacity-60' : ''}`}>
                   {product.description}
                 </p>
                 {product.comingSoon ? (
@@ -383,7 +451,7 @@ function ProductosContent() {
                 ) : (
                   <button 
                     onClick={() => setSelectedProduct(product)}
-                  className="inline-flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#FFB300] text-[#04142B] font-extrabold text-[12px] px-6 py-3.5 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.25)] hover:-translate-y-0.5 transition-all duration-300 w-full tracking-widest uppercase"
+                    className="inline-flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#FFB300] text-[#04142B] font-extrabold text-[12px] px-6 py-3.5 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.25)] hover:-translate-y-0.5 transition-all duration-300 w-full tracking-widest uppercase"
                   >
                     Ver colores y detalles
                     <span className="material-symbols-outlined text-[18px]">palette</span>
@@ -395,39 +463,45 @@ function ProductosContent() {
         </div>
       </section>
 
-      {/* Otras Categorías (Bento Grid) */}
-      <section className="py-[120px] md:py-[180px] bg-[#061A36] border-y border-[rgba(255,193,7,0.15)] relative">
-        <div className="px-6 md:px-12 max-w-7xl mx-auto relative z-10">
-          <div className="mb-16 md:mb-24 text-center max-w-3xl mx-auto">
-            <span className="text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-4 block">
+      <section className="py-16 sm:py-24 md:py-[180px] bg-[#061A36] border-y border-[rgba(255,193,7,0.15)] relative">
+        <div className="px-4 sm:px-6 md:px-12 max-w-7xl mx-auto relative z-10">
+          <div className="mb-12 sm:mb-16 md:mb-24 text-center max-w-3xl mx-auto">
+            <span className="text-[10px] sm:text-[11px] font-bold text-[#FFC107] uppercase tracking-[0.2em] mb-3 sm:mb-4 block">
               Gama Completa
             </span>
-            <h2 className="font-display font-extrabold text-white text-3xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-6 uppercase">
+            <h2 className="font-display font-extrabold text-white text-2xl sm:text-4xl md:text-5xl leading-[1.1] tracking-[-0.02em] mb-4 sm:mb-6 uppercase">
               Explora todas las categorías
             </h2>
-            <p className="text-[#D9D9D9] text-lg font-light leading-relaxed">
+            <p className="text-[#D9D9D9] text-base sm:text-lg font-light leading-relaxed">
               Soluciones integrales para la vestimenta y protección de su equipo.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[minmax(300px,auto)]">
-            {/* Camisas Industriales */}
-            <div className="relative block w-full h-[400px] md:col-span-8 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
-              <div className="absolute inset-0 bg-[#04142B] z-0 p-12 flex items-center justify-center">
-                <Image width={400} height={400} alt="Camisas Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_shirt.png"/>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div 
+              onClick={() => {
+                setActiveCategory('camisas');
+                const element = document.getElementById('catalogo-section');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="relative block w-full min-h-[320px] md:h-[400px] md:col-span-8 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-pointer hover:border-[#FFC107]/40 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
+            >
+              <div className="absolute inset-0 bg-[#04142B] z-0 p-6 sm:p-12 flex items-center justify-center group-hover:bg-[#082041]/40 transition-colors duration-500">
+                <Image width={400} height={400} alt="Camisas Industriales" className="max-w-full max-h-[220px] sm:max-h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" src="/assets/images/productos/work_shirt.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-[#082041]/90 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-8 z-20 flex justify-between items-center">
+              <div className="relative mt-auto w-full bg-[#082041]/95 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-5 sm:p-8 z-20 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
                 <div>
-                  <h3 className="font-display font-semibold text-white text-2xl tracking-tight mb-1">Camisas Industriales</h3>
-                  <p className="text-[#D9D9D9] text-sm font-light">Resistencia y transpirabilidad superior.</p>
+                  <h3 className="font-display font-semibold text-white text-xl sm:text-2xl tracking-tight mb-1">Camisas y Camisolas</h3>
+                  <p className="text-[#D9D9D9] text-xs sm:text-sm font-light">Resistencia y transpirabilidad superior para planta y campo.</p>
                 </div>
-                <div className="px-4 py-2 rounded-full bg-[#04142B] border border-[rgba(255,193,7,0.15)] flex items-center justify-center">
-                  <span className="text-[11px] font-semibold text-[#D9D9D9]/50 uppercase tracking-widest">Próximamente</span>
+                <div className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-[#FFC107] text-[#04142B] flex items-center justify-center font-bold text-[11px] sm:text-xs uppercase tracking-wider group-hover:shadow-[0_4px_12px_rgba(255,193,7,0.25)] transition-all flex-shrink-0">
+                  Ver Productos
                 </div>
               </div>
             </div>
 
-            {/* Overoles */}
             <div 
               onClick={() => {
                 setActiveCategory('overoles');
@@ -436,34 +510,42 @@ function ProductosContent() {
                   element.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
-              className="relative block w-full h-[400px] md:col-span-4 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-pointer hover:border-[#FFC107]/40 hover:-translate-y-1 transition-all duration-500 group"
+              className="relative block w-full min-h-[320px] md:h-[400px] md:col-span-4 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-pointer hover:border-[#FFC107]/40 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
             >
-              <div className="absolute inset-0 bg-[#04142B] z-0 p-10 flex items-center justify-center group-hover:bg-[#082041]/40 transition-colors duration-500">
-                <Image width={400} height={400} alt="Overoles Industriales" className="max-w-full max-h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" src="/assets/images/productos/coveralls.png"/>
+              <div className="absolute inset-0 bg-[#04142B] z-0 p-6 sm:p-10 flex items-center justify-center group-hover:bg-[#082041]/40 transition-colors duration-500">
+                <Image width={400} height={400} alt="Overoles Industriales" className="max-w-full max-h-[220px] sm:max-h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" src="/assets/images/productos/coveralls.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-[#082041]/90 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-8 z-20 flex justify-between items-center">
+              <div className="relative mt-auto w-full bg-[#082041]/95 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-5 sm:p-8 z-20 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
                 <div>
-                  <h3 className="font-display font-semibold text-white text-2xl tracking-tight mb-1">Overoles</h3>
-                  <p className="text-[#D9D9D9] text-sm font-light">Protección integral.</p>
+                  <h3 className="font-display font-semibold text-white text-xl sm:text-2xl tracking-tight mb-1">Overoles</h3>
+                  <p className="text-[#D9D9D9] text-xs sm:text-sm font-light">Protección integral para trabajo pesado.</p>
                 </div>
-                <div className="px-5 py-2.5 rounded-md bg-[#FFC107] text-[#04142B] flex items-center justify-center font-bold text-xs uppercase tracking-wider group-hover:shadow-[0_4px_12px_rgba(255,193,7,0.25)] transition-all">
+                <div className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-[#FFC107] text-[#04142B] flex items-center justify-center font-bold text-[11px] sm:text-xs uppercase tracking-wider group-hover:shadow-[0_4px_12px_rgba(255,193,7,0.25)] transition-all flex-shrink-0">
                   Ver Productos
                 </div>
               </div>
             </div>
 
-            {/* Pantalones Industriales */}
-            <div className="relative block w-full h-[400px] md:col-span-12 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-not-allowed">
-              <div className="absolute inset-0 bg-[#04142B] z-0 p-12 flex items-center justify-center">
-                <Image width={400} height={400} alt="Pantalones Industriales" className="max-w-full max-h-full object-contain filter grayscale-[0.8] opacity-60 z-10" src="/assets/images/productos/work_pants.png"/>
+            <div 
+              onClick={() => {
+                setActiveCategory('pantalones');
+                const element = document.getElementById('catalogo-section');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="relative block w-full min-h-[320px] md:h-[400px] md:col-span-12 bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.02)] cursor-pointer hover:border-[#FFC107]/40 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
+            >
+              <div className="absolute inset-0 bg-[#04142B] z-0 p-6 sm:p-12 flex items-center justify-center group-hover:bg-[#082041]/40 transition-colors duration-500">
+                <Image width={400} height={400} alt="Pantalones Industriales" className="max-w-full max-h-[220px] sm:max-h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-10" src="/assets/images/productos/work_pants.png"/>
               </div>
-              <div className="absolute bottom-0 left-0 w-full bg-[#082041]/90 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-8 z-20 flex justify-between items-center">
+              <div className="relative mt-auto w-full bg-[#082041]/95 backdrop-blur-md border-t border-[rgba(255,193,7,0.15)] p-5 sm:p-8 z-20 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0">
                 <div>
-                  <h3 className="font-display font-semibold text-white text-2xl tracking-tight mb-1">Pantalones Industriales</h3>
-                  <p className="text-[#D9D9D9] text-sm font-light">Ergonomía activa y refuerzos estratégicos para el uso diario.</p>
+                  <h3 className="font-display font-semibold text-white text-xl sm:text-2xl tracking-tight mb-1">Pantalones Industriales y Ejecutivos</h3>
+                  <p className="text-[#D9D9D9] text-xs sm:text-sm font-light">Ergonomía activa, durabilidad y refuerzos estratégicos para el uso diario.</p>
                 </div>
-                <div className="px-4 py-2 rounded-full bg-[#04142B] border border-[rgba(255,193,7,0.15)] flex items-center justify-center">
-                  <span className="text-[11px] font-semibold text-[#D9D9D9]/50 uppercase tracking-widest">Próximamente</span>
+                <div className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-md bg-[#FFC107] text-[#04142B] flex items-center justify-center font-bold text-[11px] sm:text-xs uppercase tracking-wider group-hover:shadow-[0_4px_12px_rgba(255,193,7,0.25)] transition-all flex-shrink-0">
+                  Ver Productos
                 </div>
               </div>
             </div>
@@ -471,82 +553,74 @@ function ProductosContent() {
         </div>
       </section>
 
-      {/* Servicios Especializados */}
-      <section className="py-[120px] md:py-[180px] px-6 md:px-12 max-w-7xl mx-auto bg-[#04142B]">
+      <section className="py-16 sm:py-24 md:py-[180px] px-4 sm:px-6 md:px-12 max-w-7xl mx-auto bg-[#04142B]">
         <div className="border border-[rgba(255,193,7,0.15)] rounded-3xl overflow-hidden flex flex-col lg:flex-row">
-          <div className="p-10 md:p-16 lg:w-1/2 flex flex-col justify-center bg-[#082041]">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="material-symbols-outlined text-[#FFC107] text-[28px]">precision_manufacturing</span>
-              <span className="font-bold text-[11px] text-[#FFC107] uppercase tracking-[0.2em]">Servicios Especializados</span>
+          <div className="p-6 sm:p-10 md:p-16 lg:w-1/2 flex flex-col justify-center bg-[#082041]">
+            <div className="flex items-center gap-2.5 mb-4 sm:mb-6">
+              <span className="material-symbols-outlined text-[#FFC107] text-[24px] sm:text-[28px]">precision_manufacturing</span>
+              <span className="font-bold text-[10px] sm:text-[11px] text-[#FFC107] uppercase tracking-[0.2em]">Servicios Especializados</span>
             </div>
-            <h3 className="font-display font-extrabold text-3xl text-white mb-6 tracking-tight uppercase">Uniformes personalizados</h3>
-            <p className="text-[#D9D9D9] mb-10 text-lg font-light leading-relaxed">
+            <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-white mb-4 sm:mb-6 tracking-tight uppercase">Uniformes personalizados</h3>
+            <p className="text-[#D9D9D9] mb-8 sm:mb-10 text-base sm:text-lg font-light leading-relaxed">
               Integramos la identidad corporativa de su empresa directamente en la manufactura del equipamiento mediante técnicas de alta precisión.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-3 bg-[#04142B] px-5 py-3 rounded-xl border border-[rgba(255,193,7,0.15)]">
-                <span className="material-symbols-outlined text-white text-[20px]">styler</span>
-                <span className="font-medium text-sm text-white">Bordado CNC</span>
+            <div className="flex flex-wrap gap-3 sm:gap-4">
+              <div className="flex items-center gap-3 bg-[#04142B] px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl border border-[rgba(255,193,7,0.15)]">
+                <span className="material-symbols-outlined text-white text-[18px] sm:text-[20px]">styler</span>
+                <span className="font-medium text-xs sm:text-sm text-white">Bordado CNC</span>
               </div>
-              <div className="flex items-center gap-3 bg-[#04142B] px-5 py-3 rounded-xl border border-[rgba(255,193,7,0.15)]">
-                <span className="material-symbols-outlined text-white text-[20px]">format_paint</span>
-                <span className="font-medium text-sm text-white">Serigrafía Textil</span>
+              <div className="flex items-center gap-3 bg-[#04142B] px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl border border-[rgba(255,193,7,0.15)]">
+                <span className="material-symbols-outlined text-white text-[18px] sm:text-[20px]">format_paint</span>
+                <span className="font-medium text-xs sm:text-sm text-white">Serigrafía Textil</span>
               </div>
             </div>
           </div>
-          <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden group bg-[#04142B]">
+          <div className="lg:w-1/2 relative min-h-[260px] sm:min-h-[350px] md:min-h-[400px] overflow-hidden group bg-[#04142B]">
             <Image width={800} height={800} alt="Máquina de Bordado Industrial" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-0" src="/assets/images/instalaciones/embroidery_machine.png"/>
-            {/* Soft inner shadow */}
             <div className="absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)] pointer-events-none"></div>
           </div>
         </div>
       </section>
 
-      {/* MODAL GALERÍA DE COLORES */}
       {selectedProduct && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6"
           onClick={() => setSelectedProduct(null)}
         >
-          {/* Overlay Background */}
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+          <div className="absolute inset-0 bg-black/75 backdrop-blur-sm transition-opacity"></div>
           
-          {/* Modal Container */}
           <div 
-            className="relative bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col md:flex-row transform transition-all"
+            className="relative bg-[#082041] border border-[rgba(255,193,7,0.15)] rounded-3xl shadow-2xl w-full max-w-4xl max-h-[92vh] overflow-y-auto md:overflow-hidden flex flex-col md:flex-row transform transition-all z-10"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button 
               onClick={() => setSelectedProduct(null)}
-              className="absolute top-4 right-4 z-20 w-10 h-10 bg-[#04142B]/85 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-[#061A36] transition-colors shadow-sm"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-30 w-9 h-9 sm:w-10 sm:h-10 bg-[#04142B]/85 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-[#061A36] transition-colors shadow-sm"
+              aria-label="Cerrar modal"
             >
-              <span className="material-symbols-outlined">close</span>
+              <span className="material-symbols-outlined text-[20px]">close</span>
             </button>
 
-            {/* Product Image Area Slider */}
-            <div className="w-full md:w-1/2 bg-[#061A36] flex items-center justify-center relative min-h-[300px] md:min-h-full overflow-hidden group">
-              {/* Images */}
+            <div className="w-full md:w-1/2 bg-[#061A36] flex items-center justify-center relative min-h-[260px] sm:min-h-[300px] md:min-h-[460px] overflow-hidden group flex-shrink-0">
               {(() => {
                 const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                 return images.map((img: string, idx: number) => (
                   <div 
                     key={idx}
-                    className={`absolute inset-0 flex items-center justify-center p-8 transition-opacity duration-1000 ease-in-out ${currentImageIndex === idx ? 'opacity-100' : 'opacity-0'}`}
+                    className={`absolute inset-0 flex items-center justify-center p-6 sm:p-8 transition-opacity duration-1000 ease-in-out ${currentImageIndex === idx ? 'opacity-100' : 'opacity-0'}`}
                   >
                     <Image 
                       src={img} 
                       alt={`${selectedProduct.name} vista ${idx + 1}`}
                       width={600}
                       height={600}
-                      className="max-h-[300px] md:max-h-[400px] object-contain drop-shadow-xl"
+                      className="max-h-[220px] sm:max-h-[280px] md:max-h-[360px] w-auto object-contain drop-shadow-xl"
                     />
                   </div>
                 ));
               })()}
               
-              {/* Pagination Dots */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 sm:gap-2 z-10">
                 {(() => {
                   const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                   return images.map((_, idx: number) => (
@@ -560,16 +634,15 @@ function ProductosContent() {
                 })()}
               </div>
               
-              {/* Arrows */}
               <button 
                 onClick={(e) => {
                   e.stopPropagation();
                   const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                   setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
                 }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#04142B]/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#061A36] shadow-sm hover:shadow-md"
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-[#04142B]/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-80 sm:opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#061A36] shadow-sm hover:shadow-md"
               >
-                <span className="material-symbols-outlined">chevron_left</span>
+                <span className="material-symbols-outlined text-[18px] sm:text-[24px]">chevron_left</span>
               </button>
               <button 
                 onClick={(e) => {
@@ -577,39 +650,37 @@ function ProductosContent() {
                   const images = selectedProduct.colors.map((c: any) => c.image || selectedProduct.image);
                   setCurrentImageIndex((prev) => (prev + 1) % images.length);
                 }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#04142B]/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#061A36] shadow-sm hover:shadow-md"
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 bg-[#04142B]/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white opacity-80 sm:opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#061A36] shadow-sm hover:shadow-md"
               >
-                <span className="material-symbols-outlined">chevron_right</span>
+                <span className="material-symbols-outlined text-[18px] sm:text-[24px]">chevron_right</span>
               </button>
             </div>
 
-            {/* Product Details & Colors */}
-            <div className="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto flex flex-col">
-              <span className="text-[10px] font-bold text-[#FFC107] uppercase tracking-widest mb-2 block">
+            <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-10 overflow-y-auto flex flex-col">
+              <span className="text-[10px] font-bold text-[#FFC107] uppercase tracking-widest mb-1.5 block">
                 {selectedProduct.tag}
               </span>
-              <h2 className="text-2xl font-display font-extrabold text-white mb-4 uppercase">
+              <h2 className="text-xl sm:text-2xl font-display font-extrabold text-white mb-3 sm:mb-4 uppercase">
                 {selectedProduct.name}
               </h2>
-              <p className="text-[#D9D9D9] text-sm font-light leading-relaxed mb-8">
+              <p className="text-[#D9D9D9] text-xs sm:text-sm font-light leading-relaxed mb-6 sm:mb-8">
                 {selectedProduct.description}
               </p>
 
-              {/* Colors Section */}
-              <div className="mb-10">
-                <h4 className="text-sm font-medium text-white uppercase tracking-widest mb-4 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[18px]">palette</span>
+              <div className="mb-6 sm:mb-8">
+                <h4 className="text-xs sm:text-sm font-medium text-white uppercase tracking-widest mb-3 sm:mb-4 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-[16px] sm:text-[18px]">palette</span>
                   Colores Disponibles
                 </h4>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                   {selectedProduct.colors.map((color: any, index: number) => (
                     <button 
                       key={index} 
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex items-center gap-3 p-3 rounded-xl border transition-all text-left ${currentImageIndex === index ? 'border-[#FFC107] bg-[#FFC107]/10 shadow-sm' : 'border-[rgba(255,193,7,0.15)] bg-[#04142B]/50 hover:bg-[#04142B]'}`}
+                      className={`flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl border transition-all text-left ${currentImageIndex === index ? 'border-[#FFC107] bg-[#FFC107]/10 shadow-sm' : 'border-[rgba(255,193,7,0.15)] bg-[#04142B]/50 hover:bg-[#04142B]'}`}
                     >
                       <div 
-                        className="w-8 h-8 rounded-full border border-black/10 shadow-sm relative overflow-hidden flex-shrink-0"
+                        className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-black/10 shadow-sm relative overflow-hidden flex-shrink-0"
                         style={{ backgroundColor: color.hex }}
                       >
                         {color.secondaryHex && (
@@ -619,7 +690,7 @@ function ProductosContent() {
                           ></div>
                         )}
                       </div>
-                      <span className={`text-sm font-semibold leading-tight ${currentImageIndex === index ? 'text-[#FFC107]' : 'text-[#D9D9D9]'}`}>
+                      <span className={`text-xs sm:text-sm font-semibold leading-tight ${currentImageIndex === index ? 'text-[#FFC107]' : 'text-[#D9D9D9]'}`}>
                         {color.name}
                       </span>
                     </button>
@@ -627,13 +698,12 @@ function ProductosContent() {
                 </div>
               </div>
 
-              {/* Action Button */}
-              <div className="mt-auto pt-6 border-t border-[rgba(255,193,7,0.15)]">
+              <div className="mt-auto pt-4 sm:pt-6 border-t border-[rgba(255,193,7,0.15)]">
                 <a 
                   href={`https://wa.me/525524398773?text=${encodeURIComponent(selectedProduct.whatsappText)}`}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-full flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#FFB300] text-[#04142B] font-extrabold text-sm px-6 py-4 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.3)] transition-all duration-300 tracking-widest uppercase"
+                  className="w-full flex justify-center items-center gap-2 bg-[#FFC107] hover:bg-[#FFB300] text-[#04142B] font-extrabold text-xs sm:text-sm px-6 py-3.5 sm:py-4 rounded-md hover:shadow-[0_8px_20px_rgba(255,193,7,0.3)] transition-all duration-300 tracking-widest uppercase text-center"
                 >
                   <span className="material-symbols-outlined text-[18px]">chat</span>
                   Cotizar este modelo

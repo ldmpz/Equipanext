@@ -96,49 +96,45 @@ export default function Disenador() {
   };
 
   return (
-    <main className="bg-background text-on-background min-h-screen">
+    <main className="bg-background text-on-background min-h-screen w-full overflow-x-hidden">
       {/* Hero Header */}
-      <section className="relative pt-[140px] md:pt-[180px] pb-6 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
-        <div className="inline-flex items-center space-x-2 bg-primary-container px-3 py-1 rounded border border-outline-variant mb-4">
-          <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-          <span className="text-mono-label font-mono-label text-on-primary-container">LABORATORIO DE DISEÑO B2B</span>
-        </div>
-        <h1 className="text-headline-lg-mobile md:text-headline-lg font-display text-white mb-3 font-bold tracking-tight">
+      <section className="relative pt-36 sm:pt-44 md:pt-48 pb-6 sm:pb-8 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto text-center">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl font-display text-white mb-3 sm:mb-4 font-bold tracking-tight uppercase break-words">
           Configurador Técnico de Uniformes
         </h1>
-        <p className="text-body-md font-body-md text-on-surface-variant max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-on-surface-variant max-w-2xl mx-auto font-light leading-relaxed">
           Diseñe y personalice en tiempo real la indumentaria de su fuerza laboral. Seleccione prendas, asigne colores corporativos, incorpore cintas de alta visibilidad y estime su cotización corporativa con nuestro cotizador automatizado.
         </p>
       </section>
 
       {/* Interactive Customizer Section */}
-      <section className="pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+      <section className="pb-16 sm:pb-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
           
           {/* Left: Interactive Canvas */}
-          <div className="lg:col-span-7 bg-surface border border-outline-variant rounded-xl shadow-sm overflow-hidden flex flex-col designer-canvas relative min-h-[550px]">
+          <div className="lg:col-span-7 bg-surface border border-outline-variant rounded-2xl sm:rounded-3xl shadow-sm overflow-hidden flex flex-col designer-canvas relative min-h-[420px] sm:min-h-[480px] md:min-h-[550px]">
             {/* Active Garment Name Badge */}
-            <div className="absolute top-4 left-4 z-10 bg-surface-container-high/80 backdrop-blur-md px-4 py-2 rounded-lg border border-outline-variant flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary text-sm">settings_accessibility</span>
-              <span className="text-mono-label font-mono-label font-bold text-on-surface uppercase">
+            <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 bg-surface-container-high/90 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-outline-variant flex items-center gap-1.5 sm:gap-2">
+              <span className="material-symbols-outlined text-primary text-xs sm:text-sm">settings_accessibility</span>
+              <span className="text-[10px] sm:text-xs font-mono font-bold text-on-surface uppercase">
                 {garmentNameMap[garment]}
               </span>
             </div>
 
             {/* Color Preview Badge */}
-            <div className="absolute top-4 right-4 z-10 bg-surface-container-high/80 backdrop-blur-md px-4 py-2 rounded-lg border border-outline-variant flex items-center gap-2">
-              <span className="w-3.5 h-3.5 rounded-full border border-outline-variant transition-colors" style={{ backgroundColor: colorHex }}></span>
-              <span className="text-mono-label font-mono-label font-bold text-on-surface uppercase">
+            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 bg-surface-container-high/90 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg border border-outline-variant flex items-center gap-1.5 sm:gap-2">
+              <span className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full border border-outline-variant transition-colors" style={{ backgroundColor: colorHex }}></span>
+              <span className="text-[10px] sm:text-xs font-mono font-bold text-on-surface uppercase">
                 {colorName}
               </span>
             </div>
 
             {/* The Garment SVG Canvas Wrapper */}
-            <div className="flex-grow flex items-center justify-center p-8 min-h-[420px] transition-all duration-300">
+            <div className="flex-grow flex items-center justify-center p-4 sm:p-8 min-h-[340px] sm:min-h-[420px] transition-all duration-300">
               
               {/* CAMISA INDUSTRIAL SVG */}
               {garment === 'camisa' && (
-                <svg className="w-full max-w-[360px] h-auto drop-shadow-md transition-all duration-300" viewBox="0 0 300 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-full max-w-[260px] sm:max-w-[320px] md:max-w-[360px] h-auto drop-shadow-md transition-all duration-300" viewBox="0 0 300 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="150" cy="330" rx="90" ry="12" fill="#202530" fillOpacity="0.15" />
                   
                   {/* Left Sleeve */}
@@ -220,7 +216,7 @@ export default function Disenador() {
 
               {/* CHALECO DE SEGURIDAD SVG */}
               {garment === 'chaleco' && (
-                <svg className="w-full max-w-[360px] h-auto drop-shadow-md transition-all duration-300" viewBox="0 0 300 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-full max-w-[260px] sm:max-w-[320px] md:max-w-[360px] h-auto drop-shadow-md transition-all duration-300" viewBox="0 0 300 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="150" cy="330" rx="90" ry="12" fill="#202530" fillOpacity="0.15" />
                   
                   {/* Body of Vest */}
@@ -277,7 +273,7 @@ export default function Disenador() {
 
               {/* PANTALÓN TÉCNICO SVG */}
               {garment === 'pantalon' && (
-                <svg className="w-full max-w-[360px] h-auto drop-shadow-md transition-all duration-300" viewBox="0 0 300 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-full max-w-[260px] sm:max-w-[320px] md:max-w-[360px] h-auto drop-shadow-md transition-all duration-300" viewBox="0 0 300 350" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <ellipse cx="150" cy="335" rx="80" ry="10" fill="#202530" fillOpacity="0.15" />
 
                   {/* Waistband */}
@@ -331,13 +327,13 @@ export default function Disenador() {
             </div>
 
             {/* Bottom: Feature Spec List */}
-            <div className="bg-surface-container border-t border-outline-variant p-4 flex flex-wrap gap-4 items-center justify-between text-sm">
+            <div className="bg-surface-container border-t border-outline-variant p-3.5 sm:p-4 flex flex-wrap gap-2.5 sm:gap-4 items-center justify-between text-xs sm:text-sm">
               <span className="text-on-surface-variant font-medium flex items-center gap-1">
-                <span className="material-symbols-outlined text-[18px]">verified_user</span>
-                Materiales con Certificación de Protección Industrial
+                <span className="material-symbols-outlined text-[16px] sm:text-[18px]">verified_user</span>
+                Materiales con Certificación de Protección
               </span>
               <span className="text-on-surface-variant font-medium flex items-center gap-1">
-                <span className="material-symbols-outlined text-[18px]">update</span>
+                <span className="material-symbols-outlined text-[16px] sm:text-[18px]">update</span>
                 Listo para Bordado de Alta Densidad
               </span>
             </div>
@@ -347,46 +343,46 @@ export default function Disenador() {
           <div className="lg:col-span-5 flex flex-col gap-6">
             
             {/* Card 1: Configuration Form */}
-            <div className="bg-surface border border-outline-variant rounded-xl shadow-sm p-6 md:p-8 flex flex-col gap-6">
+            <div className="bg-surface border border-outline-variant rounded-2xl sm:rounded-3xl shadow-sm p-5 sm:p-6 md:p-8 flex flex-col gap-6">
               
               {/* STEP 1: PRENDA SELECTOR */}
               <div>
-                <span className="block text-mono-label font-mono-label text-primary uppercase mb-2 text-xs font-semibold">// Paso 1: Seleccione Prenda</span>
-                <div className="grid grid-cols-3 gap-2">
+                <span className="block text-[11px] font-mono text-primary uppercase mb-2 font-bold">// Paso 1: Seleccione Prenda</span>
+                <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                   <button 
-                    className={`flex flex-col items-center gap-2 p-3 bg-surface-container rounded-lg border text-center transition-all hover:bg-surface-container-high group active:scale-95 ${garment === 'camisa' ? 'border-primary bg-primary-container/20 text-primary' : 'border-outline-variant text-on-surface'}`}
+                    className={`flex flex-col items-center gap-1.5 sm:gap-2 p-2.5 sm:p-3 bg-surface-container rounded-lg border text-center transition-all hover:bg-surface-container-high group active:scale-95 ${garment === 'camisa' ? 'border-primary bg-primary-container/20 text-primary' : 'border-outline-variant text-on-surface'}`}
                     onClick={() => setGarment('camisa')}
                   >
-                    <span className={`material-symbols-outlined group-hover:scale-110 transition-transform ${garment === 'camisa' ? 'text-primary' : 'text-on-surface'}`}>apparel</span>
-                    <span className="text-label-caps font-label-caps text-xs">Camisa</span>
+                    <span className={`material-symbols-outlined text-[20px] sm:text-[24px] group-hover:scale-110 transition-transform ${garment === 'camisa' ? 'text-primary' : 'text-on-surface'}`}>apparel</span>
+                    <span className="text-[11px] sm:text-xs font-bold uppercase">Camisa</span>
                   </button>
                   <button 
-                    className={`flex flex-col items-center gap-2 p-3 bg-surface-container rounded-lg border text-center transition-all hover:bg-surface-container-high group active:scale-95 ${garment === 'chaleco' ? 'border-primary bg-primary-container/20 text-primary' : 'border-outline-variant text-on-surface'}`}
+                    className={`flex flex-col items-center gap-1.5 sm:gap-2 p-2.5 sm:p-3 bg-surface-container rounded-lg border text-center transition-all hover:bg-surface-container-high group active:scale-95 ${garment === 'chaleco' ? 'border-primary bg-primary-container/20 text-primary' : 'border-outline-variant text-on-surface'}`}
                     onClick={() => setGarment('chaleco')}
                   >
-                    <span className={`material-symbols-outlined group-hover:scale-110 transition-transform ${garment === 'chaleco' ? 'text-primary' : 'text-on-surface'}`}>safety_divider</span>
-                    <span className="text-label-caps font-label-caps text-xs">Chaleco</span>
+                    <span className={`material-symbols-outlined text-[20px] sm:text-[24px] group-hover:scale-110 transition-transform ${garment === 'chaleco' ? 'text-primary' : 'text-on-surface'}`}>safety_divider</span>
+                    <span className="text-[11px] sm:text-xs font-bold uppercase">Chaleco</span>
                   </button>
                   <button 
-                    className={`flex flex-col items-center gap-2 p-3 bg-surface-container rounded-lg border text-center transition-all hover:bg-surface-container-high group active:scale-95 ${garment === 'pantalon' ? 'border-primary bg-primary-container/20 text-primary' : 'border-outline-variant text-on-surface'}`}
+                    className={`flex flex-col items-center gap-1.5 sm:gap-2 p-2.5 sm:p-3 bg-surface-container rounded-lg border text-center transition-all hover:bg-surface-container-high group active:scale-95 ${garment === 'pantalon' ? 'border-primary bg-primary-container/20 text-primary' : 'border-outline-variant text-on-surface'}`}
                     onClick={() => setGarment('pantalon')}
                   >
-                    <span className={`material-symbols-outlined group-hover:scale-110 transition-transform ${garment === 'pantalon' ? 'text-primary' : 'text-on-surface'}`}>airline_seat_legroom_extra</span>
-                    <span className="text-label-caps font-label-caps text-xs">Pantalón</span>
+                    <span className={`material-symbols-outlined text-[20px] sm:text-[24px] group-hover:scale-110 transition-transform ${garment === 'pantalon' ? 'text-primary' : 'text-on-surface'}`}>airline_seat_legroom_extra</span>
+                    <span className="text-[11px] sm:text-xs font-bold uppercase">Pantalón</span>
                   </button>
                 </div>
               </div>
 
               {/* STEP 2: COLOR SELECTOR */}
               <div>
-                <span className="block text-mono-label font-mono-label text-primary uppercase mb-2 text-xs font-semibold">// Paso 2: Color Corporativo</span>
+                <span className="block text-[11px] font-mono text-primary uppercase mb-2 font-bold">// Paso 2: Color Corporativo</span>
                 <div className="flex flex-wrap gap-2">
                   {colorsList.map((col) => {
                     const isSelected = colorHex === col.hex;
                     return (
                       <button 
                         key={col.hex}
-                        className={`w-8 h-8 rounded-full border active:scale-95 transition-all shadow-sm flex items-center justify-center ${isSelected ? 'border-2 border-primary' : 'border-outline-variant'}`}
+                        className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full border active:scale-95 transition-all shadow-sm flex items-center justify-center ${isSelected ? 'border-2 border-primary ring-2 ring-primary/30' : 'border-outline-variant'}`}
                         style={{ backgroundColor: col.hex }}
                         onClick={() => {
                           setColorHex(col.hex);
@@ -396,7 +392,7 @@ export default function Disenador() {
                         title={col.name}
                       >
                         {isSelected && (
-                          <span className={`material-symbols-outlined text-[16px] font-bold ${col.hex === '#E2E8F0' ? 'text-on-background' : 'text-white'}`}>check</span>
+                          <span className={`material-symbols-outlined text-[14px] sm:text-[16px] font-bold ${col.hex === '#E2E8F0' ? 'text-on-background' : 'text-white'}`}>check</span>
                         )}
                       </button>
                     );
@@ -406,15 +402,15 @@ export default function Disenador() {
 
               {/* STEP 3: DETAILS AND SAFETY */}
               <div>
-                <span className="block text-mono-label font-mono-label text-primary uppercase mb-2 text-xs font-semibold">// Paso 3: Detalles y Seguridad</span>
-                <div className="flex flex-col gap-3">
+                <span className="block text-[11px] font-mono text-primary uppercase mb-2 font-bold">// Paso 3: Detalles y Seguridad</span>
+                <div className="flex flex-col gap-2.5 sm:gap-3">
                   {/* Reflective Tape Toggle */}
                   <label className="relative flex items-center justify-between p-3 bg-surface-container rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container-high transition-colors">
                     <div className="flex items-center gap-2">
-                      <span className="material-symbols-outlined text-primary">brightness_high</span>
+                      <span className="material-symbols-outlined text-primary text-[20px]">brightness_high</span>
                       <div>
-                        <span className="block text-body-md font-medium text-on-surface">Cintas Reflectantes</span>
-                        <span className="block text-xs text-on-surface-variant">Alta Visibilidad de 2 pulgadas</span>
+                        <span className="block text-xs sm:text-sm font-medium text-on-surface">Cintas Reflectantes</span>
+                        <span className="block text-[10px] sm:text-xs text-on-surface-variant">Alta Visibilidad de 2 pulgadas</span>
                       </div>
                     </div>
                     <input 
@@ -429,10 +425,10 @@ export default function Disenador() {
                   {/* Contrast Stitching Contrast Toggle */}
                   <label className="relative flex items-center justify-between p-3 bg-surface-container rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container-high transition-colors">
                     <div className="flex items-center gap-2">
-                      <span className="material-symbols-outlined text-primary">schema</span>
+                      <span className="material-symbols-outlined text-primary text-[20px]">schema</span>
                       <div>
-                        <span className="block text-body-md font-medium text-on-surface">Costura de Contrases</span>
-                        <span className="block text-xs text-on-surface-variant">Hilo de alta tenacidad en color amarillo</span>
+                        <span className="block text-xs sm:text-sm font-medium text-on-surface">Costura de Contraste</span>
+                        <span className="block text-[10px] sm:text-xs text-on-surface-variant">Hilo de alta tenacidad en color amarillo</span>
                       </div>
                     </div>
                     <input 
@@ -448,8 +444,8 @@ export default function Disenador() {
 
               {/* STEP 4: LOGO & EMBROIDERY PLACEMENT */}
               <div>
-                <span className="block text-mono-label font-mono-label text-primary uppercase mb-2 text-xs font-semibold">// Paso 4: Logotipo e Insignias</span>
-                <div className="grid grid-cols-2 gap-4 mb-3">
+                <span className="block text-[11px] font-mono text-primary uppercase mb-2 font-bold">// Paso 4: Logotipo e Insignias</span>
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-4 mb-3">
                   <label className="flex items-center gap-2 p-2.5 bg-surface-container rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container-high">
                     <input 
                       type="radio" 
@@ -459,7 +455,7 @@ export default function Disenador() {
                       onChange={() => setLogoType('Bordado')}
                       className="accent-primary" 
                     />
-                    <span className="text-body-md text-on-surface">Bordado Industrial</span>
+                    <span className="text-xs sm:text-sm text-on-surface font-medium">Bordado</span>
                   </label>
                   <label className="flex items-center gap-2 p-2.5 bg-surface-container rounded-lg border border-outline-variant cursor-pointer hover:bg-surface-container-high">
                     <input 
@@ -470,18 +466,18 @@ export default function Disenador() {
                       onChange={() => setLogoType('Serigrafía')}
                       className="accent-primary" 
                     />
-                    <span className="text-body-md text-on-surface">Serigrafía</span>
+                    <span className="text-xs sm:text-sm text-on-surface font-medium">Serigrafía</span>
                   </label>
                 </div>
 
                 {/* Logo Location Selector */}
                 <div>
-                  <span className="block text-xs text-on-surface-variant mb-1">Ubicación del Logo:</span>
+                  <span className="block text-[11px] text-on-surface-variant mb-1 font-medium">Ubicación del Logo:</span>
                   <select 
                     id="logo-location" 
                     value={logoLocation}
                     onChange={(e) => setLogoLocation(e.target.value)}
-                    className="w-full bg-surface-container border border-outline-variant p-2.5 rounded-lg text-body-md text-on-surface focus:outline-none focus:border-primary"
+                    className="w-full bg-surface-container border border-outline-variant p-2.5 rounded-lg text-xs sm:text-sm text-on-surface focus:outline-none focus:border-primary"
                   >
                     <option value="Ninguno">Sin logotipo / Solo liso</option>
                     <option value="Pecho Izquierdo">Pecho Izquierdo (Estándar)</option>
@@ -494,18 +490,18 @@ export default function Disenador() {
             </div>
 
             {/* Card 2: Smart Cotizador & Sales Tier Pricing */}
-            <div className="bg-surface border-t-4 border-t-primary border-x border-b border-outline-variant rounded-xl shadow-sm p-6 md:p-8 flex flex-col gap-6">
+            <div className="bg-surface border-t-4 border-t-primary border-x border-b border-outline-variant rounded-2xl sm:rounded-3xl shadow-sm p-5 sm:p-6 md:p-8 flex flex-col gap-5 sm:gap-6">
               
-              <div className="flex items-center gap-2 border-b border-outline-variant pb-4">
-                <span className="material-symbols-outlined text-primary">calculate</span>
-                <h3 className="text-headline-md font-headline-md font-bold text-on-surface">Cotizador Inteligente</h3>
+              <div className="flex items-center gap-2 border-b border-outline-variant pb-3 sm:pb-4">
+                <span className="material-symbols-outlined text-primary text-[22px]">calculate</span>
+                <h3 className="text-lg sm:text-xl font-display font-bold text-on-surface uppercase">Cotizador Inteligente</h3>
               </div>
 
               {/* Quantity Slider */}
               <div>
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-body-md font-semibold text-on-surface">Volumen Solicitado:</span>
-                  <span className="text-headline-md font-display font-bold text-primary">{quantity} pzas</span>
+                  <span className="text-xs sm:text-sm font-semibold text-on-surface">Volumen Solicitado:</span>
+                  <span className="text-lg sm:text-xl font-display font-bold text-primary">{quantity} pzas</span>
                 </div>
                 <input 
                   type="range" 
@@ -516,47 +512,48 @@ export default function Disenador() {
                   onChange={(e) => setQuantity(parseInt(e.target.value))}
                   className="w-full h-2 bg-outline rounded-lg appearance-none cursor-pointer" 
                 />
-                <div className="flex justify-between text-xs text-on-surface-variant mt-1.5 font-mono">
-                  <span>Min B2B: 50 pzas</span>
+                <div className="flex justify-between text-[10px] sm:text-xs text-on-surface-variant mt-1.5 font-mono">
+                  <span>Min: 50 pzas</span>
                   <span>500 pzas</span>
                   <span>Max: 1000+ pzas</span>
                 </div>
               </div>
 
               {/* Dynamic Price Summary Grid */}
-              <div className="bg-surface-container rounded-lg p-4 grid grid-cols-2 gap-4 border border-outline-variant relative overflow-hidden">
-                <div className="absolute right-2 top-2">
-                  <span className={`text-mono-label font-mono-label px-2.5 py-1 rounded text-[10px] ${tierClass}`}>{tierName}</span>
+              <div className="bg-surface-container rounded-xl p-3.5 sm:p-4 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 border border-outline-variant relative overflow-hidden">
+                <div className="sm:col-span-2 flex justify-between items-center border-b border-outline-variant pb-2">
+                  <span className="text-[10px] uppercase tracking-wider text-on-surface-variant font-medium">Categoría de Volumen</span>
+                  <span className={`px-2.5 py-0.5 rounded text-[10px] font-bold ${tierClass}`}>{tierName}</span>
                 </div>
                 <div>
-                  <span className="block text-xs text-on-surface-variant uppercase">Precio Unitario Est.</span>
-                  <span className="text-headline-lg font-display font-bold text-white">${unitPrice.toLocaleString('es-MX')} MXN</span>
+                  <span className="block text-[10px] sm:text-xs text-on-surface-variant uppercase">Precio Unitario Est.</span>
+                  <span className="text-xl sm:text-2xl font-display font-bold text-white">${unitPrice.toLocaleString('es-MX')} MXN</span>
                 </div>
                 <div>
-                  <span className="block text-xs text-on-surface-variant uppercase">Total Estimado Neto</span>
-                  <span className="text-headline-lg font-display font-bold text-white">${totalCost.toLocaleString('es-MX')} MXN</span>
+                  <span className="block text-[10px] sm:text-xs text-on-surface-variant uppercase">Total Estimado Neto</span>
+                  <span className="text-xl sm:text-2xl font-display font-bold text-white">${totalCost.toLocaleString('es-MX')} MXN</span>
                 </div>
               </div>
 
               {/* Order Specs Textfield */}
-              <div className="text-xs text-on-surface-variant flex flex-col gap-1.5 bg-surface-container-low p-3 rounded border border-outline-variant border-dashed">
-                <span className="font-bold flex items-center gap-1">
+              <div className="text-[11px] sm:text-xs text-on-surface-variant flex flex-col gap-1 bg-surface-container-low p-3 rounded-lg border border-outline-variant border-dashed">
+                <span className="font-bold flex items-center gap-1 text-primary">
                   <span className="material-symbols-outlined text-[14px]">description</span>
-                  Especificación Técnica Generada:
+                  Especificación Técnica:
                 </span>
-                <p className="font-mono text-[11px] text-white">
+                <p className="font-mono text-[10px] sm:text-[11px] text-white/90">
                   {specString}
                 </p>
               </div>
 
               {/* Ultimate CTA to WhatsApp */}
               <a 
-                className="flex justify-center items-center gap-3 bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container font-label-caps text-label-caps uppercase px-6 py-4 rounded-xl shadow-md transition-all active:translate-y-px text-center w-full font-bold" 
+                className="flex justify-center items-center gap-2 sm:gap-3 bg-[#FFC107] text-[#04142B] hover:bg-white hover:text-[#04142B] uppercase px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl shadow-md transition-all active:translate-y-px text-center w-full font-black text-xs sm:text-[13px] tracking-wider" 
                 href={getWhatsAppLink()} 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <span className="material-symbols-outlined">forum</span>
+                <span className="material-symbols-outlined text-[18px]">forum</span>
                 COTIZAR POR WHATSAPP
               </a>
 
